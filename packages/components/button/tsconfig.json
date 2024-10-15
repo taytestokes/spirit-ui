@@ -1,0 +1,42 @@
+{
+  // tsconfig is influenced by the config cheatsheet defined here: https://www.totaltypescript.com/tsconfig-cheat-sheet
+  "compilerOptions": {
+    // Base Options
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+
+    // Strictness
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // Transpiling
+    "module": "NodeNext",
+    "outDir": "dist",
+
+    // Emit .d.ts files for lib consumers
+    "declaration": true,
+
+    // Emit .tsbuildinfo files to let ts know we're in a monorepo and help cache builds and run faster
+    "composite": true,
+
+    // Generate sourcemaps and declaration maps to help consumers debug by exposing source code
+    "sourceMap": true,
+    "declarationMap": true,
+
+    // Code will run in the DOM
+    "lib": ["es2022", "dom", "dom.iterable"],
+
+    // React transformation
+    "jsx": "preserve"
+  },
+
+  // Library specific code to know what files to include and exclude in compilation
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"]
+}

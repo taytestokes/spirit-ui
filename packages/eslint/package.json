@@ -1,0 +1,11 @@
+{
+  "name": "@cosmos-ui/eslint",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "react.js"
+  ],
+  "devDependencies": {
+    "@vercel/style-guide": "^6.0.0"
+  }
+}
