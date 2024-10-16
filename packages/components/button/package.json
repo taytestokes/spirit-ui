@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@cosmos-ui/eslint-config": "*",
+    "@cosmos-ui/typescript-config": "*",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "eslint": "^8.57.1",
