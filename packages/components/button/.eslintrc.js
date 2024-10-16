@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["@cosmos-ui/eslint/react.js"],
+  extends: ["@cosmos-ui/eslint-config/react.js"],
 };

@@ -16,9 +16,7 @@ module.exports = {
     require.resolve("@vercel/style-guide/eslint/react"),
   ],
   parserOptions: { project },
-  plugins: "only-warn",
   globals: {
-    React: true,
     JSX: true,
   },
   settings: {
@@ -30,6 +28,6 @@ module.exports = {
   },
   ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js", "**/*.css"],
   rules: {
-    "import/no-default-export": "off",
+    "react/no-unescaped-entities": "off",
   },
 };
