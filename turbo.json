@@ -21,6 +21,7 @@
     },
     "storybook": {
       "cache": false
-    }
+    },
+    "clean": {}
   }
 }
