@@ -1,50 +1,34 @@
 {
-  "name": "@cosmos-ui/button",
-  "description": "The button component for Cosmos UI.",
+  "name": "@cosmos-ui/theme",
+  "description": "The design system theme for Cosmos UI.",
   "author": "Tayte Stokes",
   "version": "0.0.0",
+  "main": "./index.ts",
   "keywords": [
     "cosmos-ui",
-    "button"
+    "theme"
   ],
   "license": "MIT",
   "homepage": "https://github.com/taytestokes/cosmos-ui",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taytestokes/cosmos-ui.git",
-    "directory": "packages/components/button"
+    "directory": "packages/theme"
   },
   "bugs": {
     "url": "https://github.com/taytestokes/cosmos-ui/issues"
   },
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "scripts": {
-    "build": "tsup src",
     "check-format": "prettier --check .",
     "format": "prettier --write .",
     "lint": "eslint ."
   },
   "devDependencies": {
     "@cosmos-ui/eslint-config": "*",
-    "@cosmos-ui/theme": "*",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.1",
-    "@vanilla-extract/esbuild-plugin": "^2.3.11",
+    "@vanilla-extract/css": "^1.16.0",
     "eslint": "^8.57.1",
     "tsup": "^8.3.0",
     "typescript": "^5.6.3"
-  },
-  "dependencies": {
-    "react": "^18.3.1"
   },
   "publishConfig": {
     "access": "public"

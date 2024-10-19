@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import classes from './button.module.css';
+import '@cosmos-ui/theme/globals.css';
 
 // TODO:
 // Finish setting up tsup for bundling with css modules
