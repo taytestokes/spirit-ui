@@ -1,1 +1,1 @@
-export default true;
+export { theme } from "./theme.css";
