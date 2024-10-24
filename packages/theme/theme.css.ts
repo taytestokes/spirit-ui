@@ -1,7 +1,38 @@
 import { createGlobalTheme } from "@vanilla-extract/css";
 
-const color = {
-  // Neutrals
+const breakpoints = {
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1280,
+};
+
+const fontSizes = {
+  // Heading sizes move in units of 8 pixels
+  heading5XL: "72px",
+  heading4XL: "64px",
+  heading3XL: "56px",
+  heading2XL: "48px",
+  headingXL: "40px",
+  headingL: "32px",
+  headingM: "24px",
+  headingS: "16px",
+
+  // Text sizes move in units of 4 pixels
+  textXL: "24px",
+  textL: "20px",
+  textM: "16px",
+  textS: "12px",
+  textXS: "8px",
+};
+
+const fontWeights = {
+  regular: "400",
+  semibold: "600",
+  bold: "700",
+};
+
+const colors = {
   neutral50: "#ffffff",
   neutral100: "#fafafa",
   neutral200: "#eaeaea",
@@ -13,7 +44,6 @@ const color = {
   neutral800: "#111111",
   neutral900: "#000000",
 
-  // Green
   green100: "#e1fdd9",
   green200: "#bdfbb4",
   green300: "#8ff58d",
@@ -24,7 +54,6 @@ const color = {
   green800: "#158045",
   green900: "#0c6a3f",
 
-  // Pink
   pink100: "#fdd9ea",
   pink200: "#fbb4db",
   pink300: "#f58dd0",
@@ -35,7 +64,6 @@ const color = {
   pink800: "#741580",
   pink900: "#560c6a",
 
-  // Blue
   blue100: "#ccfaff",
   blue200: "#99f0ff",
   blue300: "#66deff",
@@ -46,7 +74,6 @@ const color = {
   blue800: "#004593",
   blue900: "#00317a",
 
-  // Orange
   orange100: "#ffeecc",
   orange200: "#ffd899",
   orange300: "#ffbd66",
@@ -57,7 +84,6 @@ const color = {
   orange800: "#932c00",
   orange900: "#7a1e00",
 
-  // Red
   red100: "#ffe4d8",
   red200: "#ffc2b2",
   red300: "#ff9a8b",
@@ -69,6 +95,29 @@ const color = {
   red900: "#7a0c39",
 };
 
+const spacings = {
+  spacing2XS: "2px",
+  spacingXS: "4px",
+  spacingS: "8px",
+  spacingM: "12px",
+  spacingL: "16px",
+  spacingXL: "24px",
+  spacing2XL: "32px",
+  spacing3XL: "40px",
+  spacing4XL: "48px",
+  spacing5XL: "56px",
+  spacing6XL: "64px",
+  spacing7XL: "72px",
+  spacing8XL: "80px",
+  spacing9XL: "88px",
+  spacing10XL: "96px",
+  spacing11XL: "104px",
+  spacing12XL: "112px",
+};
+
 export const theme = createGlobalTheme(":root", {
-  color,
+  colors,
+  fontSizes,
+  fontWeights,
+  spacings,
 });
