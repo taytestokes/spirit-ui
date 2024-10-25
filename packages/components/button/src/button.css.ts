@@ -3,28 +3,16 @@ import { recipe } from '@vanilla-extract/recipes';
 
 import { theme } from '@cosmos-ui/theme';
 
-// TODO: Implement typography styles once established
-
 export const styles = recipe({
   base: {
-    border: 'none',
+    borderStyle: 'solid',
     borderRadius: '4px',
+    borderWidth: '1px',
     cursor: 'pointer',
     display: 'block',
     textAlign: 'center',
   },
   variants: {
-    color: {
-      default: {
-        backgroundColor: theme.colors.neutral200,
-      },
-      green: {
-        backgroundColor: theme.colors.green500,
-      },
-      pink: {
-        backgroundColor: theme.colors.pink500,
-      },
-    },
     size: {
       small: {
         fontSize: theme.fontSizes.textS,
@@ -46,9 +34,79 @@ export const styles = recipe({
       },
     },
     variant: {
-      base: {},
-      ghost: {},
-      outline: {},
+      primary: {
+        backgroundColor: theme.colors.background,
+        borderColor: theme.colors.border,
+        color: theme.colors.foreground,
+
+        ':hover': {
+          borderColor: theme.colors.foreground,
+        },
+      },
+      secondary: {
+        backgroundColor: theme.colors.foreground,
+        borderColor: theme.colors.foreground,
+        color: theme.colors.background,
+
+        ':hover': {
+          backgroundColor: theme.colors.accents_7,
+          borderColor: theme.colors.accents_7,
+        },
+      },
+      transparent: {
+        backgroundColor: theme.colors.background,
+        borderColor: theme.colors.background,
+        color: theme.colors.foreground,
+
+        ':hover': {
+          backgroundColor: theme.colors.accents_2,
+          borderColor: theme.colors.accents_2,
+        },
+      },
+      success: {
+        backgroundColor: theme.colors.success,
+        borderColor: theme.colors.success,
+        color: theme.colors.white,
+
+        ':hover': {
+          backgroundColor: theme.colors.successDark,
+          borderColor: theme.colors.successDark,
+        },
+      },
+      warning: {
+        backgroundColor: theme.colors.warning,
+        borderColor: theme.colors.warning,
+        color: theme.colors.white,
+
+        ':hover': {
+          backgroundColor: theme.colors.warningDark,
+          borderColor: theme.colors.warningDark,
+        },
+      },
+      error: {
+        backgroundColor: theme.colors.error,
+        borderColor: theme.colors.error,
+        color: theme.colors.white,
+
+        ':hover': {
+          backgroundColor: theme.colors.errorDark,
+          borderColor: theme.colors.errorDark,
+        },
+      },
+      info: {
+        backgroundColor: theme.colors.info,
+        borderColor: theme.colors.info,
+        color: theme.colors.white,
+
+        ':hover': {
+          backgroundColor: theme.colors.infoDark,
+          borderColor: theme.colors.infoDark,
+        },
+      },
     },
+  },
+  defaultVariants: {
+    size: 'medium',
+    variant: 'primary',
   },
 });

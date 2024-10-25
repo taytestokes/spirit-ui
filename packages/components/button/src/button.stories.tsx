@@ -9,22 +9,27 @@ export default meta;
 
 export const Primary = (args) => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '8px',
-      }}
-    >
-      <Button color="green" size="small" {...args}>
-        Small
+    <div>
+      <Button variant="primary" {...args}>
+        Primary
       </Button>
-      <Button size="medium" {...args}>
-        Medium
+      <Button variant="secondary" {...args}>
+        Secondary
       </Button>
-      <Button color="pink" size="large" {...args}>
-        Large
+      <Button variant="transparent" {...args}>
+        Transparent
+      </Button>
+      <Button variant="success" {...args}>
+        Success
+      </Button>
+      <Button variant="warning" {...args}>
+        Warning
+      </Button>
+      <Button variant="error" {...args}>
+        Error
+      </Button>
+      <Button variant="info" {...args}>
+        Info
       </Button>
     </div>
   );
