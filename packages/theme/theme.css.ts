@@ -1,4 +1,4 @@
-import { createGlobalTheme } from "@vanilla-extract/css";
+import { createGlobalTheme, globalFontFace } from "@vanilla-extract/css";
 
 const breakpoints = {
   sm: 640,

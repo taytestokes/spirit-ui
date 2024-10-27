@@ -5,32 +5,28 @@ const meta = {
   component: Button,
 };
 
-export default meta;
+export const Primary = (args) => (
+  <Button variant="primary" {...args}>
+    Primary
+  </Button>
+);
 
-export const Primary = (args) => {
-  return (
-    <div>
-      <Button variant="primary" {...args}>
-        Primary
-      </Button>
-      <Button variant="secondary" {...args}>
-        Secondary
-      </Button>
-      <Button variant="transparent" {...args}>
-        Transparent
-      </Button>
-      <Button variant="success" {...args}>
-        Success
-      </Button>
-      <Button variant="warning" {...args}>
-        Warning
-      </Button>
-      <Button variant="error" {...args}>
-        Error
-      </Button>
-      <Button variant="info" {...args}>
-        Info
-      </Button>
-    </div>
-  );
-};
+export const Secondary = (args) => (
+  <Button variant="secondary" {...args}>
+    Secondary
+  </Button>
+);
+
+export const Transparent = (args) => (
+  <Button variant="transparent" {...args}>
+    Transparent
+  </Button>
+);
+
+export const Disabled = (args) => (
+  <Button disabled {...args}>
+    Transparent
+  </Button>
+);
+
+export default meta;

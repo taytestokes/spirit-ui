@@ -1,108 +1,99 @@
-import { style } from '@vanilla-extract/css';
+import { globalFontFace, style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 
 import { theme } from '@cosmos-ui/theme';
 
-export const styles = recipe({
-  base: {
-    borderStyle: 'solid',
-    borderRadius: '4px',
-    borderWidth: '1px',
-    cursor: 'pointer',
-    display: 'block',
-    textAlign: 'center',
+const {
+  colors: { accents_1, accents_2, accents_7, background, border, foreground },
+  fontSizes: { textS, textL },
+  spacings: { spacingXS, spacingS, spacingM, spacingXL },
+} = theme;
+
+const inter = '"Inter", sans-serif';
+
+// TODO: Rework how fonts are being handled?
+globalFontFace(inter, [
+  {
+    src: 'url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap)',
   },
+]);
+
+export const styles = recipe({
+  base: style({
+    border: 'none',
+    borderRadius: spacingXS,
+    cursor: 'pointer',
+    display: 'inline-block',
+    fontFamily: inter,
+    letterSpacing: 'normal',
+    margin: '0px',
+    padding: '0px',
+    textAlign: 'center',
+    transition: '200ms ease',
+
+    selectors: {
+      '&:disabled': {
+        background: accents_1,
+        border: `1px solid ${accents_2}`,
+        color: accents_2,
+        cursor: 'not-allowed',
+      },
+    },
+  }),
   variants: {
+    // TODO: Rework sizes
     size: {
       small: {
-        fontSize: theme.fontSizes.textS,
+        fontSize: textS,
         height: '32px',
         lineHeight: '20px',
-        paddingInline: theme.spacings.spacingS,
+        paddingInline: spacingS,
       },
       medium: {
-        fontSize: theme.fontSizes.textM,
+        fontSize: '14px',
         height: '40px',
         lineHeight: '24px',
-        paddingInline: theme.spacings.spacingM,
+        paddingInline: spacingM,
       },
       large: {
-        fontSize: theme.fontSizes.textL,
+        fontSize: textL,
         height: '48px',
         lineHeight: '28px',
-        paddingInline: theme.spacings.spacingXL,
+        paddingInline: spacingXL,
       },
     },
     variant: {
-      primary: {
-        backgroundColor: theme.colors.background,
-        borderColor: theme.colors.border,
-        color: theme.colors.foreground,
+      primary: style({
+        background: foreground,
+        color: background,
 
-        ':hover': {
-          borderColor: theme.colors.foreground,
+        selectors: {
+          '&:hover:not([disabled])': {
+            backgroundColor: accents_7,
+          },
         },
-      },
-      secondary: {
-        backgroundColor: theme.colors.foreground,
-        borderColor: theme.colors.foreground,
-        color: theme.colors.background,
+      }),
+      secondary: style({
+        background: background,
+        border: `1px solid ${border}`,
+        color: foreground,
 
-        ':hover': {
-          backgroundColor: theme.colors.accents_7,
-          borderColor: theme.colors.accents_7,
+        selectors: {
+          '&:hover': {
+            border: `1px solid ${foreground}`,
+          },
         },
-      },
-      transparent: {
-        backgroundColor: theme.colors.background,
-        borderColor: theme.colors.background,
-        color: theme.colors.foreground,
+      }),
+      transparent: style({
+        background: background,
+        color: foreground,
 
-        ':hover': {
-          backgroundColor: theme.colors.accents_2,
-          borderColor: theme.colors.accents_2,
+        selectors: {
+          '&:hover': {
+            background: accents_2,
+          },
         },
-      },
-      success: {
-        backgroundColor: theme.colors.success,
-        borderColor: theme.colors.success,
-        color: theme.colors.white,
-
-        ':hover': {
-          backgroundColor: theme.colors.successDark,
-          borderColor: theme.colors.successDark,
-        },
-      },
-      warning: {
-        backgroundColor: theme.colors.warning,
-        borderColor: theme.colors.warning,
-        color: theme.colors.white,
-
-        ':hover': {
-          backgroundColor: theme.colors.warningDark,
-          borderColor: theme.colors.warningDark,
-        },
-      },
-      error: {
-        backgroundColor: theme.colors.error,
-        borderColor: theme.colors.error,
-        color: theme.colors.white,
-
-        ':hover': {
-          backgroundColor: theme.colors.errorDark,
-          borderColor: theme.colors.errorDark,
-        },
-      },
-      info: {
-        backgroundColor: theme.colors.info,
-        borderColor: theme.colors.info,
-        color: theme.colors.white,
-
-        ':hover': {
-          backgroundColor: theme.colors.infoDark,
-          borderColor: theme.colors.infoDark,
-        },
-      },
+      }),
     },
   },
   defaultVariants: {
