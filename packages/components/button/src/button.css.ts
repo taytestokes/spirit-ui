@@ -1,10 +1,19 @@
-import { globalFontFace, style } from '@vanilla-extract/css';
+import { style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
+import { calc } from '@vanilla-extract/css-utils';
 
-import { theme } from '@cosmos-ui/theme';
+import { theme } from '@vision-ui/theme';
 
 const {
-  colors: { accents_1, accents_2, accents_7, background, border, foreground },
+  colors: {
+    accents_1,
+    accents_2,
+    accents_3,
+    accents_7,
+    background,
+    border,
+    foreground,
+  },
   fontSizes: { buttonS, buttonM, buttonL },
   fontWeights: { medium },
   spacings: {
@@ -18,24 +27,14 @@ const {
   },
 } = theme;
 
-// TODO: Rework how fonts are being handled?
-const inter = '"Inter", sans-serif';
-
-globalFontFace(inter, [
-  {
-    src: 'url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap)',
-  },
-]);
-
 export const styles = recipe({
   base: style({
     border: 'none',
     borderRadius: spacingXS,
     cursor: 'pointer',
     display: 'inline-block',
-    fontFamily: inter,
     fontWeight: medium,
-    lineHeight: `calc(1em + 8px)`,
+    lineHeight: calc.add('1em', '8px'),
     margin: '0px',
     padding: '0px',
     textAlign: 'center',
@@ -45,7 +44,7 @@ export const styles = recipe({
       '&:disabled': {
         background: accents_1,
         border: `1px solid ${accents_2}`,
-        color: accents_2,
+        color: accents_3,
         cursor: 'not-allowed',
       },
     },

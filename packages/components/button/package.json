@@ -1,5 +1,5 @@
 {
-  "name": "@cosmos-ui/button",
+  "name": "@vision-ui/button",
   "description": "The button component for Cosmos UI.",
   "author": "Tayte Stokes",
   "version": "0.0.0",
@@ -35,11 +35,12 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@cosmos-ui/eslint-config": "*",
-    "@cosmos-ui/theme": "*",
+    "@vision-ui/eslint-config": "*",
+    "@vision-ui/theme": "*",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "@vanilla-extract/css": "^1.16.0",
+    "@vanilla-extract/css-utils": "^0.1.4",
     "@vanilla-extract/esbuild-plugin": "^2.3.11",
     "@vanilla-extract/recipes": "^0.5.5",
     "eslint": "^8.57.1",
