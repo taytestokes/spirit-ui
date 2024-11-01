@@ -5,13 +5,22 @@ import { theme } from '@cosmos-ui/theme';
 
 const {
   colors: { accents_1, accents_2, accents_7, background, border, foreground },
-  fontSizes: { textS, textL },
-  spacings: { spacingXS, spacingS, spacingM, spacingXL },
+  fontSizes: { buttonS, buttonM, buttonL },
+  fontWeights: { medium },
+  spacings: {
+    spacingXS,
+    spacingS,
+    spacingM,
+    spacingXL,
+    spacing2XL,
+    spacing3XL,
+    spacing4XL,
+  },
 } = theme;
 
+// TODO: Rework how fonts are being handled?
 const inter = '"Inter", sans-serif';
 
-// TODO: Rework how fonts are being handled?
 globalFontFace(inter, [
   {
     src: 'url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap)',
@@ -25,7 +34,8 @@ export const styles = recipe({
     cursor: 'pointer',
     display: 'inline-block',
     fontFamily: inter,
-    letterSpacing: 'normal',
+    fontWeight: medium,
+    lineHeight: `calc(1em + 8px)`,
     margin: '0px',
     padding: '0px',
     textAlign: 'center',
@@ -41,24 +51,20 @@ export const styles = recipe({
     },
   }),
   variants: {
-    // TODO: Rework sizes
     size: {
       small: {
-        fontSize: textS,
-        height: '32px',
-        lineHeight: '20px',
+        fontSize: buttonS,
+        height: spacing2XL,
         paddingInline: spacingS,
       },
       medium: {
-        fontSize: '14px',
-        height: '40px',
-        lineHeight: '24px',
+        fontSize: buttonM,
+        height: spacing3XL,
         paddingInline: spacingM,
       },
       large: {
-        fontSize: textL,
-        height: '48px',
-        lineHeight: '28px',
+        fontSize: buttonL,
+        height: spacing4XL,
         paddingInline: spacingXL,
       },
     },

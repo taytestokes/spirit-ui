@@ -24,12 +24,23 @@ const fontSizes = {
   textM: "16px",
   textS: "12px",
   textXS: "8px",
+
+  // Button sizes move in units of 2 pixels
+  buttonL: "16px",
+  buttonM: "14px",
+  buttonS: "12px",
 };
 
 const fontWeights = {
+  thin: "100",
+  ultraLight: "200",
+  light: "300",
   regular: "400",
+  medium: "500",
   semibold: "600",
   bold: "700",
+  black: "800",
+  ultraBlack: "900",
 };
 
 const primitiveColors = {
