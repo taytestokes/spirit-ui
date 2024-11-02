@@ -9,8 +9,8 @@
       "import": "./dist/index.mjs"
     },
     "./styles": {
-      "import": "./dist/style.css",
-      "require": "./dist/style.css"
+      "import": "./dist/index.css",
+      "require": "./dist/index.css"
     }
   },
   "keywords": [
