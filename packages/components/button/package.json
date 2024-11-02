@@ -2,7 +2,7 @@
   "name": "@spirit-ui/button",
   "description": "The button component for Spirit UI.",
   "author": "Tayte Stokes",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [
     "cosmos-ui",
     "button"
