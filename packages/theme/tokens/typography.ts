@@ -1,3 +1,5 @@
+export const fonts = {};
+
 export const fontSizes = {
   // Heading sizes move in units of 8 pixels
   heading5XL: "72px",

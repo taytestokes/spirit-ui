@@ -1,6 +1,6 @@
 {
-  "name": "@vision-ui/theme",
-  "description": "The design system theme for Cosmos UI.",
+  "name": "@spirit-ui/theme",
+  "description": "The design system theme for Spirit UI.",
   "author": "Tayte Stokes",
   "version": "0.0.1",
   "main": "./index.ts",
@@ -24,7 +24,7 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@vision-ui/eslint-config": "*",
+    "@spirit-ui/eslint-config": "*",
     "@vanilla-extract/css": "^1.16.0",
     "@vanilla-extract/sprinkles": "^1.6.3",
     "eslint": "^8.57.1",

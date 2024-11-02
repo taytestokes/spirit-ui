@@ -2,7 +2,7 @@ import { style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 import { calc } from '@vanilla-extract/css-utils';
 
-import { theme } from '@vision-ui/theme';
+import { theme } from '@spirit-ui/theme';
 
 const {
   colors: {

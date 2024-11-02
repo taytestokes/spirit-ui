@@ -1,5 +1,5 @@
 {
-  "name": "vision-ui",
+  "name": "spirit-ui",
   "private": true,
   "scripts": {
     "build": "turbo build",

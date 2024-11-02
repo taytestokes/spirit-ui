@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['@vision-ui/eslint-config/react.js'],
+  extends: ['@spirit-ui/eslint-config/react.js'],
 };
