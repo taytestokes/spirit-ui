@@ -1,17 +1,54 @@
-import React from 'react';
+import { styled } from '@stitches/react';
 
-import { styles } from './button.css';
+export const Button = styled('button', {
+  // Base styles
+  border: 'none',
+  borderRadius: '$spacingXS',
+  cursor: 'pointer',
+  display: 'inline-block',
+  fontWeight: '$medium',
+  lineHeight: '1.5',
+  margin: '0px',
+  padding: '0px',
+  textAlign: 'center',
+  transition: '200ms ease',
 
-export const Button: React.FC = ({
-  disabled = false,
-  size = 'medium',
-  variant = 'primary',
-  children,
-  ...rest
-}) => {
-  return (
-    <button className={styles({ size, variant })} disabled={disabled} {...rest}>
-      {children}
-    </button>
-  );
-};
+  // Variants
+  variants: {
+    size: {
+      small: {
+        fontSize: '$buttonS',
+        height: '$spacing2XL',
+        paddingInline: '$spacingS',
+      },
+      medium: {
+        fontSize: '$buttonM',
+        height: '$spacing3XL',
+        paddingInline: '$spacingM',
+      },
+      large: {
+        fontSize: '$buttonL',
+        height: '$spacing4XL',
+        paddingInline: '$spacingXL',
+      },
+    },
+
+    variant: {
+      primary: {
+        background: '$gray950',
+        color: '$gray100',
+
+        selectors: {
+          '&:hover:not([disabled])': {
+            backgroundColor: 'gray800',
+          },
+        },
+      },
+    },
+  },
+
+  // Default Variants
+  defaultVariants: {
+    variant: 'primary',
+  },
+});

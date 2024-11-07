@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
 
 const nextConfig: NextConfig = {
   /**
@@ -10,6 +9,4 @@ const nextConfig: NextConfig = {
   transpilePackages: ["next-mdx-remote"],
 };
 
-const withVanillaExtract = createVanillaExtractPlugin();
-
-export default withVanillaExtract(nextConfig);
+export default nextConfig;
