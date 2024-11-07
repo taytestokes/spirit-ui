@@ -1,4 +1,5 @@
 // Components
+export { Button } from './components';
 
 // Stitches Config
 export {
