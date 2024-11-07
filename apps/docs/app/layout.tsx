@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import * as styles from "./layout.css";
 
 export const metadata: Metadata = {
   title: "Spirit UI",
@@ -23,9 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+    <html className={styles.html} lang="en">
+      <body>
+        <div className={styles.container}>
+          <header className={styles.header}></header>
+          <main className={styles.main}>{children}</main>
+        </div>
       </body>
     </html>
   );

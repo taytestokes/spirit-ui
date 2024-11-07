@@ -23,7 +23,7 @@
     "noEmit": true
   },
   // Files to include when linting with typescript. https://www.typescriptlang.org/tsconfig/#include
-  "include": ["src"],
+  "include": ["src", "tokens"],
 
   // Files to exclude when linting with typescript. https://www.typescriptlang.org/tsconfig/#exclude
   "exclude": ["dist", "node_modules"]
