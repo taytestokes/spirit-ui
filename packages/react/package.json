@@ -2,7 +2,7 @@
   "name": "@spirit-ui/react",
   "description": "The React component library for Spirit UI.",
   "author": "Tayte Stokes",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "exports": {
     ".": {
       "require": "./dist/index.js",
