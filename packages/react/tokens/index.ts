@@ -1,3 +1,5 @@
-export { colors } from './color';
-export { space } from './space';
-export { fonts, fontSizes, fontWeights } from './typography';
+import { colors } from './color';
+import { space } from './space';
+import { fonts, fontSizes, fontWeights } from './typography';
+
+export const tokens = { colors, fonts, fontSizes, fontWeights, space };

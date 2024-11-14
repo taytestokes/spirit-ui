@@ -2,21 +2,14 @@ import { style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 import { calc } from '@vanilla-extract/css-utils';
 
-import { theme } from '../../styles';
+import { themeVars } from '../../styles';
 
 const {
-  colors: {
-    accents_1,
-    accents_2,
-    accents_3,
-    accents_7,
-    background,
-    border,
-    foreground,
-  },
+  colors: { pink600, pink700 },
+  fonts: { system },
   fontSizes: { buttonS, buttonM, buttonL },
   fontWeights: { medium },
-  spacings: {
+  space: {
     spacingXS,
     spacingS,
     spacingM,
@@ -25,7 +18,7 @@ const {
     spacing3XL,
     spacing4XL,
   },
-} = theme;
+} = themeVars;
 
 export const styles = recipe({
   base: style({
@@ -33,6 +26,7 @@ export const styles = recipe({
     borderRadius: spacingXS,
     cursor: 'pointer',
     display: 'inline-block',
+    fontFamily: system,
     fontWeight: medium,
     lineHeight: calc.add('1em', '8px'),
     margin: '0px',
@@ -42,10 +36,10 @@ export const styles = recipe({
 
     selectors: {
       '&:disabled': {
-        background: accents_1,
-        border: `1px solid ${accents_2}`,
-        color: accents_3,
-        cursor: 'not-allowed',
+        // background: accents_1,
+        // border: `1px solid ${accents_2}`,
+        // color: accents_3,
+        // cursor: 'not-allowed',
       },
     },
   }),
@@ -69,33 +63,33 @@ export const styles = recipe({
     },
     variant: {
       primary: style({
-        background: foreground,
-        color: background,
+        backgroundColor: pink600,
+        color: 'white',
 
         selectors: {
           '&:hover:not([disabled])': {
-            backgroundColor: accents_7,
+            backgroundColor: pink700,
           },
         },
       }),
       secondary: style({
-        background: background,
-        border: `1px solid ${border}`,
-        color: foreground,
+        // background: background,
+        // border: `1px solid ${border}`,
+        // color: foreground,
 
         selectors: {
           '&:hover': {
-            border: `1px solid ${foreground}`,
+            // border: `1px solid ${foreground}`,
           },
         },
       }),
       transparent: style({
-        background: background,
-        color: foreground,
+        // background: background,
+        // color: foreground,
 
         selectors: {
           '&:hover': {
-            background: accents_2,
+            // background: accents_2,
           },
         },
       }),
