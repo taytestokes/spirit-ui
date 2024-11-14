@@ -1,8 +1,8 @@
-// Components
-export { Button } from './components';
-
 // Styles
 export { themeVars } from './styles';
+
+// Components
+export { Button } from './components';
 
 // Tokens
 export { tokens } from './tokens';

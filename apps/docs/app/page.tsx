@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       Spirit UI
-      <Button>Hello!</Button>
+      <Button variant="primary">Hello!</Button>
     </div>
   );
 }
