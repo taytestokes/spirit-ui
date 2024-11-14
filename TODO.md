@@ -1,1 +1,1 @@
-1. Look into stitches for styling? Having issues with vanilla-extract
+1. Stitches isn't supported for SSR in app-router - what could be used instead?
