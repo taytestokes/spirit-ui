@@ -6,7 +6,7 @@ import { themeVars } from '../../styles';
 
 const {
   colors: { pink600, pink700 },
-  fonts: { system },
+  fonts: { inter },
   fontSizes: { buttonS, buttonM, buttonL },
   fontWeights: { medium },
   space: {
@@ -26,7 +26,7 @@ export const styles = recipe({
     borderRadius: spacingXS,
     cursor: 'pointer',
     display: 'inline-block',
-    fontFamily: system,
+    fontFamily: inter,
     fontWeight: medium,
     lineHeight: calc.add('1em', '8px'),
     margin: '0px',

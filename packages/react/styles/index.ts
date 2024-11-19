@@ -1,3 +1,6 @@
+// Fonts
+export * from './fonts.css';
+
 // Reset CCS
 export * from './reset.css';
 
