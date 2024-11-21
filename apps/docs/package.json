@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@spirit-ui/react": "*",
+    "@spirit-ui/theme": "*",
     "@vanilla-extract/css": "^1.16.0",
     "next": "15.0.2",
     "next-mdx-remote": "^5.0.0",

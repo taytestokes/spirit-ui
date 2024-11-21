@@ -2,11 +2,11 @@
   "name": "@spirit-ui/theme",
   "description": "Theme for Spirit UI Design System.",
   "author": "Tayte Stokes",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "exports": {
     ".": {
-      "require": "./dist/index.css",
-      "import": "./dist/index.css"
+      "require": "./dist/theme.css",
+      "import": "./dist/theme.css"
     },
     "./reset": {
       "require": "./dist/reset.css",
@@ -17,6 +17,9 @@
       "import": "./dist/tokens.mjs"
     }
   },
+  "files": [
+    "dist/**"
+  ],
   "keywords": [
     "spirit-ui",
     "theme"
