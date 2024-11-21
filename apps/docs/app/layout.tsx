@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import "@spirit-ui/react/styles";
 
+import * as styles from "./layout.css";
+
 export const metadata: Metadata = {
   title: "Spirit UI",
   description: "Documentation for the Spirit UI Design System",
@@ -14,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={styles.body}>
         <div>
           <main>{children}</main>
         </div>

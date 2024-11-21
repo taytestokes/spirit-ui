@@ -35,6 +35,7 @@
     "build": "tsup index.ts",
     "check-format": "prettier --check .",
     "clean": "rm -rf ./node_modules && rm -rf ./.turbo && rm -rf ./dist",
+    "dev": "tsup index.ts --watch",
     "format": "prettier --write .",
     "lint": "eslint ."
   },

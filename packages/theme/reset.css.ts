@@ -13,9 +13,10 @@ globalStyle('*, *::before, *::after', {
 });
 
 /**
- * Remove default margins.
+ * Remove default margins and apply inter font.
  */
 globalStyle('*', {
+  fontFamily: 'Inter',
   margin: 0,
 });
 

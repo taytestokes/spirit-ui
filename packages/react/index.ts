@@ -5,4 +5,4 @@ export { themeVars } from './styles';
 export { Button } from './components';
 
 // Tokens
-export { tokens } from './tokens';
+export { tokens } from '../theme/tokens';
