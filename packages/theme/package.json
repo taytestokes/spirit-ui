@@ -5,6 +5,10 @@
   "version": "0.0.2",
   "exports": {
     ".": {
+      "require": "./dist/theme.js",
+      "import": "./dist/theme.mjs"
+    },
+    "./styles": {
       "require": "./dist/theme.css",
       "import": "./dist/theme.css"
     },
