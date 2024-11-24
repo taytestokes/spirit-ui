@@ -2,6 +2,11 @@ import { compileMDX } from "next-mdx-remote/rsc";
 
 import { getDocumentationBySlug } from "../_utils/mdx";
 
+import { ColorPallete } from "../_components/color-pallete/color-pallete";
+import { Snippet } from "../_components/snippet/snippet";
+
+import * as styles from "./page.css";
+
 const DocumentationPage = async ({
   params: { slug },
 }: {
@@ -9,16 +14,16 @@ const DocumentationPage = async ({
 }) => {
   const documentation = await getDocumentationBySlug(slug);
 
-  const { content, frontmatter } = await compileMDX({
+  // TODO: Utilize frontmatter for meta data
+  const { content } = await compileMDX({
     source: documentation,
-    options: {
-      parseFrontmatter: true,
+    components: {
+      ColorPallete,
+      Snippet,
     },
   });
 
-  console.log({ content, frontmatter });
-
-  return <article>{content}</article>;
+  return <article className={styles.article}>{content}</article>;
 };
 
 export default DocumentationPage;

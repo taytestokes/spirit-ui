@@ -30,6 +30,14 @@ export default function RootLayout({
               <div className={styles.sidebarSection}>
                 <nav className={styles.sidebarSectionNav}>
                   <li>
+                    <Link
+                      className={styles.sidebarSectionLink}
+                      href="/introduction"
+                    >
+                      <span>Introduction</span>
+                    </Link>
+                  </li>
+                  <li>
                     <Link className={styles.sidebarSectionLink} href="/colors">
                       <span>Colors</span>
                     </Link>

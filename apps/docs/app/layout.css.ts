@@ -25,7 +25,7 @@ export const container = style({
 });
 
 export const header = style({
-  border: `1px solid ${theme.colors.gray200}`,
+  borderBottom: `1px solid ${theme.colors.gray200}`,
   height: headerHeight,
 });
 
@@ -35,12 +35,12 @@ export const headerContent = style({
   height: "100%",
   margin: autoMargin,
   maxWidth: maxContentWidth,
-  paddingInline: theme.space.spacingL,
+  paddingInline: theme.space.spacingXL,
 });
 
 export const main = style({
   display: "grid",
-  gridTemplateColumns: "260px 1fr",
+  gridTemplateColumns: "200px 1fr",
   height: calc.subtract("100%", headerHeight),
   margin: autoMargin,
   maxWidth: maxContentWidth,
@@ -48,13 +48,12 @@ export const main = style({
 });
 
 export const sidebar = style({
+  borderRight: `1px solid ${theme.colors.gray200}`,
   height: "100%",
-  paddingInline: theme.space.spacingL,
+  padding: theme.space.spacingXL,
 });
 
-export const sidebarSection = style({
-  paddingBlock: theme.space.spacingL,
-});
+export const sidebarSection = style({});
 
 export const sidebarSectionNav = style({
   listStyle: "none",
@@ -67,6 +66,7 @@ export const sidebarSectionLink = style({
 
 export const content = style({
   height: "100%",
-  overflow: "auto",
-  paddingInline: theme.space.spacingL,
+  overflowX: "hidden",
+  overflowY: "auto",
+  padding: theme.space.spacingXL,
 });
