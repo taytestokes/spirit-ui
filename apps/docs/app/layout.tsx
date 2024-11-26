@@ -28,6 +28,7 @@ export default function RootLayout({
           <main className={styles.main}>
             <aside className={styles.sidebar}>
               <div className={styles.sidebarSection}>
+                <p className={styles.sidebarSectionLabel}>Getting Started</p>
                 <nav className={styles.sidebarSectionNav}>
                   <li>
                     <Link
@@ -37,6 +38,11 @@ export default function RootLayout({
                       <span>Introduction</span>
                     </Link>
                   </li>
+                </nav>
+              </div>
+              <div className={styles.sidebarSection}>
+                <p className={styles.sidebarSectionLabel}>Foundations</p>
+                <nav className={styles.sidebarSectionNav}>
                   <li>
                     <Link className={styles.sidebarSectionLink} href="/colors">
                       <span>Colors</span>

@@ -13,7 +13,7 @@ export const html = style({
     [maxContentWidth]: "1000px",
     [autoMargin]: "0 auto",
   },
-  color: theme.colors.gray950,
+  color: theme.colors.textPrimary,
   fontFamily: theme.fonts.inter,
 });
 
@@ -25,7 +25,7 @@ export const container = style({
 });
 
 export const header = style({
-  borderBottom: `1px solid ${theme.colors.gray200}`,
+  borderBottom: `1px solid ${theme.colors.border}`,
   height: headerHeight,
 });
 
@@ -48,19 +48,27 @@ export const main = style({
 });
 
 export const sidebar = style({
-  borderRight: `1px solid ${theme.colors.gray200}`,
+  borderRight: `1px solid ${theme.colors.border}`,
+  display: "flex",
+  flexDirection: "column",
+  gap: theme.space.spacingXL,
   height: "100%",
   padding: theme.space.spacingXL,
 });
 
 export const sidebarSection = style({});
 
+export const sidebarSectionLabel = style({
+  fontSize: theme.fontSizes.textS,
+  fontWeight: theme.fontWeights.bold,
+});
+
 export const sidebarSectionNav = style({
   listStyle: "none",
 });
 
 export const sidebarSectionLink = style({
-  color: theme.colors.gray950,
+  color: theme.colors.textPrimary,
   textDecoration: "none",
 });
 
