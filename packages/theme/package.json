@@ -15,10 +15,6 @@
     "./reset": {
       "require": "./dist/reset.css",
       "import": "./dist/reset.css"
-    },
-    "./tokens": {
-      "require": "./dist/tokens.js",
-      "import": "./dist/tokens.mjs"
     }
   },
   "files": [

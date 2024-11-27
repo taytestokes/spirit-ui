@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={styles.html} lang="en">
+    <html className={styles.html} data-theme="dark" lang="en">
       <body>
         <div className={styles.container}>
           <header className={styles.header}>

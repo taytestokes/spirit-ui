@@ -1,5 +1,4 @@
 import { style, styleVariants } from "@vanilla-extract/css";
-import { tokens } from "@spirit-ui/theme/tokens";
 import { theme } from "@spirit-ui/theme";
 
 export const colorPallete = style({
@@ -37,7 +36,7 @@ const colorBoxBase = style({
   width: "100%",
 });
 
-export const colorBoxVariant = styleVariants(tokens.colors, (color) => [
+export const colorBoxVariant = styleVariants(theme.colors, (color) => [
   colorBoxBase,
   { backgroundColor: color },
 ]);

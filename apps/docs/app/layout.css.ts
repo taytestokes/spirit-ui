@@ -3,6 +3,8 @@ import { calc } from "@vanilla-extract/css-utils";
 
 import { theme } from "@spirit-ui/theme";
 
+console.log({ theme });
+
 const headerHeight = createVar();
 const maxContentWidth = createVar();
 const autoMargin = createVar();
@@ -13,6 +15,7 @@ export const html = style({
     [maxContentWidth]: "1000px",
     [autoMargin]: "0 auto",
   },
+  background: theme.colors.backgroundPrimary,
   color: theme.colors.textPrimary,
   fontFamily: theme.fonts.inter,
 });
