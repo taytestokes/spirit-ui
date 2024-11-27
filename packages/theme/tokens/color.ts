@@ -1,8 +1,6 @@
 export const colors = {
   black: "#000000",
-  black50: "#0a0a0a",
 
-  // Dark Mode Gray
   darkGray950: "#EDEDED",
   darkGray900: "#A1A1A1",
   darkGray800: "#7D7D7D",
@@ -13,11 +11,10 @@ export const colors = {
   darkGray300: "#292929",
   darkGray200: "#1F1F1F",
   darkGray100: "#1A1A1A",
+  darkGray50: "#0a0a0a",
 
   white: "#ffffff",
-  white50: "#fafafa",
 
-  // Light Mode Grays
   lightGray950: "#171717",
   lightGray900: "#666666",
   lightGray800: "#7d7d7d",
@@ -28,6 +25,7 @@ export const colors = {
   lightGray300: "#e6e6e6",
   lightGray200: "#ebebeb",
   lightGray100: "#f2f2f2",
+  lightGray50: "#fafafa",
 
   blue950: "#002358",
   blue900: "#0060f2",

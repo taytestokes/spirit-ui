@@ -12,125 +12,92 @@ import { tokens } from "./tokens";
 const getVarName = (_val: string | null, path: string[]) =>
   `spirit-ui-${path.join("-")}`;
 
+const sharedColorTokens = {
+  // blue
+  blueLighter: tokens.colors.blue500,
+  blueLight: tokens.colors.blue600,
+  blue: tokens.colors.blue700,
+  blueDark: tokens.colors.blue800,
+  blueDarker: tokens.colors.blue900,
+  // red
+  redLighter: tokens.colors.red500,
+  redLight: tokens.colors.red600,
+  red: tokens.colors.red700,
+  redDark: tokens.colors.red800,
+  redDarker: tokens.colors.red900,
+  // yellow
+  yellowLighter: tokens.colors.yellow500,
+  yellowLight: tokens.colors.yellow600,
+  yellow: tokens.colors.yellow700,
+  yellowDark: tokens.colors.yellow800,
+  yellowDarker: tokens.colors.yellow900,
+  // green
+  greenLighter: tokens.colors.green500,
+  greenLight: tokens.colors.green600,
+  green: tokens.colors.green700,
+  greenDark: tokens.colors.green800,
+  greenDarker: tokens.colors.green900,
+  // teal
+  tealLighter: tokens.colors.teal500,
+  tealLight: tokens.colors.teal600,
+  teal: tokens.colors.teal700,
+  tealDark: tokens.colors.teal800,
+  tealDarker: tokens.colors.teal900,
+  // purple
+  purpleLighter: tokens.colors.purple500,
+  purpleLight: tokens.colors.purple600,
+  purple: tokens.colors.purple700,
+  purpleDark: tokens.colors.purple800,
+  purpleDarker: tokens.colors.purple900,
+  // pink
+  pinkLighter: tokens.colors.pink500,
+  pinkLight: tokens.colors.pink600,
+  pink: tokens.colors.pink700,
+  pinkDark: tokens.colors.pink800,
+  pinkDarker: tokens.colors.pink900,
+};
+
 const lightTokens = {
   colors: {
     // background
-    backgroundPrimary: tokens.colors.white,
-    backgroundPrimaryHover: tokens.colors.lightGray100,
-    backgroundPrimaryActive: tokens.colors.lightGray200,
-    backgroundSecondary: tokens.colors.white50,
-    backgroundSecondaryHover: tokens.colors.lightGray200,
-    backgroundSecondaryActive: tokens.colors.lightGray300,
-    // borders
-    border: tokens.colors.lightGray200,
-    borderHover: tokens.colors.lightGray400,
-    borderActive: tokens.colors.lightGray500,
-    // text
-    textPrimary: tokens.colors.lightGray950,
-    textSecondary: tokens.colors.lightGray900,
-    // blue
-    blueLighter: tokens.colors.blue500,
-    blueLight: tokens.colors.blue600,
-    blue: tokens.colors.blue700,
-    blueDark: tokens.colors.blue800,
-    blueDarker: tokens.colors.blue900,
-    // red
-    redLighter: tokens.colors.red500,
-    redLight: tokens.colors.red600,
-    red: tokens.colors.red700,
-    redDark: tokens.colors.red800,
-    redDarker: tokens.colors.red900,
-    // yellow
-    yellowLighter: tokens.colors.yellow500,
-    yellowLight: tokens.colors.yellow600,
-    yellow: tokens.colors.yellow700,
-    yellowDark: tokens.colors.yellow800,
-    yellowDarker: tokens.colors.yellow900,
-    // green
-    greenLighter: tokens.colors.green500,
-    greenLight: tokens.colors.green600,
-    green: tokens.colors.green700,
-    greenDark: tokens.colors.green800,
-    greenDarker: tokens.colors.green900,
-    // teal
-    tealLighter: tokens.colors.teal500,
-    tealLight: tokens.colors.teal600,
-    teal: tokens.colors.teal700,
-    tealDark: tokens.colors.teal800,
-    tealDarker: tokens.colors.teal900,
-    // purple
-    purpleLighter: tokens.colors.purple500,
-    purpleLight: tokens.colors.purple600,
-    purple: tokens.colors.purple700,
-    purpleDark: tokens.colors.purple800,
-    purpleDarker: tokens.colors.purple900,
-    // pink
-    pinkLighter: tokens.colors.pink500,
-    pinkLight: tokens.colors.pink600,
-    pink: tokens.colors.pink700,
-    pinkDark: tokens.colors.pink800,
-    pinkDarker: tokens.colors.pink900,
+    background: tokens.colors.white,
+    // foreground
+    foreground: tokens.colors.black,
+    // neutral
+    neutral50: tokens.colors.lightGray50,
+    neutral100: tokens.colors.lightGray100,
+    neutral200: tokens.colors.lightGray200,
+    neutral300: tokens.colors.lightGray300,
+    neutral4000: tokens.colors.lightGray400,
+    neutral500: tokens.colors.lightGray500,
+    neutral600: tokens.colors.lightGray600,
+    neutral700: tokens.colors.lightGray700,
+    neutral800: tokens.colors.lightGray800,
+    neutral900: tokens.colors.lightGray900,
+    neutral950: tokens.colors.lightGray950,
+    ...sharedColorTokens,
   },
 };
 
 const darkTokens = {
   colors: {
     // background
-    backgroundPrimary: tokens.colors.black50,
-    backgroundPrimaryHover: tokens.colors.darkGray100,
-    backgroundPrimaryActive: tokens.colors.darkGray200,
-    backgroundSecondary: tokens.colors.black,
-    backgroundSecondaryHover: tokens.colors.darkGray200,
-    backgroundSecondaryActive: tokens.colors.darkGray300,
-    // borders
-    border: tokens.colors.darkGray200,
-    borderHover: tokens.colors.darkGray400,
-    borderActive: tokens.colors.darkGray500,
-    // text
-    textPrimary: tokens.colors.darkGray950,
-    textSecondary: tokens.colors.darkGray900,
-    // blue
-    blueLighter: tokens.colors.blue900,
-    blueLight: tokens.colors.blue800,
-    blue: tokens.colors.blue700,
-    blueDark: tokens.colors.blue600,
-    blueDarker: tokens.colors.blue500,
-    // red
-    redLighter: tokens.colors.red900,
-    redLight: tokens.colors.red800,
-    red: tokens.colors.red700,
-    redDark: tokens.colors.red600,
-    redDarker: tokens.colors.red500,
-    // yellow
-    yellowLighter: tokens.colors.yellow900,
-    yellowLight: tokens.colors.yellow800,
-    yellow: tokens.colors.yellow700,
-    yellowDark: tokens.colors.yellow600,
-    yellowDarker: tokens.colors.yellow500,
-    // green
-    greenLighter: tokens.colors.green900,
-    greenLight: tokens.colors.green800,
-    green: tokens.colors.green700,
-    greenDark: tokens.colors.green600,
-    greenDarker: tokens.colors.green500,
-    // teal
-    tealLighter: tokens.colors.teal900,
-    tealLight: tokens.colors.teal800,
-    teal: tokens.colors.teal700,
-    tealDark: tokens.colors.teal600,
-    tealDarker: tokens.colors.teal500,
-    // purple
-    purpleLighter: tokens.colors.purple900,
-    purpleLight: tokens.colors.purple800,
-    purple: tokens.colors.purple700,
-    purpleDark: tokens.colors.purple600,
-    purpleDarker: tokens.colors.purple500,
-    // pink
-    pinkLighter: tokens.colors.pink900,
-    pinkLight: tokens.colors.pink800,
-    pink: tokens.colors.pink700,
-    pinkDark: tokens.colors.pink600,
-    pinkDarker: tokens.colors.pink500,
+    background: tokens.colors.black,
+    // foreground
+    foreground: tokens.colors.white,
+    // neutral
+    neutral50: tokens.colors.darkGray50,
+    neutral100: tokens.colors.darkGray100,
+    neutral200: tokens.colors.darkGray200,
+    neutral300: tokens.colors.darkGray300,
+    neutral4000: tokens.colors.darkGray400,
+    neutral500: tokens.colors.darkGray500,
+    neutral600: tokens.colors.darkGray600,
+    neutral700: tokens.colors.darkGray700,
+    neutral800: tokens.colors.darkGray800,
+    neutral900: tokens.colors.darkGray900,
+    neutral950: tokens.colors.darkGray950,
+    ...sharedColorTokens,
   },
 };
 

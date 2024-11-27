@@ -1,9 +1,7 @@
-import { style, createVar } from "@vanilla-extract/css";
+import { style, createVar, globalStyle } from "@vanilla-extract/css";
 import { calc } from "@vanilla-extract/css-utils";
 
 import { theme } from "@spirit-ui/theme";
-
-console.log({ theme });
 
 const headerHeight = createVar();
 const maxContentWidth = createVar();
@@ -15,9 +13,13 @@ export const html = style({
     [maxContentWidth]: "1000px",
     [autoMargin]: "0 auto",
   },
-  background: theme.colors.backgroundPrimary,
-  color: theme.colors.textPrimary,
+  background: theme.colors.background,
+  color: theme.colors.neutral950,
   fontFamily: theme.fonts.inter,
+
+  "::selection": {
+    background: theme.colors.pink,
+  },
 });
 
 export const container = style({
@@ -28,7 +30,8 @@ export const container = style({
 });
 
 export const header = style({
-  borderBottom: `1px solid ${theme.colors.border}`,
+  background: theme.colors.background,
+  borderBottom: `1px solid ${theme.colors.neutral200}`,
   height: headerHeight,
 });
 
@@ -51,7 +54,7 @@ export const main = style({
 });
 
 export const sidebar = style({
-  borderRight: `1px solid ${theme.colors.border}`,
+  borderRight: `1px solid ${theme.colors.neutral200}`,
   display: "flex",
   flexDirection: "column",
   gap: theme.space.spacingXL,
@@ -71,7 +74,7 @@ export const sidebarSectionNav = style({
 });
 
 export const sidebarSectionLink = style({
-  color: theme.colors.textPrimary,
+  color: theme.colors.neutral950,
   textDecoration: "none",
 });
 

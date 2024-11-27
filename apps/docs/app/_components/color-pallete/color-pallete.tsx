@@ -13,7 +13,7 @@ const ColorRow = ({ color }) => {
     <div className={styles.colorRow}>
       <p className={styles.rowLabel}>{color}</p>
       <div className={styles.colorBoxes}>
-        {colorKeys.reverse().map((color) => (
+        {colorKeys.map((color) => (
           <div className={styles.colorBoxVariant[color]} key={color} />
         ))}
       </div>
@@ -24,11 +24,9 @@ const ColorRow = ({ color }) => {
 export const ColorPallete = () => {
   return (
     <div className={styles.colorPallete}>
-      <ColorRow color={"textPrimary"} />
-      <ColorRow color={"textSecondary"} />
-
-      <ColorRow color={"backgroundPrimary"} />
-      <ColorRow color={"backgroundSecondary"} />
+      <ColorRow color={"background"} />
+      <ColorRow color={"foreground"} />
+      <ColorRow color={"neutral"} />
       <ColorRow color={"blue"} />
       <ColorRow color={"red"} />
       <ColorRow color={"yellow"} />
