@@ -31,7 +31,7 @@ export const container = style({
 
 export const header = style({
   background: theme.colors.background,
-  borderBottom: `1px solid ${theme.colors.neutral200}`,
+  borderBottom: `1px solid ${theme.colors.neutral300}`,
   height: headerHeight,
 });
 
@@ -39,6 +39,7 @@ export const headerContent = style({
   alignItems: "center",
   display: "flex",
   height: "100%",
+  justifyContent: "space-between",
   margin: autoMargin,
   maxWidth: maxContentWidth,
   paddingInline: theme.space.spacingXL,

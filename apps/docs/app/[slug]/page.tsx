@@ -3,7 +3,7 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import { getDocumentationBySlug } from "../_utils/mdx";
 
 import MDXDefaultComponents from "../_components/mdx";
-import { ColorPallete } from "../_components/color-pallete/color-pallete";
+import { ColorPalette } from "../_components/color-palette/color-palette";
 import { Snippet } from "../_components/snippet/snippet";
 
 import * as styles from "./page.css";
@@ -19,7 +19,7 @@ const DocumentationPage = async ({
     source: documentation,
     components: {
       ...MDXDefaultComponents,
-      ColorPallete,
+      ColorPalette,
       Snippet,
     },
   });
