@@ -1,13 +1,20 @@
+"use client";
+
 import React from "react";
 import { theme } from "@spirit-ui/theme";
 
+import { useTheme } from "../theme-provider/theme-provider";
+
 import * as styles from "./color-palette.css";
 
-const getColorKeys = (colors, key) =>
-  Object.keys(colors).filter((color) => color.startsWith(key));
+const ColorBox = () => {};
 
 const ColorRow = ({ color }: { color: string }) => {
-  const colorKeys = getColorKeys(theme.colors, color);
+  const { mode } = useTheme();
+
+  const colorKeys = Object.keys(theme.vars.colors).filter((colorVar) =>
+    colorVar.startsWith(color)
+  );
 
   return (
     <div className={styles.colorRow}>
@@ -22,10 +29,9 @@ const ColorRow = ({ color }: { color: string }) => {
 };
 
 export const ColorPalette = () => {
+  // Display color var and token value
   return (
-    <div className={styles.colorPalette}>
-      <ColorRow color={"background"} />
-      <ColorRow color={"foreground"} />
+    <div className={styles.palette}>
       <ColorRow color={"neutral"} />
       <ColorRow color={"blue"} />
       <ColorRow color={"red"} />

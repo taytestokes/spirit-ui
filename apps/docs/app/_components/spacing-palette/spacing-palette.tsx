@@ -3,8 +3,10 @@ import { theme } from "@spirit-ui/theme";
 
 import * as styles from "./spacing-palette.css";
 
+const { vars } = theme;
+
 export const SpacingPalette = () => {
-  const spacingKeys = Object.keys(theme.space);
+  const spacingKeys = Object.keys(vars.space);
 
   return (
     <div className={styles.spacingPalette}>

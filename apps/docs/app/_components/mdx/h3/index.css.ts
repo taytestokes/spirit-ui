@@ -1,8 +1,10 @@
 import { style } from "@vanilla-extract/css";
 import { theme } from "@spirit-ui/theme";
 
+const { vars } = theme;
+
 export const h3 = style({
-  fontSize: theme.fontSizes.headingM,
-  fontWeight: theme.fontWeights.semibold,
-  marginBlock: `${theme.space.spacing2XL} ${theme.space.spacingM}`,
+  fontSize: vars.fontSizes.headingM,
+  fontWeight: vars.fontWeights.semibold,
+  marginBlock: `${vars.space.spacing2XL} ${vars.space.spacingM}`,
 });

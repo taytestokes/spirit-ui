@@ -1,7 +1,9 @@
 import { style } from "@vanilla-extract/css";
 import { theme } from "@spirit-ui/theme";
 
+const { vars } = theme;
+
 export const p = style({
   lineHeight: "1.5",
-  margin: `${theme.space.spacingXL} 0`,
+  margin: `${vars.space.spacingXL} 0`,
 });

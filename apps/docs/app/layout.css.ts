@@ -1,7 +1,8 @@
 import { style, createVar, globalStyle } from "@vanilla-extract/css";
 import { calc } from "@vanilla-extract/css-utils";
-
 import { theme } from "@spirit-ui/theme";
+
+const { vars } = theme;
 
 const headerHeight = createVar();
 const maxContentWidth = createVar();
@@ -10,16 +11,12 @@ const autoMargin = createVar();
 export const html = style({
   vars: {
     [headerHeight]: "64px",
-    [maxContentWidth]: "900px",
+    [maxContentWidth]: "1200px",
     [autoMargin]: "0 auto",
   },
-  background: theme.colors.background,
-  color: theme.colors.neutral950,
-  fontFamily: theme.fonts.inter,
-
-  "::selection": {
-    background: theme.colors.pink,
-  },
+  background: vars.colors.neutral0,
+  color: vars.colors.neutral950,
+  fontFamily: vars.fonts.inter,
 });
 
 export const container = style({
@@ -30,8 +27,8 @@ export const container = style({
 });
 
 export const header = style({
-  background: theme.colors.background,
-  borderBottom: `1px solid ${theme.colors.neutral300}`,
+  background: vars.colors.neutral0,
+  borderBottom: `1px solid ${vars.colors.neutral200}`,
   height: headerHeight,
 });
 
@@ -42,7 +39,7 @@ export const headerContent = style({
   justifyContent: "space-between",
   margin: autoMargin,
   maxWidth: maxContentWidth,
-  paddingInline: theme.space.spacingXL,
+  paddingInline: vars.space.spacingXL,
 });
 
 export const main = style({
@@ -58,5 +55,5 @@ export const content = style({
   height: "100%",
   overflowX: "hidden",
   overflowY: "auto",
-  padding: theme.space.spacingXL,
+  padding: vars.space.spacingXL,
 });
