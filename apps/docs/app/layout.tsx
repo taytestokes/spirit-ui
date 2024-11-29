@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ThemeProvider } from "./_components/theme-provider/theme-provider";
 import { ThemeSwitcher } from "./_components/theme-switcher/theme-switcher";
+import { Sidebar } from "./_components/sidebar/sidebar";
 
 import "@spirit-ui/theme/reset";
 import "@spirit-ui/theme/styles";
@@ -30,50 +31,7 @@ export default function RootLayout({
               </div>
             </header>
             <main className={styles.main}>
-              <aside className={styles.sidebar}>
-                <div className={styles.sidebarSection}>
-                  <p className={styles.sidebarSectionLabel}>Getting Started</p>
-                  <nav className={styles.sidebarSectionNav}>
-                    <li>
-                      <Link
-                        className={styles.sidebarSectionLink}
-                        href="/introduction"
-                      >
-                        <span>Introduction</span>
-                      </Link>
-                    </li>
-                  </nav>
-                </div>
-                <div className={styles.sidebarSection}>
-                  <p className={styles.sidebarSectionLabel}>Foundations</p>
-                  <nav className={styles.sidebarSectionNav}>
-                    <li>
-                      <Link
-                        className={styles.sidebarSectionLink}
-                        href="/colors"
-                      >
-                        <span>Colors</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={styles.sidebarSectionLink}
-                        href="/colors"
-                      >
-                        <span>Spacing</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={styles.sidebarSectionLink}
-                        href="/colors"
-                      >
-                        <span>Typography</span>
-                      </Link>
-                    </li>
-                  </nav>
-                </div>
-              </aside>
+              <Sidebar />
               <div className={styles.content}>{children}</div>
             </main>
           </div>

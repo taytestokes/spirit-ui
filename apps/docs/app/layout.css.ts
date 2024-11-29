@@ -10,7 +10,7 @@ const autoMargin = createVar();
 export const html = style({
   vars: {
     [headerHeight]: "64px",
-    [maxContentWidth]: "1000px",
+    [maxContentWidth]: "900px",
     [autoMargin]: "0 auto",
   },
   background: theme.colors.background,
@@ -52,31 +52,6 @@ export const main = style({
   margin: autoMargin,
   maxWidth: maxContentWidth,
   width: "100%",
-});
-
-export const sidebar = style({
-  borderRight: `1px solid ${theme.colors.neutral200}`,
-  display: "flex",
-  flexDirection: "column",
-  gap: theme.space.spacingXL,
-  height: "100%",
-  padding: theme.space.spacingXL,
-});
-
-export const sidebarSection = style({});
-
-export const sidebarSectionLabel = style({
-  fontSize: theme.fontSizes.textS,
-  fontWeight: theme.fontWeights.bold,
-});
-
-export const sidebarSectionNav = style({
-  listStyle: "none",
-});
-
-export const sidebarSectionLink = style({
-  color: theme.colors.neutral950,
-  textDecoration: "none",
 });
 
 export const content = style({
