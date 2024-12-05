@@ -11,7 +11,7 @@ const autoMargin = createVar();
 export const html = style({
   vars: {
     [headerHeight]: "64px",
-    [maxContentWidth]: "1200px",
+    [maxContentWidth]: "900px",
     [autoMargin]: "0 auto",
   },
   background: vars.colors.neutral0,
@@ -39,7 +39,7 @@ export const headerContent = style({
   justifyContent: "space-between",
   margin: autoMargin,
   maxWidth: maxContentWidth,
-  paddingInline: vars.space.spacingXL,
+  paddingInline: vars.space.spacing_3,
 });
 
 export const main = style({
@@ -55,5 +55,5 @@ export const content = style({
   height: "100%",
   overflowX: "hidden",
   overflowY: "auto",
-  padding: vars.space.spacingXL,
+  padding: vars.space.spacing_3,
 });

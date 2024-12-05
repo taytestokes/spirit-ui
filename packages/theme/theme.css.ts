@@ -98,14 +98,14 @@ const darkColorTokens = {
   colors: getColorTokensByMode("dark"),
 };
 
-const colorVars = createGlobalThemeContract(lightColorTokens, getVarName);
-
 const sharedTokens = {
   fonts: tokens.fonts,
   fontSizes: tokens.fontSizes,
   fontWeights: tokens.fontWeights,
   space: tokens.space,
 };
+
+const colorVars = createGlobalThemeContract(lightColorTokens, getVarName);
 
 const sharedVars = createGlobalThemeContract(sharedTokens, getVarName);
 

@@ -7,9 +7,9 @@ export const sidebar = style({
   borderRight: `1px solid ${vars.colors.neutral200}`,
   display: "flex",
   flexDirection: "column",
-  gap: vars.space.spacingXL,
+  gap: vars.space.spacing_3,
   height: "100%",
-  padding: vars.space.spacingXL,
+  padding: vars.space.spacing_3,
 });
 
 export const sidebarSection = style({});
@@ -23,7 +23,7 @@ export const nav = style({});
 
 export const section = style({
   display: "grid",
-  gap: vars.space.spacingS,
+  gap: vars.space.spacing_1,
 });
 
 export const sectionLabel = style({
@@ -33,7 +33,7 @@ export const sectionLabel = style({
 
 export const sectionLinks = style({
   display: "grid",
-  gap: vars.space.spacingXS,
+  gap: vars.space.spacing_05,
   listStyle: "none",
   padding: "0px",
 });

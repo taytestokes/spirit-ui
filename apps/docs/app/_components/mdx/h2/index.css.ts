@@ -6,5 +6,5 @@ const { vars } = theme;
 export const h2 = style({
   fontSize: vars.fontSizes.headingL,
   fontWeight: vars.fontWeights.bold,
-  marginBottom: vars.space.spacingXL,
+  marginBlock: `${vars.space.spacing_6} ${vars.space.spacing_3}`,
 });

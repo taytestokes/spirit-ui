@@ -6,5 +6,5 @@ const { vars } = theme;
 export const h1 = style({
   fontSize: vars.fontSizes.headingXL,
   fontWeight: vars.fontWeights.black,
-  marginBottom: vars.space.spacing2XL,
+  marginBottom: vars.space.spacing_4,
 });

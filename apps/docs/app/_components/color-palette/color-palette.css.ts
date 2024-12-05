@@ -5,13 +5,13 @@ const { vars } = theme;
 
 export const palette = style({
   display: "grid",
-  gap: vars.space.spacingXL,
-  marginTop: vars.space.spacingXL,
+  gap: vars.space.spacing_3,
+  marginTop: vars.space.spacing_3,
 });
 
 export const colorRow = style({
   display: "grid",
-  gap: vars.space.spacingS,
+  gap: vars.space.spacing_1,
 });
 
 export const rowLabel = style({
@@ -26,7 +26,7 @@ export const rowLabel = style({
 export const colorBoxes = style({
   alignItems: "center",
   display: "grid",
-  gap: vars.space.spacingS,
+  gap: vars.space.spacing_1,
   gridTemplateColumns: "repeat(6, 1fr)",
   width: "100%",
 });

@@ -9,5 +9,5 @@ export const themeSwitcher = style({
   borderRadius: "4px",
   color: vars.colors.neutral950,
   cursor: "pointer",
-  padding: vars.space.spacingS,
+  padding: vars.space.spacing_1,
 });
