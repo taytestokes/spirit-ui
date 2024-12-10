@@ -12,6 +12,7 @@
     "@spirit-ui/theme": "*",
     "@vanilla-extract/css": "^1.16.0",
     "@vanilla-extract/css-utils": "^0.1.4",
+    "@vanilla-extract/recipes": "^0.5.5",
     "next": "15.0.2",
     "next-mdx-remote": "^5.0.0",
     "react": "18.3.1",

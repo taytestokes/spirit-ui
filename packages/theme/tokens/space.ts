@@ -1,23 +1,3 @@
-// export const space = {
-//   spacing2XS: "2px",
-//   spacingXS: "4px",
-//   spacingS: "8px",
-//   spacingM: "12px",
-//   spacingL: "16px",
-//   spacingXL: "24px",
-//   spacing2XL: "32px",
-//   spacing3XL: "40px",
-//   spacing4XL: "48px",
-//   spacing5XL: "56px",
-//   spacing6XL: "64px",
-//   spacing7XL: "72px",
-//   spacing8XL: "80px",
-//   spacing9XL: "88px",
-//   spacing10XL: "96px",
-//   spacing11XL: "104px",
-//   spacing12XL: "112px",
-// };
-
 export const space = {
   spacing_0: "0px",
   spacing_0_25: "2px",

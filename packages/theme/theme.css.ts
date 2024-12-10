@@ -103,6 +103,8 @@ const sharedTokens = {
   fontSizes: tokens.fontSizes,
   fontWeights: tokens.fontWeights,
   space: tokens.space,
+  lineHeights: tokens.lineHeights,
+  letterSpacings: tokens.letterSpacings,
 };
 
 const colorVars = createGlobalThemeContract(lightColorTokens, getVarName);

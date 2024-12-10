@@ -1,14 +1,14 @@
 import React from "react";
 import { theme } from "@spirit-ui/theme";
 
-import * as styles from "./spacing-palette.css";
+import * as styles from "./spacing-table.css";
 
 const calcRem = (px: string | number, base: number = 16) => {
   const tempPx = `${px}`.replace("px", "");
   return `${parseInt(tempPx) / base}rem`;
 };
 
-const headers = ["Token", "Multiplier", "REM", "PX", "Visual"];
+const headers = ["Token", "Multiplier", "REM Value", "PX Value", "Example"];
 
 const rows = Object.keys(theme.tokens.space).map((token) => {
   const multiplier = `x${token.replace("spacing_", "").split("_").join(".")}`;
@@ -23,7 +23,7 @@ const rows = Object.keys(theme.tokens.space).map((token) => {
   };
 });
 
-export const SpacingPalette = () => (
+export const SpacingTable = () => (
   <div className={styles.wrapper}>
     <table className={styles.table}>
       <thead>

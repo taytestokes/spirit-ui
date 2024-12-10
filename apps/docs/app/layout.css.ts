@@ -19,17 +19,13 @@ export const html = style({
   fontFamily: vars.fonts.inter,
 });
 
-export const container = style({
-  display: "flex",
-  flexDirection: "column",
-  height: "100vh",
-  width: "100vw",
-});
-
 export const header = style({
-  background: vars.colors.neutral0,
+  backdropFilter: "blur(5px)",
+  background: `color-mix(in srgb, ${vars.colors.neutral0} 85%, transparent)`,
   borderBottom: `1px solid ${vars.colors.neutral200}`,
   height: headerHeight,
+  position: "sticky",
+  top: "0px",
 });
 
 export const headerContent = style({
@@ -45,9 +41,9 @@ export const headerContent = style({
 export const main = style({
   display: "grid",
   gridTemplateColumns: "200px 1fr",
-  height: calc.subtract("100%", headerHeight),
   margin: autoMargin,
   maxWidth: maxContentWidth,
+  minHeight: calc.subtract("100vh", headerHeight),
   width: "100%",
 });
 

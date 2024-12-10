@@ -5,27 +5,15 @@ export const fonts = {
 };
 
 export const fontSizes = {
-  // Heading sizes move in units of 8 pixels
-  heading5XL: "72px",
-  heading4XL: "64px",
-  heading3XL: "56px",
-  heading2XL: "48px",
-  headingXL: "40px",
-  headingL: "32px",
-  headingM: "24px",
-  headingS: "16px",
-
-  // Text sizes move in units of 4 pixels
-  textXL: "24px",
-  textL: "20px",
-  textM: "16px",
-  textS: "12px",
-  textXS: "8px",
-
-  // Button sizes move in units of 2 pixels
-  buttonL: "16px",
-  buttonM: "14px",
-  buttonS: "12px",
+  xs: "0.694rem",
+  sm: "0.833rem",
+  base: "1rem",
+  md: "1.2rem",
+  lg: "1.44rem",
+  xl: "1.728rem",
+  xxl: "2.074rem",
+  xxxl: "2.488rem",
+  xxxxl: "2.986rem",
 };
 
 export const fontWeights = {
@@ -38,4 +26,21 @@ export const fontWeights = {
   bold: "700",
   black: "800",
   ultraBlack: "900",
+};
+
+export const lineHeights = {
+  none: "1",
+  tight: "1.25",
+  snug: "1.375",
+  normal: "1.5",
+  relaxed: "1.625",
+  loose: "2",
+  heading: "1.25",
+  text: "1.5",
+};
+
+export const letterSpacings = {
+  snug: "-0.03rem",
+  normal: "0",
+  relaxed: "0.03rem",
 };

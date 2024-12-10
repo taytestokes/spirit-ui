@@ -23,18 +23,17 @@ export default function RootLayout({
     <ThemeProvider>
       <html className={styles.html} lang="en">
         <body>
-          <div className={styles.container}>
-            <header className={styles.header}>
-              <div className={styles.headerContent}>
-                <h3>Spirit UI</h3>
-                <ThemeSwitcher />
-              </div>
-            </header>
-            <main className={styles.main}>
-              <Sidebar />
-              <div className={styles.content}>{children}</div>
-            </main>
-          </div>
+          <header className={styles.header}>
+            <div className={styles.headerContent}>
+              <h3>Spirit UI</h3>
+              <ThemeSwitcher />
+            </div>
+          </header>
+
+          <main className={styles.main}>
+            <Sidebar />
+            <div className={styles.content}>{children}</div>
+          </main>
         </body>
       </html>
     </ThemeProvider>

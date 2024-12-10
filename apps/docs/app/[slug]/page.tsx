@@ -4,7 +4,8 @@ import { getDocumentationBySlug } from "../_utils/mdx";
 
 import MDXDefaultComponents from "../_components/mdx";
 import { ColorPalette } from "../_components/color-palette/color-palette";
-import { SpacingPalette } from "../_components/spacing-palette/spacing-palette";
+import { SpacingTable } from "../_components/spacing-table/spacing-table";
+import { TypeScale } from "../_components/type-scale/type-scale";
 
 import * as styles from "./page.css";
 
@@ -20,7 +21,8 @@ const DocumentationPage = async ({
     components: {
       ...MDXDefaultComponents,
       ColorPalette,
-      SpacingPalette,
+      SpacingTable,
+      TypeScale,
     },
   });
 
