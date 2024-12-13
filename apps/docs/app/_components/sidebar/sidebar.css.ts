@@ -15,11 +15,14 @@ export const sidebar = style({
 export const sidebarSection = style({});
 
 export const sidebarSectionLabel = style({
-  fontSize: vars.fontSizes.textS,
+  fontSize: vars.fontSizes.lg,
   fontWeight: vars.fontWeights.bold,
 });
 
-export const nav = style({});
+export const nav = style({
+  display: "grid",
+  gap: theme.vars.space.spacing_2,
+});
 
 export const section = style({
   display: "grid",

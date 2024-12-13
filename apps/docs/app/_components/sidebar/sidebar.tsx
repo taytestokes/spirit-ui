@@ -31,6 +31,15 @@ export const Sidebar = () => {
             </li>
           </ul>
         </div>
+
+        <div className={styles.section}>
+          <p className={styles.sectionLabel}>Components</p>
+          <ul className={styles.sectionLinks}>
+            <li>
+              <NavLink path="/text">Text</NavLink>
+            </li>
+          </ul>
+        </div>
       </nav>
     </aside>
   );

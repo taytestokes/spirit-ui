@@ -5,18 +5,21 @@ import { theme } from "@spirit-ui/theme";
 const { vars } = theme;
 
 const headerHeight = createVar();
-const maxContentWidth = createVar();
 const autoMargin = createVar();
 
 export const html = style({
   vars: {
     [headerHeight]: "64px",
-    [maxContentWidth]: "900px",
     [autoMargin]: "0 auto",
   },
+
   background: vars.colors.neutral0,
   color: vars.colors.neutral950,
   fontFamily: vars.fonts.inter,
+});
+
+export const headerWrapper = style({
+  height: headerHeight,
 });
 
 export const header = style({
@@ -24,8 +27,8 @@ export const header = style({
   background: `color-mix(in srgb, ${vars.colors.neutral0} 85%, transparent)`,
   borderBottom: `1px solid ${vars.colors.neutral200}`,
   height: headerHeight,
-  position: "sticky",
-  top: "0px",
+  position: "fixed",
+  width: "100%",
 });
 
 export const headerContent = style({
@@ -34,7 +37,6 @@ export const headerContent = style({
   height: "100%",
   justifyContent: "space-between",
   margin: autoMargin,
-  maxWidth: maxContentWidth,
   paddingInline: vars.space.spacing_3,
 });
 
@@ -42,7 +44,7 @@ export const main = style({
   display: "grid",
   gridTemplateColumns: "200px 1fr",
   margin: autoMargin,
-  maxWidth: maxContentWidth,
+  maxWidth: "900px",
   minHeight: calc.subtract("100vh", headerHeight),
   width: "100%",
 });

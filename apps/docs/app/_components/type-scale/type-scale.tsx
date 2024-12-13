@@ -1,16 +1,16 @@
 import React from "react";
 
-import { Heading } from "../heading/heading";
+import { Text } from "../text/text";
 
 export const TypeScale = () => {
   return (
     <div>
-      <Heading>Heading One</Heading>
-      <Heading as="h2">Heading Two</Heading>
-      <Heading as="h3">Heading Three</Heading>
-      <Heading as="h4">Heading Four</Heading>
-      <Heading as="h5">Heading Four</Heading>
-      <Heading as="h6">Heading Four</Heading>
+      <Text variant="h1">Heading One</Text>
+      <Text variant="h2">Heading Two</Text>
+      <Text variant="h3">Heading Three</Text>
+      <Text variant="h4">Heading Four</Text>
+      <Text variant="h5">Heading Five</Text>
+      <Text variant="h6">Heading Six</Text>
     </div>
   );
 };

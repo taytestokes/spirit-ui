@@ -1,5 +1,9 @@
 import React from "react";
 
-import * as styles from "./index.css";
+import { Text } from "../../text/text";
 
-export const H1 = ({ children }) => <h1 className={styles.h1}>{children}</h1>;
+interface Props {
+  children: React.ReactNode;
+}
+
+export const H1 = ({ children }: Props) => <Text variant="h1">{children}</Text>;

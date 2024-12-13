@@ -5,15 +5,15 @@ export const fonts = {
 };
 
 export const fontSizes = {
-  xs: "0.694rem",
-  sm: "0.833rem",
+  xs: "0.79rem",
+  sm: "0.889rem",
   base: "1rem",
-  md: "1.2rem",
-  lg: "1.44rem",
-  xl: "1.728rem",
-  xxl: "2.074rem",
-  xxxl: "2.488rem",
-  xxxxl: "2.986rem",
+  md: "1.125rem",
+  lg: "1.266rem",
+  xl: "1.424rem",
+  xxl: "1.602rem",
+  xxxl: "1.802rem",
+  xxxxl: "2.027rem",
 };
 
 export const fontWeights = {
@@ -35,8 +35,6 @@ export const lineHeights = {
   normal: "1.5",
   relaxed: "1.625",
   loose: "2",
-  heading: "1.25",
-  text: "1.5",
 };
 
 export const letterSpacings = {
