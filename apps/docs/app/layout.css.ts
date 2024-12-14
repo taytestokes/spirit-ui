@@ -44,7 +44,7 @@ export const main = style({
   display: "grid",
   gridTemplateColumns: "200px 1fr",
   margin: autoMargin,
-  maxWidth: "900px",
+  maxWidth: "1200px",
   minHeight: calc.subtract("100vh", headerHeight),
   width: "100%",
 });

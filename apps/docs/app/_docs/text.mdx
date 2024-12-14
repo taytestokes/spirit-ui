@@ -1,5 +1,7 @@
 import { Text } from "../_components/text/text";
 
+import { CodePreview } from "../_components/code-preview/code-preview";
+
 # Text
 
 Display text using defined typography styles.
@@ -8,14 +10,37 @@ Display text using defined typography styles.
 
 The variant will determine how to the text is visually represented.
 
+<CodePreview
+  code={`export async function getData() {
+   const res = await fetch('https://external-service.com/data', {
+     headers: {
+       authorization: process.env.API_KEY,
+     },
+  })
+ 
+  return res.json()
+}
+
+<p>Hello</p>
 <Text variant="h1">Heading One</Text>
-<Text variant="h2">Heading Two</Text>
-<Text variant="h3">Heading Three</Text>
-<Text variant="h4">Heading Four</Text>
-<Text variant="h5">Heading Five</Text>
-<Text variant="h6">Heading Six</Text>
-<Text variant="paragraph">Paragraph</Text>
-<Text variant="paragraph-sm">Paragraph Small</Text>
+  <Text variant="h2">Heading Two</Text>
+  <Text variant="h3">Heading Three</Text>
+  <Text variant="h4">Heading Four</Text>
+  <Text variant="h5">Heading Five</Text>
+  <Text variant="h6">Heading Six</Text>
+  <Text variant="paragraph">Paragraph</Text>
+  <Text variant="paragraph-sm">Paragraph Small</Text>
+`}
+>
+  <Text variant="h1">Heading One</Text>
+  <Text variant="h2">Heading Two</Text>
+  <Text variant="h3">Heading Three</Text>
+  <Text variant="h4">Heading Four</Text>
+  <Text variant="h5">Heading Five</Text>
+  <Text variant="h6">Heading Six</Text>
+  <Text variant="paragraph">Paragraph</Text>
+  <Text variant="paragraph-sm">Paragraph Small</Text>
+</CodePreview>
 
 ### Polymorphic
 
