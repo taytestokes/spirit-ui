@@ -15,7 +15,7 @@ const NavLink = ({ children, path }: React.PropsWithChildren<NavLinkProps>) => (
 
 export const Sidebar = () => {
   return (
-    <aside className={styles.sidebar}>
+    <aside className={styles.aside}>
       <nav className={styles.nav}>
         <div className={styles.section}>
           <p className={styles.sectionLabel}>Foundations</p>

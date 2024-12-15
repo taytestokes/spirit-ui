@@ -18,5 +18,10 @@ export const Box = <Element extends React.ElementType>({
 }: BoxProps<Element>) => {
   const Component = as ?? "div";
 
+  return React.createElement(as, {
+    children,
+    ...rest,
+  });
+
   return <Component {...rest}>{children}</Component>;
 };

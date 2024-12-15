@@ -21,6 +21,7 @@ const DocumentationPage = async ({
   const { content } = await compileMDX({
     source: documentation,
     components: {
+      ...MDXDefaultComponents,
       ColorPalette,
       SpacingTable,
       TypeScale,

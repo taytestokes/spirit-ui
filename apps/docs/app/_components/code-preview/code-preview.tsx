@@ -2,7 +2,7 @@ import React from "react";
 import reactElementToJSXString from "react-element-to-jsx-string";
 import { createHighlighter } from "shiki";
 
-import { spiritCodeTheme } from "./code-theme";
+import { codeTheme } from "./code-theme";
 
 import * as styles from "./code-preview.css";
 
@@ -12,23 +12,12 @@ interface Props {
 }
 
 export const CodePreview = async ({ code, children }: Props) => {
-  // const jsxElementString: string = React.Children.toArray(children).reduce(
-  //   (acc: string, child: React.ReactNode) => {
-  //     const jsxElementStringRepresentation =
-  //       reactElementToJSXString(child) + "\n";
-  //     return (acc += jsxElementStringRepresentation);
-  //   },
-  //   ""
-  // );
-
-  // TODO: Look into adding tranformers
-
   const highlighter = await createHighlighter({
-    themes: [spiritCodeTheme],
+    themes: [codeTheme],
     langs: ["tsx"],
   });
 
-  const snippit = await highlighter.codeToHtml(code, {
+  const highlightedCode = await highlighter.codeToHtml(code.trim(), {
     lang: "tsx",
     theme: "spirit-ui",
   });
@@ -40,7 +29,7 @@ export const CodePreview = async ({ code, children }: Props) => {
         <summary className={styles.summary}>Code</summary>
         <div
           className={styles.code}
-          dangerouslySetInnerHTML={{ __html: snippit }}
+          dangerouslySetInnerHTML={{ __html: highlightedCode }}
         />
       </details>
     </div>

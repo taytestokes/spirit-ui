@@ -3,8 +3,7 @@ import { theme } from "@spirit-ui/theme";
 
 const { vars } = theme;
 
-export const sidebar = style({
-  borderRight: `1px solid ${vars.colors.neutral200}`,
+export const aside = style({
   display: "flex",
   flexDirection: "column",
   gap: vars.space.spacing_3,
@@ -36,7 +35,7 @@ export const sectionLabel = style({
 
 export const sectionLinks = style({
   display: "grid",
-  gap: vars.space.spacing_05,
+  gap: vars.space.spacing_0_5,
   listStyle: "none",
   padding: "0px",
 });

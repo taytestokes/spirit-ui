@@ -2,7 +2,7 @@ import { theme } from "@spirit-ui/theme";
 
 // https://www.sublimetext.com/docs/scope_naming.html#color-schemes
 
-export const spiritCodeTheme = {
+export const codeTheme = {
   name: "spirit-ui",
   settings: [
     {

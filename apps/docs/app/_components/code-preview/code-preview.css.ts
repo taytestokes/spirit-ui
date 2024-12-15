@@ -7,6 +7,7 @@ export const wrapper = style({
   borderRight: `1px solid ${theme.vars.colors.neutral200}`,
   borderTop: `1px solid ${theme.vars.colors.neutral200}`,
   borderRadius: "4px",
+  marginBlock: theme.vars.space.spacing_4,
 });
 
 export const preview = style({
@@ -23,6 +24,7 @@ export const summary = style({
   background: theme.vars.colors.neutral50,
   borderTop: `1px solid ${theme.vars.colors.neutral200}`,
   color: theme.vars.colors.neutral900,
+  cursor: "pointer",
   fontSize: theme.vars.fontSizes.sm,
   padding: theme.vars.space.spacing_2,
 });

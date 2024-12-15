@@ -1,4 +1,4 @@
-import { style, createVar, globalStyle } from "@vanilla-extract/css";
+import { style, createVar } from "@vanilla-extract/css";
 import { calc } from "@vanilla-extract/css-utils";
 import { theme } from "@spirit-ui/theme";
 
@@ -12,7 +12,6 @@ export const html = style({
     [headerHeight]: "64px",
     [autoMargin]: "0 auto",
   },
-
   background: vars.colors.neutral0,
   color: vars.colors.neutral950,
   fontFamily: vars.fonts.inter,
@@ -36,15 +35,12 @@ export const headerContent = style({
   display: "flex",
   height: "100%",
   justifyContent: "space-between",
-  margin: autoMargin,
   paddingInline: vars.space.spacing_3,
 });
 
 export const main = style({
   display: "grid",
-  gridTemplateColumns: "200px 1fr",
-  margin: autoMargin,
-  maxWidth: "1200px",
+  gridTemplateColumns: "240px 1fr",
   minHeight: calc.subtract("100vh", headerHeight),
   width: "100%",
 });
