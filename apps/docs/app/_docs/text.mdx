@@ -32,6 +32,22 @@ The variant will determine how to the text is visually represented.
   <Text variant="paragraph-sm">Paragraph Small</Text>
 </CodePreview>
 
+## Color
+
+The color of the text can be applied by passing the name of the color that is represented by our color tokens.
+
+<CodePreview
+  code={`
+  <Text color="blue_700">This text is blue</Text>
+  <Text color="pink_700">This text is pink</Text>
+  <Text color="purple_700">This text is purple</Text>
+`}
+>
+  <Text color="blue_700">This text is blue</Text>
+  <Text color="pink_700">This text is pink</Text>
+  <Text color="purple_700">This text is purple</Text>
+</CodePreview>
+
 ## Polymorphic
 
 Override the underlying element that is rendered for the text to change it's semantic meaning. By default, the `p` element will be rendered.

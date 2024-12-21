@@ -1,5 +1,4 @@
 import React from "react";
-import reactElementToJSXString from "react-element-to-jsx-string";
 import { createHighlighter } from "shiki";
 
 import { codeTheme } from "./code-theme";

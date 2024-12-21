@@ -3,15 +3,9 @@
 import React from "react";
 import { theme } from "@spirit-ui/theme";
 
-import { useTheme } from "../theme-provider/theme-provider";
-
 import * as styles from "./color-palette.css";
 
-const ColorBox = () => {};
-
 const ColorRow = ({ color }: { color: string }) => {
-  const { mode } = useTheme();
-
   const colorKeys = Object.keys(theme.vars.colors).filter((colorVar) =>
     colorVar.startsWith(color)
   );

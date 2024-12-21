@@ -41,7 +41,7 @@ export const sectionLinks = style({
 });
 
 export const navLink = style({
-  color: vars.colors.neutral950,
+  color: vars.colors.neutral_950,
   fontSize: "14px",
   textDecoration: "none",
 });

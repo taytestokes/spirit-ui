@@ -4,10 +4,10 @@ import { theme } from "@spirit-ui/theme";
 const { vars } = theme;
 
 export const themeSwitcher = style({
-  background: vars.colors.neutral0,
-  border: `1px solid ${vars.colors.neutral200}`,
+  background: vars.colors.neutral_0,
+  border: `1px solid ${vars.colors.neutral_200}`,
   borderRadius: "4px",
-  color: vars.colors.neutral950,
+  color: vars.colors.neutral_950,
   cursor: "pointer",
   padding: vars.space.spacing_1,
 });

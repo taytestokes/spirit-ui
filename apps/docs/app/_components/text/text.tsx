@@ -3,33 +3,25 @@ import { clsx } from "clsx";
 
 import { Box } from "../box/box";
 
-import * as styles from "./text.css";
+import { styles, Variants } from "./text.css";
 
-interface TextProps {
+type Props = {
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label" | "p" | "span";
   children: React.ReactNode;
   className?: string;
-  variant?:
-    | "h1"
-    | "h2"
-    | "h3"
-    | "h4"
-    | "h5"
-    | "h6"
-    | "paragraph"
-    | "paragraph-sm";
-}
+} & Variants;
 
 export const Text = ({
   as = "p",
   children,
   className,
+  color,
   variant = "paragraph",
   ...rest
-}: TextProps) => (
+}: Props) => (
   <Box
     as={as}
-    className={clsx(styles.variants({ variant }), className)}
+    className={clsx(styles({ variant, color }), className)}
     {...rest}
   >
     {children}

@@ -15,7 +15,7 @@ export const colorRow = style({
 });
 
 export const rowLabel = style({
-  fontSize: vars.fontSizes.textM,
+  fontSize: vars.fontSizes.md,
   fontWeight: vars.fontWeights.semibold,
 
   ":first-letter": {
@@ -26,8 +26,8 @@ export const rowLabel = style({
 export const colorBoxes = style({
   alignItems: "center",
   display: "grid",
-  gap: vars.space.spacing_1,
-  gridTemplateColumns: "repeat(6, 1fr)",
+  gap: vars.space.spacing_0_5,
+  gridTemplateColumns: "repeat(5, 1fr)",
   width: "100%",
 });
 

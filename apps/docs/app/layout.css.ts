@@ -12,8 +12,8 @@ export const html = style({
     [headerHeight]: "64px",
     [autoMargin]: "0 auto",
   },
-  background: vars.colors.neutral0,
-  color: vars.colors.neutral950,
+  background: vars.colors.neutral_0,
+  color: vars.colors.neutral_950,
   fontFamily: vars.fonts.inter,
 });
 
@@ -23,8 +23,8 @@ export const headerWrapper = style({
 
 export const header = style({
   backdropFilter: "blur(5px)",
-  background: `color-mix(in srgb, ${vars.colors.neutral0} 85%, transparent)`,
-  borderBottom: `1px solid ${vars.colors.neutral200}`,
+  background: `color-mix(in srgb, ${vars.colors.neutral_0} 85%, transparent)`,
+  borderBottom: `1px solid ${vars.colors.neutral_200}`,
   height: headerHeight,
   position: "fixed",
   width: "100%",
@@ -41,6 +41,8 @@ export const headerContent = style({
 export const main = style({
   display: "grid",
   gridTemplateColumns: "240px 1fr",
+  margin: "0 auto",
+  maxWidth: "1100px",
   minHeight: calc.subtract("100vh", headerHeight),
   width: "100%",
 });

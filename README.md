@@ -1,1 +1,0 @@
-# Spirit UI Design Sytem

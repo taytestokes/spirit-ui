@@ -7,50 +7,50 @@ export const codeTheme = {
   settings: [
     {
       settings: {
-        foreground: theme.vars.colors.neutral950,
-        background: theme.vars.colors.neutral0,
+        foreground: theme.vars.colors.neutral_950,
+        background: theme.vars.colors.neutral_0,
       },
     },
     {
       scope: ["support"],
       settings: {
-        foreground: "#006bff",
+        foreground: theme.vars.colors.blue_700,
       },
     },
     {
       scope: ["storage"],
       settings: {
-        foreground: "#f32882",
+        foreground: theme.vars.colors.pink_700,
       },
     },
     {
       scope: ["string"],
       settings: {
-        foreground: "#28a948",
+        foreground: theme.vars.colors.green_700,
       },
     },
     {
       scope: ["text.html"],
       settings: {
-        foreground: "#28a948",
+        foreground: theme.vars.colors.green_700,
       },
     },
     {
       scope: ["keyword"],
       settings: {
-        foreground: "#f32882",
+        foreground: theme.vars.colors.pink_700,
       },
     },
     {
       scope: ["entity"],
       settings: {
-        foreground: "#A000F8",
+        foreground: theme.vars.colors.purple_700,
       },
     },
     {
       scope: ["variable"],
       settings: {
-        foreground: "#006bff",
+        foreground: theme.vars.colors.blue_700,
       },
     },
   ],
