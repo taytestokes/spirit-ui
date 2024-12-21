@@ -3,10 +3,10 @@ import { style } from "@vanilla-extract/css";
 
 export const wrapper = style({
   background: theme.vars.colors.neutral_0,
-  borderLeft: `1px solid ${theme.vars.colors.neutral_200}`,
-  borderRight: `1px solid ${theme.vars.colors.neutral_200}`,
-  borderTop: `1px solid ${theme.vars.colors.neutral_200}`,
-  borderRadius: "4px",
+  borderLeft: `1px solid ${theme.vars.colors.neutral_300}`,
+  borderRight: `1px solid ${theme.vars.colors.neutral_300}`,
+  borderTop: `1px solid ${theme.vars.colors.neutral_300}`,
+  borderRadius: "6px",
   marginBlock: theme.vars.space.spacing_4,
 });
 
@@ -15,14 +15,14 @@ export const preview = style({
 });
 
 export const details = style({
-  borderBottom: `1px solid ${theme.vars.colors.neutral_200}`,
-  borderBottomLeftRadius: "4px",
-  borderBottomRightRadius: "4px",
+  background: theme.vars.colors.neutral_50,
+  borderBottom: `1px solid ${theme.vars.colors.neutral_300}`,
+  borderBottomLeftRadius: "6px",
+  borderBottomRightRadius: "6px",
 });
 
 export const summary = style({
-  background: theme.vars.colors.neutral_50,
-  borderTop: `1px solid ${theme.vars.colors.neutral_200}`,
+  borderTop: `1px solid ${theme.vars.colors.neutral_300}`,
   color: theme.vars.colors.neutral_900,
   cursor: "pointer",
   fontSize: theme.vars.fontSizes.sm,
@@ -30,7 +30,10 @@ export const summary = style({
 });
 
 export const code = style({
-  borderTop: `1px solid ${theme.vars.colors.neutral_200}`,
+  background: theme.vars.colors.neutral_0,
+  borderBottomLeftRadius: "6px",
+  borderBottomRightRadius: "6px",
+  borderTop: `1px solid ${theme.vars.colors.neutral_300}`,
   fontFamily: "monospace, ui-monospace",
   fontSize: theme.vars.fontSizes.sm,
   overflow: "auto",

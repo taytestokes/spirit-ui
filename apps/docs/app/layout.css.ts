@@ -24,7 +24,7 @@ export const headerWrapper = style({
 export const header = style({
   backdropFilter: "blur(5px)",
   background: `color-mix(in srgb, ${vars.colors.neutral_0} 85%, transparent)`,
-  borderBottom: `1px solid ${vars.colors.neutral_200}`,
+  borderBottom: `1px solid ${vars.colors.neutral_300}`,
   height: headerHeight,
   position: "fixed",
   width: "100%",
