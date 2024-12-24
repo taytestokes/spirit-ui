@@ -1,7 +1,7 @@
 import React from "react";
 import { clsx } from "clsx";
 
-import { Box } from "../box/box";
+import { Box } from "../box";
 
 import { styles, Variants } from "./text.css";
 
@@ -11,7 +11,7 @@ type Props = {
   className?: string;
 } & Variants;
 
-export const Text = ({
+export const Text: React.FC<Props> = ({
   as = "p",
   children,
   className,

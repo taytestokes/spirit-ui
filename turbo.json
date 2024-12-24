@@ -19,9 +19,6 @@
       "cache": false,
       "persistent": true
     },
-    "storybook": {
-      "cache": false
-    },
     "clean": {}
   }
 }

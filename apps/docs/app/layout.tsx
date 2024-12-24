@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ThemeProvider } from "./_components/theme-provider/theme-provider";
 import { ThemeSwitcher } from "./_components/theme-switcher/theme-switcher";
 import { Sidebar } from "./_components/sidebar/sidebar";

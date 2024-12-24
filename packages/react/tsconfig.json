@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    // Helps with module improts to allow CJS modules to be compliant with ESM spec. https://www.typescriptlang.org/tsconfig/#esModuleInterop
+    "esModuleInterop": true,
+
+    // Determines how JSX constructs are emitted in JS files from a TSX file. https://www.typescriptlang.org/tsconfig/#jsx
+    "jsx": "react-jsx",
+
+    // Determines the module system to use - we use ESNext because the code will be bundled using tsup. https://www.typescriptlang.org/tsconfig/#module
+    "module": "ESNext",
+
+    // Specifies the module resolution strategy - we use Bundler because the code will be bundled using tsup. https://www.typescriptlang.org/tsconfig/#moduleResolution
+    "moduleResolution": "Bundler",
+
+    // Skips type checking of type declaration files. https://www.typescriptlang.org/tsconfig/#skipLibCheck
+    "skipLibCheck": true,
+
+    // Enforce strong typechecking to guarentee program correctness. https://www.typescriptlang.org/tsconfig/#strict
+    "strict": true,
+
+    // Don't compile and emit compiled files like js, source-maps, or declarations. This output will be handled by tsup when the code is bundled during the build step. https://www.typescriptlang.org/tsconfig/#noEmit
+    "noEmit": true
+  },
+  // Files to include when linting with typescript. https://www.typescriptlang.org/tsconfig/#include
+  "include": ["."],
+
+  // Files to exclude when linting with typescript. https://www.typescriptlang.org/tsconfig/#exclude
+  "exclude": ["dist", "node_modules", "tsup.congig.ts"]
+}
