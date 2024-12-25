@@ -1,4 +1,4 @@
-import { theme } from "@spirit-ui/theme";
+import { theme } from "@spirit-ui/design-system/theme";
 import { style } from "@vanilla-extract/css";
 
 export const wrapper = style({

@@ -1,4 +1,4 @@
-import { theme } from "@spirit-ui/theme";
+import { theme } from "@spirit-ui/design-system/theme";
 
 // https://www.sublimetext.com/docs/scope_naming.html#color-schemes
 

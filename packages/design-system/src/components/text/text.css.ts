@@ -1,5 +1,5 @@
-import { theme } from "@spirit-ui/theme";
 import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
+import { theme } from "../../styles/vars.css";
 
 type ThemeColor = keyof typeof theme.vars.colors;
 

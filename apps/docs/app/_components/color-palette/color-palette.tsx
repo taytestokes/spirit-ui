@@ -1,11 +1,23 @@
-"use client";
-
 import React from "react";
-import { theme } from "@spirit-ui/theme";
+import { theme } from "@spirit-ui/design-system/theme";
 
 import * as styles from "./color-palette.css";
 
-const ColorRow = ({ color }: { color: string }) => {
+type ThemeVarColor = keyof typeof theme.vars.colors;
+
+type ColorRowProps = {
+  color:
+    | "neutral"
+    | "blue"
+    | "red"
+    | "yellow"
+    | "green"
+    | "teal"
+    | "purple"
+    | "pink";
+};
+
+const ColorRow = ({ color }: ColorRowProps) => {
   const colorKeys = Object.keys(theme.vars.colors).filter((colorVar) =>
     colorVar.startsWith(color)
   );
@@ -15,25 +27,25 @@ const ColorRow = ({ color }: { color: string }) => {
       <p className={styles.rowLabel}>{color}</p>
       <div className={styles.colorBoxes}>
         {colorKeys.map((color) => (
-          <div className={styles.colorBoxVariant[color]} key={color} />
+          <div
+            className={styles.colorBoxVariant[color as ThemeVarColor]}
+            key={color}
+          />
         ))}
       </div>
     </div>
   );
 };
 
-export const ColorPalette = () => {
-  // Display color var and token value
-  return (
-    <div className={styles.palette}>
-      <ColorRow color={"neutral"} />
-      <ColorRow color={"blue"} />
-      <ColorRow color={"red"} />
-      <ColorRow color={"yellow"} />
-      <ColorRow color={"green"} />
-      <ColorRow color={"teal"} />
-      <ColorRow color={"purple"} />
-      <ColorRow color={"pink"} />
-    </div>
-  );
-};
+export const ColorPalette = () => (
+  <div className={styles.palette}>
+    <ColorRow color={"neutral"} />
+    <ColorRow color={"blue"} />
+    <ColorRow color={"red"} />
+    <ColorRow color={"yellow"} />
+    <ColorRow color={"green"} />
+    <ColorRow color={"teal"} />
+    <ColorRow color={"purple"} />
+    <ColorRow color={"pink"} />
+  </div>
+);

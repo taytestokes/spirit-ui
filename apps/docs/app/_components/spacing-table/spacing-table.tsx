@@ -1,5 +1,5 @@
 import React from "react";
-import { theme } from "@spirit-ui/theme";
+import { theme } from "@spirit-ui/design-system/theme";
 
 import * as styles from "./spacing-table.css";
 

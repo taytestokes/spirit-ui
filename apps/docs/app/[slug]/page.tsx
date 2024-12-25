@@ -1,6 +1,7 @@
 import { compileMDX } from "next-mdx-remote/rsc";
+import { MDXComponents } from "mdx/types";
 
-import { Text } from "@spirit-ui/react";
+import { Text } from "@spirit-ui/design-system";
 
 import { getDocumentationBySlug } from "../_utils/mdx";
 
@@ -14,14 +15,14 @@ import * as styles from "./page.css";
 
 type Params = Promise<{ slug: string }>;
 
-const mdxComponents = {
+const components = {
   ...MDXDefaultComponents,
   ColorPalette,
   SpacingTable,
   TypeScale,
   Text,
   CodePreview,
-};
+} as MDXComponents;
 
 const DocumentationPage = async (props: { params: Params }) => {
   const pageParams = await props.params;
@@ -31,7 +32,7 @@ const DocumentationPage = async (props: { params: Params }) => {
 
   const { content } = await compileMDX({
     source: documentation,
-    components: mdxComponents,
+    components,
   });
 
   return <article className={styles.article}>{content}</article>;

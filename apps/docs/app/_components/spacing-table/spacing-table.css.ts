@@ -1,10 +1,10 @@
 import { style, styleVariants } from "@vanilla-extract/css";
-import { theme } from "@spirit-ui/theme";
+import { theme } from "@spirit-ui/design-system/theme";
 
 const { vars } = theme;
 
 export const wrapper = style({
-  border: `1px solid ${vars.colors.neutral200}`,
+  border: `1px solid ${vars.colors.neutral_200}`,
   borderRadius: "4px",
   width: "100%",
 });
@@ -15,7 +15,7 @@ export const table = style({
 });
 
 export const tr = style({
-  borderBottom: `1px solid ${vars.colors.neutral200}`,
+  borderBottom: `1px solid ${vars.colors.neutral_200}`,
 
   selectors: {
     "tbody > &:last-child": {
@@ -59,13 +59,13 @@ export const td = style({
 });
 
 export const token = style({
-  backgroundColor: vars.colors.neutral100,
+  backgroundColor: vars.colors.neutral_100,
   borderRadius: "4px",
   padding: `${vars.space.spacing_0_5}`,
 });
 
 export const visual = style({
-  backgroundColor: vars.colors.neutral950,
+  backgroundColor: vars.colors.neutral_950,
   borderRadius: "4px",
   height: "16px",
 });

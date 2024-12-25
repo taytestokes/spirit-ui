@@ -3,8 +3,8 @@ import { ThemeProvider } from "./_components/theme-provider/theme-provider";
 import { ThemeSwitcher } from "./_components/theme-switcher/theme-switcher";
 import { Sidebar } from "./_components/sidebar/sidebar";
 
-import "@spirit-ui/theme/reset";
-import "@spirit-ui/theme/styles";
+import "@spirit-ui/design-system/reset";
+import "@spirit-ui/design-system/styles";
 
 import * as styles from "./layout.css";
 

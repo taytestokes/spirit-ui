@@ -1,6 +1,6 @@
 import { style, createVar } from "@vanilla-extract/css";
 import { calc } from "@vanilla-extract/css-utils";
-import { theme } from "@spirit-ui/theme";
+import { theme } from "@spirit-ui/design-system/theme";
 
 const { vars } = theme;
 

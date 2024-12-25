@@ -3,7 +3,7 @@ import {
   createGlobalThemeContract,
 } from "@vanilla-extract/css";
 
-import { tokens } from "./tokens";
+import { tokens } from "../tokens";
 
 const getVarName = (_val: string | null, path: string[]) =>
   `spirit-ui-${path.join("-")}`.replace("_", "-");

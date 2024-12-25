@@ -1,4 +1,4 @@
-import { colors } from "./color";
+import { colors } from "./colors";
 import { space } from "./space";
 import {
   fonts,

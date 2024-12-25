@@ -1,11 +1,10 @@
 import React from "react";
 
-import { Text } from "@spirit-ui/react";
+import { Text } from "@spirit-ui/design-system";
 
 export const TypeScale = () => {
   return (
     <div>
-      <Text variant="h1">Heading One</Text>
       <Text variant="h2">Heading Two</Text>
       <Text variant="h3">Heading Three</Text>
       <Text variant="h4">Heading Four</Text>
