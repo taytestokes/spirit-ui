@@ -17,6 +17,7 @@ export default defineConfig(
       sourcemap: false,
       clean: !options.watch,
       minify: !options.watch,
+      dts: true,
       ...options,
     }) as Options
 );
