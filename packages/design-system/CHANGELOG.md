@@ -1,5 +1,11 @@
 # @spirit-ui/design-system
 
+## 0.0.3
+
+### Patch Changes
+
+- 2653b28: Remove base styling for text font weight"
+
 ## 0.0.2
 
 ### Patch Changes
