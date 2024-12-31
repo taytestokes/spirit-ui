@@ -1,46 +1,55 @@
 import React from "react";
-import Link from "next/link";
 
-import * as styles from "./sidebar.css";
+import { Text } from "@spirit-ui/design-system";
 
-type NavLinkProps = {
-  path: string;
-};
+import { SidebarLink } from "./sidebar-link";
+import { ThemeSwitcher } from "../theme-switcher/theme-switcher";
 
-const NavLink = ({ children, path }: React.PropsWithChildren<NavLinkProps>) => (
-  <Link className={styles.navLink} href={path}>
-    {children}
-  </Link>
-);
+import * as classes from "./sidebar.css";
 
 export const Sidebar = () => {
   return (
-    <aside className={styles.aside}>
-      <nav className={styles.nav}>
-        <div className={styles.section}>
-          <p className={styles.sectionLabel}>Foundations</p>
-          <ul className={styles.sectionLinks}>
-            <li>
-              <NavLink path="/colors">Colors</NavLink>
+    <aside className={classes.sidebar}>
+      <nav className={classes.content}>
+        <div className={classes.group}>
+          <Text
+            color="neutral_900"
+            className={classes.groupLabel}
+            variant="label"
+          >
+            Foundations
+          </Text>
+          <ul className={classes.groupMenu}>
+            <li className={classes.groupMenuItem}>
+              <SidebarLink path="/colors">Colors</SidebarLink>
             </li>
-            <li>
-              <NavLink path="/spacing">Spacing</NavLink>
+            <li className={classes.groupMenuItem}>
+              <SidebarLink path="/spacing">Spacing</SidebarLink>
             </li>
-            <li>
-              <NavLink path="/typography">Typography</NavLink>
+            <li className={classes.groupMenuItem}>
+              <SidebarLink path="/typography">Typography</SidebarLink>
             </li>
           </ul>
         </div>
-
-        <div className={styles.section}>
-          <p className={styles.sectionLabel}>Components</p>
-          <ul className={styles.sectionLinks}>
-            <li>
-              <NavLink path="/text">Text</NavLink>
+        <div className={classes.group}>
+          <Text
+            color="neutral_900"
+            className={classes.groupLabel}
+            variant="label"
+          >
+            Components
+          </Text>
+          <ul className={classes.groupMenu}>
+            <li className={classes.groupMenuItem}>
+              <SidebarLink path="/text">Text</SidebarLink>
             </li>
           </ul>
         </div>
       </nav>
+
+      <div className={classes.footer}>
+        <ThemeSwitcher />
+      </div>
     </aside>
   );
 };

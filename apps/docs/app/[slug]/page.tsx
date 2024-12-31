@@ -11,7 +11,7 @@ import { SpacingTable } from "../_components/spacing-table/spacing-table";
 import { TypeScale } from "../_components/type-scale/type-scale";
 import { CodePreview } from "../_components/code-preview/code-preview";
 
-import * as styles from "./page.css";
+import * as classes from "./page.css";
 
 type Params = Promise<{ slug: string }>;
 
@@ -35,7 +35,7 @@ const DocumentationPage = async (props: { params: Params }) => {
     components,
   });
 
-  return <article className={styles.article}>{content}</article>;
+  return <article className={classes.article}>{content}</article>;
 };
 
 export default DocumentationPage;

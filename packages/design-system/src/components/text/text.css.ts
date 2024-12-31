@@ -54,17 +54,17 @@ const variant = {
   },
   paragraph: {
     fontSize: theme.vars.fontSizes.base,
-    lineHeight: theme.vars.lineHeights.normal,
   },
   "paragraph-sm": {
     fontSize: theme.vars.fontSizes.sm,
-    lineHeight: theme.vars.lineHeights.normal,
+  },
+  label: {
+    fontSize: theme.vars.fontSizes.xs,
   },
 };
 
 export const styles = recipe({
   base: {
-    fontWeight: theme.vars.fontWeights.regular,
     lineHeight: theme.vars.lineHeights.normal,
   },
   variants: {
