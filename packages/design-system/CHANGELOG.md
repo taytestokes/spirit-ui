@@ -1,5 +1,11 @@
 # @spirit-ui/design-system
 
+## 0.0.4
+
+### Patch Changes
+
+- de29cf8: Updated tsup config to add client directive for client components
+
 ## 0.0.3
 
 ### Patch Changes
