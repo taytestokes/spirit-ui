@@ -10,6 +10,14 @@ const config: Options = {
   dts: true,
 };
 
+/**
+ * This config has to build config options, one designed for client components and the
+ * other is designed for server components and other static assets (styles, etc). We
+ * need to apply the "use client" directive banner at build time to allow consumers
+ * to not have to wrap the client component in a client wrapper.
+ *
+ * https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#advice-for-library-authors
+ */
 export default defineConfig(
   (options: Options) =>
     [
