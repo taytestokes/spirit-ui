@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Text } from "@spirit-ui/design-system";
+import { Text } from "@spirit-ui/design-system/server";
 
 import { SidebarLink } from "./sidebar-link";
 import { ThemeSwitcher } from "../theme-switcher/theme-switcher";
@@ -42,6 +42,9 @@ export const Sidebar = () => {
           <ul className={classes.groupMenu}>
             <li className={classes.groupMenuItem}>
               <SidebarLink path="/text">Text</SidebarLink>
+            </li>
+            <li className={classes.groupMenuItem}>
+              <SidebarLink path="/theme-provider">ThemeProvider</SidebarLink>
             </li>
           </ul>
         </div>

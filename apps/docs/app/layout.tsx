@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import { ThemeProvider } from "./_components/theme-provider/theme-provider";
-import { ThemeSwitcher } from "./_components/theme-switcher/theme-switcher";
+// import { ThemeProvider } from "./_components/theme-provider/theme-provider";
+import { ThemeProvider } from "@spirit-ui/design-system/client";
 import { Sidebar } from "./_components/sidebar/sidebar";
 
 /**

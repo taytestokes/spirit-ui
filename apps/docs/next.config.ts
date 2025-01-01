@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
    * so we need to transpile the next-mdx-remote package.
    * https://github.com/hashicorp/next-mdx-remote?tab=readme-ov-file#installation
    */
-  transpilePackages: ["next-mdx-remote"],
+  transpilePackages: ["next-mdx-remote", "@spirit-ui/design-system"],
 };
 
 export default withVanillaExtract(nextConfig);

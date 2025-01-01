@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Text } from "@spirit-ui/design-system";
+import { Text } from "@spirit-ui/design-system/server";
 
 import * as styles from "./paragraph.css";
 

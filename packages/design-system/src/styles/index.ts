@@ -1,5 +1,5 @@
 // Component Styles
-export * from "../components/text/text.css";
+export * from "../components/server/text/text.css";
 
 // Fonts
 export * from "./fonts.css";

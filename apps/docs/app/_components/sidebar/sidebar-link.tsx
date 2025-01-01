@@ -4,7 +4,7 @@ import React from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Text } from "@spirit-ui/design-system";
+import { Text } from "@spirit-ui/design-system/server";
 
 import * as classes from "./sidebar-link.css";
 
