@@ -36,7 +36,6 @@ export default defineConfig(
         entry: [
           "src/components/server/index.ts",
           "src/styles/index.ts",
-          "src/styles/reset.ts",
           "src/tokens/index.ts",
         ],
         outDir: DIST_PATH,

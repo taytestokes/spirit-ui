@@ -39,10 +39,6 @@
       "require": "./dist/components/server/index.js",
       "import": "./dist/components/server/index.mjs"
     },
-    "./reset": {
-      "require": "./dist/styles/reset.css",
-      "import": "./dist/styles/reset.css"
-    },
     "./styles": {
       "require": "./dist/styles/index.css",
       "import": "./dist/styles/index.css"
