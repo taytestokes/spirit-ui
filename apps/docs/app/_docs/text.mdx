@@ -12,24 +12,20 @@ The variant will determine how to the text is visually represented.
 
 <CodePreview
   code={`
-  <Text variant="h1">Heading One</Text>
-  <Text variant="h2">Heading Two</Text>
-  <Text variant="h3">Heading Three</Text>
-  <Text variant="h4">Heading Four</Text>
-  <Text variant="h5">Heading Five</Text>
-  <Text variant="h6">Heading Six</Text>
-  <Text variant="paragraph">Paragraph</Text>
-  <Text variant="paragraph-sm">Paragraph Small</Text>
+  <Text variant="p">Paragraph</Text>
+  <Text variant="p-sm">Paragraph Small</Text>
+  <Text variant="label">Label</Text>
+  <Text variant="label-sm">Label Small</Text>
+  <Text variant="button">Button</Text>
+  <Text variant="button-sm">Button Small</Text>
 `}
 >
-  <Text variant="h1">Heading One</Text>
-  <Text variant="h2">Heading Two</Text>
-  <Text variant="h3">Heading Three</Text>
-  <Text variant="h4">Heading Four</Text>
-  <Text variant="h5">Heading Five</Text>
-  <Text variant="h6">Heading Six</Text>
-  <Text variant="paragraph">Paragraph</Text>
-  <Text variant="paragraph-sm">Paragraph Small</Text>
+  <Text variant="p">Paragraph</Text>
+  <Text variant="p-sm">Paragraph Small</Text>
+  <Text variant="label">Label</Text>
+  <Text variant="label-sm">Label Small</Text>
+  <Text variant="button">Button</Text>
+  <Text variant="button-sm">Button Small</Text>
 </CodePreview>
 
 ## Color
@@ -68,5 +64,5 @@ Override the underlying element that is rendered for the text to change it's sem
 `}
 >
 
-  <Text as="h4" variant="h3">Semantically rendered as {"<h4>"}, but visually rendered as {"<h3>"}</Text>
+  <Text as="h2" variant="h1">Semantically rendered as {"<h2>"}, but visually rendered as {"<h1>"}</Text>
 </CodePreview>

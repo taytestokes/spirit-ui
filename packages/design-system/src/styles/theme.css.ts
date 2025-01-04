@@ -11,11 +11,11 @@ const getVarName = (_val: string | null, path: string[]) =>
 const getColorTokensByMode = (mode: string) =>
   mode === "light" ? tokens.colors.light : tokens.colors.dark;
 
-const lightColorTokens = {
+const lightModeTokens = {
   colors: getColorTokensByMode("light"),
 };
 
-const darkColorTokens = {
+const darkModeTokens = {
   colors: getColorTokensByMode("dark"),
 };
 
@@ -29,27 +29,14 @@ const sharedTokens = {
   letterSpacings: tokens.letterSpacings,
 };
 
-const colorVars = createGlobalThemeContract(lightColorTokens, getVarName);
-
+const colorVars = createGlobalThemeContract(lightModeTokens, getVarName);
 const sharedVars = createGlobalThemeContract(sharedTokens, getVarName);
 
 createGlobalTheme(":root", sharedVars, sharedTokens);
-createGlobalTheme('[data-theme="light"]', colorVars, lightColorTokens);
-createGlobalTheme('[data-theme="dark"]', colorVars, darkColorTokens);
+createGlobalTheme('[data-theme="light"]', colorVars, lightModeTokens);
+createGlobalTheme('[data-theme="dark"]', colorVars, darkModeTokens);
 
-/**
- * Theme object that provides the theme in both variable and token values.
- */
-export const theme = {
-  vars: {
-    ...colorVars,
-    ...sharedVars,
-  },
-  tokens: {
-    colors: {
-      light: lightColorTokens,
-      dark: darkColorTokens,
-    },
-    ...sharedTokens,
-  },
+export const vars = {
+  ...colorVars,
+  ...sharedVars,
 };

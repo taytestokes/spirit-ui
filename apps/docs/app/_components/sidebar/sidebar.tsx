@@ -15,7 +15,7 @@ export const Sidebar = () => {
           <Text
             color="neutral_900"
             className={classes.groupLabel}
-            variant="label"
+            variant="label-sm"
           >
             Foundations
           </Text>
@@ -35,16 +35,19 @@ export const Sidebar = () => {
           <Text
             color="neutral_900"
             className={classes.groupLabel}
-            variant="label"
+            variant="label-sm"
           >
             Components
           </Text>
           <ul className={classes.groupMenu}>
             <li className={classes.groupMenuItem}>
+              <SidebarLink path="/heading">Heading</SidebarLink>
+            </li>
+            <li className={classes.groupMenuItem}>
               <SidebarLink path="/text">Text</SidebarLink>
             </li>
             <li className={classes.groupMenuItem}>
-              <SidebarLink path="/theme-provider">ThemeProvider</SidebarLink>
+              <SidebarLink path="/theme-provider">Theme Provider</SidebarLink>
             </li>
           </ul>
         </div>

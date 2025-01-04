@@ -40,16 +40,11 @@ const MoonIcon = () => (
 );
 
 export const ThemeSwitcher = () => {
-  const { mode, setMode } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <button
-      className={styles.themeSwitcher}
-      onClick={() =>
-        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"))
-      }
-    >
-      {mode === "light" ? <MoonIcon /> : <SunIcon />}
+    <button className={styles.themeSwitcher} onClick={toggleTheme}>
+      {theme === "light" ? <MoonIcon /> : <SunIcon />}
     </button>
   );
 };

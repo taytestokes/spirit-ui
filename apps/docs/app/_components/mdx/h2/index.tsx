@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Text } from "@spirit-ui/design-system/server";
+import { Heading } from "@spirit-ui/design-system/server";
 
 interface Props {
   children: React.ReactNode;
 }
 
 export const H2 = ({ children }: Props) => (
-  <Text as="h2" variant="h2">
+  <Heading as="h2" variant="h2">
     {children}
-  </Text>
+  </Heading>
 );

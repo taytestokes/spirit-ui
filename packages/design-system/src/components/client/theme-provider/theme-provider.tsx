@@ -1,42 +1,55 @@
-"use client";
-
 import React, { createContext, useContext, useEffect, useState } from "react";
 
+// TODO:
+// - Figure out how to prevent flash of theme - need inject the theme script into the html to run on the server
+// - https://www.joshwcomeau.com/react/dark-mode/
+
 type ThemeContextValue = {
-  mode: string;
-  setMode(mode: string): void;
+  theme: string;
+  toggleTheme(): void;
 };
 
 type Props = {
+  attribute?: string;
   children: React.ReactNode;
-  defaultMode?: string;
+  defaultTheme?: "light" | "dark";
+  element?: string;
+  storageKey?: string;
 };
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-export const ThemeProvider = ({ children, defaultMode = "light" }: Props) => {
-  const [mode, setMode] = useState(defaultMode);
+export const ThemeProvider = ({
+  attribute = "data-theme",
+  children,
+  defaultTheme = "light",
+  element = ":root",
+  storageKey = "spirit-ui-theme",
+}: Props) => {
+  const [theme, setTheme] = useState(defaultTheme);
 
-  /**
-   *
-   */
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem(storageKey, newTheme);
+  };
+
   useEffect(() => {
-    const systemColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const storedTheme = localStorage.getItem(storageKey);
+    if (!storedTheme) return localStorage.setItem(storageKey, defaultTheme);
+    if (storedTheme === "dark") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
   }, []);
 
-  /**
-   *
-   */
   useEffect(() => {
-    const root = document.querySelector(":root");
-
-    if (root) {
-      root.setAttribute("data-theme", mode);
-    }
-  }, [mode]);
+    document.querySelector(element)?.setAttribute(attribute, theme);
+  }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ mode, setMode }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );

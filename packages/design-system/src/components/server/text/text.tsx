@@ -1,14 +1,15 @@
 import React from "react";
 import { clsx } from "clsx";
 
-import { Box } from "../box";
+import { Box, BoxProps } from "../box";
 
-import { styles, Variants } from "./text.css";
+import { textStyles, Variants } from "./text.css";
 
 type Props = {
-  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label" | "p" | "span";
+  as?: "label" | "p" | "span";
   children: React.ReactNode;
   className?: string;
+  color: BoxProps["color"];
 } & Variants;
 
 export const Text: React.FC<Props> = ({
@@ -16,12 +17,13 @@ export const Text: React.FC<Props> = ({
   children,
   className,
   color,
-  variant = "paragraph",
+  variant = "p",
   ...rest
 }: Props) => (
   <Box
     as={as}
-    className={clsx(styles({ variant, color }), className)}
+    className={clsx(textStyles({ variant }), className)}
+    color={color}
     {...rest}
   >
     {children}

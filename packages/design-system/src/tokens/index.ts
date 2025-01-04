@@ -1,3 +1,4 @@
+import { borderStyles } from "./border";
 import { colors } from "./colors";
 import { space } from "./space";
 import {
@@ -9,6 +10,7 @@ import {
 } from "./typography";
 
 export const tokens = {
+  borderStyles,
   colors,
   fonts,
   fontSizes,

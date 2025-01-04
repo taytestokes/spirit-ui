@@ -1,0 +1,43 @@
+import { Heading } from "@spirit-ui/design-system/server";
+
+import { CodePreview } from "../_components/code-preview/code-preview";
+
+# Heading
+
+Display heading text using defined typography styles that helps define the hierarchical structure of the text content.
+
+## Variants
+
+The variant will determine how to the text is visually represented.
+
+<CodePreview
+  code={`
+  <Heading variant="h1">Heading One</Heading>
+  <Heading variant="h2">Heading Two</Heading>
+  <Heading variant="h3">Heading Three</Heading>
+  <Heading variant="h4">Heading Four</Heading>
+  <Heading variant="h5">Heading Five</Heading>
+  <Heading variant="h6">Heading Six</Heading>
+`}
+>
+  <Heading variant="h1">Heading One</Heading>
+  <Heading variant="h2">Heading Two</Heading>
+  <Heading variant="h3">Heading Three</Heading>
+  <Heading variant="h4">Heading Four</Heading>
+  <Heading variant="h5">Heading Five</Heading>
+  <Heading variant="h6">Heading Six</Heading>
+</CodePreview>
+
+## Polymorphic
+
+Override the underlying element that is rendered for the text to change it's semantic meaning. By default, the `p` element will be rendered.
+
+<CodePreview
+  code={`
+<Text as="h2" variant="h1">
+    Semantically rendered as {"<h2>"}, but visually rendered as {"<h1>"}
+</Text>
+`}
+>
+  <Text as="h1" variant="h2">Semantically rendered as {"<h1>"}, but visually rendered as {"<h2>"}</Text>
+</CodePreview>

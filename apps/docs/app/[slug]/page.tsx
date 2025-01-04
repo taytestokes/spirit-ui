@@ -1,7 +1,7 @@
 import { compileMDX } from "next-mdx-remote/rsc";
 import { MDXComponents } from "mdx/types";
 
-import { Text } from "@spirit-ui/design-system/server";
+import { Heading, Text } from "@spirit-ui/design-system/server";
 
 import { getDocumentationBySlug } from "../_utils/mdx";
 
@@ -20,6 +20,7 @@ const components = {
   ColorPalette,
   SpacingTable,
   TypeScale,
+  Heading,
   Text,
   CodePreview,
 } as MDXComponents;

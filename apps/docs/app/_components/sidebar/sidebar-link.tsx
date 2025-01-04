@@ -26,7 +26,7 @@ export const SidebarLink = ({ className, children, path }: Props) => {
       )}
       href={path}
     >
-      <Text variant="paragraph-sm">{children}</Text>
+      <Text variant="p-sm">{children}</Text>
     </Link>
   );
 };
