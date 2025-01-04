@@ -1,5 +1,11 @@
 # @spirit-ui/design-system
 
+## 0.0.5
+
+### Patch Changes
+
+- 8b9899a: Implemented sprinkles for utility classes, updated box component to consume token values, and updated Text and Heading components
+
 ## 0.0.4
 
 ### Patch Changes
