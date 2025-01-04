@@ -6,53 +6,61 @@ import { CodePreview } from "../_components/code-preview/code-preview";
 
 Display text using defined typography styles.
 
-## Variants
+### Variants
 
 The variant will determine how to the text is visually represented.
 
 <CodePreview
   code={`
-  <Text variant="p">Paragraph</Text>
-  <Text variant="p-sm">Paragraph Small</Text>
-  <Text variant="label">Label</Text>
-  <Text variant="label-sm">Label Small</Text>
-  <Text variant="button">Button</Text>
-  <Text variant="button-sm">Button Small</Text>
+  <Text variant="extraLarge">Extra Large</Text>
+  <Text variant="large">Large</Text>
+  <Text variant="medium">Medium</Text>
+  <Text variant="base">Base</Text>
+  <Text variant="small">Small</Text>
+  <Text variant="extraSmall">Extra Small</Text>
 `}
 >
-  <Text variant="p">Paragraph</Text>
-  <Text variant="p-sm">Paragraph Small</Text>
-  <Text variant="label">Label</Text>
-  <Text variant="label-sm">Label Small</Text>
-  <Text variant="button">Button</Text>
-  <Text variant="button-sm">Button Small</Text>
+  <Text variant="extraLarge">Extra Large</Text>
+  <Text variant="large">Large</Text>
+  <Text variant="medium">Medium</Text>
+  <Text variant="base">Base</Text>
+  <Text variant="small">Small</Text>
+  <Text variant="extraSmall">Extra Small</Text>
 </CodePreview>
 
-## Color
+### Color
 
 The color of the text can be applied by passing the name of the color that is represented by our color tokens.
 
 <CodePreview
   code={`
-  <Text color="blue_700">Blue</Text>
-  <Text color="red_700">Red</Text>
-  <Text color="yellow_700">Yellow</Text>
-  <Text color="green_700">Green</Text>
-  <Text color="teal_700">Teal</Text>
-  <Text color="purple_700">Purple</Text>
-  <Text color="pink_700">Pink</Text>
+  <Text color="pink_700">Welcome to Spirit UI</Text>
 `}
 >
-  <Text color="blue_700">Blue</Text>
-  <Text color="red_700">Red</Text>
-  <Text color="yellow_700">Yellow</Text>
-  <Text color="green_700">Green</Text>
-  <Text color="teal_700">Teal</Text>
-  <Text color="purple_700">Purple</Text>
-  <Text color="pink_700">Pink</Text>
+  <Text color="pink_700">Welcome to Spirit UI</Text>
 </CodePreview>
 
-## Polymorphic
+### Weight
+
+The font weight of the text can be applied by passing the name of the font weight through the weight prop.
+
+<CodePreview
+  code={`
+  <Text weight="regular">Regular</Text>
+  <Text weight="medium">Medium</Text>
+  <Text weight="semibold">Semibold</Text>
+  <Text weight="bold">Bold</Text>
+  <Text weight="black">Black</Text>
+`}
+>
+  <Text weight="regular">Regular</Text>
+  <Text weight="medium">Medium</Text>
+  <Text weight="semibold">Semibold</Text>
+  <Text weight="bold">Bold</Text>
+  <Text weight="black">Black</Text>
+</CodePreview>
+
+### Polymorphic
 
 Override the underlying element that is rendered for the text to change it's semantic meaning. By default, the `p` element will be rendered.
 

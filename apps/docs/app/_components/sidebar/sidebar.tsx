@@ -15,7 +15,7 @@ export const Sidebar = () => {
           <Text
             color="neutral_900"
             className={classes.groupLabel}
-            variant="label-sm"
+            variant="extraSmall"
           >
             Foundations
           </Text>
@@ -35,7 +35,7 @@ export const Sidebar = () => {
           <Text
             color="neutral_900"
             className={classes.groupLabel}
-            variant="label-sm"
+            variant="extraSmall"
           >
             Components
           </Text>

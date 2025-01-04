@@ -8,27 +8,28 @@ export const textStyles = recipe({
   }),
   variants: {
     variant: {
-      p: atoms({
+      extraLarge: atoms({
+        fontSize: "xl",
+      }),
+      large: atoms({
+        fontSize: "lg",
+      }),
+      medium: atoms({
+        fontSize: "md",
+      }),
+      base: atoms({
         fontSize: "base",
       }),
-      "p-sm": atoms({
+      small: atoms({
         fontSize: "sm",
       }),
-      label: atoms({
-        fontSize: "sm",
-      }),
-      "label-sm": atoms({
+      extraSmall: atoms({
         fontSize: "xs",
-      }),
-      button: atoms({
-        fontSize: "sm",
-        fontWeight: "medium",
-      }),
-      "button-sm": atoms({
-        fontSize: "xs",
-        fontWeight: "medium",
       }),
     },
+  },
+  defaultVariants: {
+    variant: "base",
   },
 });
 

@@ -10,6 +10,7 @@ type Props = {
   children: React.ReactNode;
   className?: string;
   color?: BoxProps["color"];
+  weight?: BoxProps["fontWeight"];
 } & Variants;
 
 export const Text: React.FC<Props> = ({
@@ -17,13 +18,15 @@ export const Text: React.FC<Props> = ({
   children,
   className,
   color,
-  variant = "p",
+  variant,
+  weight,
   ...rest
 }: Props) => (
   <Box
     as={as}
     className={clsx(textStyles({ variant }), className)}
     color={color}
+    fontWeight={weight}
     {...rest}
   >
     {children}
