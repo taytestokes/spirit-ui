@@ -1,52 +1,33 @@
-import { style } from "@vanilla-extract/css";
 import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
-import { theme } from "../../../styles/vars.css";
 
-const baseTextStyle = style({
-  lineHeight: theme.vars.lineHeights.normal,
-});
+import { atoms } from "../../../styles/atoms";
 
 export const textStyles = recipe({
+  base: atoms({
+    lineHeight: "normal",
+  }),
   variants: {
     variant: {
-      p: style([
-        baseTextStyle,
-        style({
-          fontSize: theme.vars.fontSizes.base,
-        }),
-      ]),
-      "p-sm": style([
-        baseTextStyle,
-        style({
-          fontSize: theme.vars.fontSizes.sm,
-        }),
-      ]),
-      label: style([
-        baseTextStyle,
-        style({
-          fontSize: theme.vars.fontSizes.sm,
-        }),
-      ]),
-      "label-sm": style([
-        baseTextStyle,
-        style({
-          fontSize: theme.vars.fontSizes.xs,
-        }),
-      ]),
-      button: style([
-        baseTextStyle,
-        style({
-          fontSize: theme.vars.fontSizes.sm,
-          fontWeight: theme.vars.fontWeights.medium,
-        }),
-      ]),
-      "button-sm": style([
-        baseTextStyle,
-        style({
-          fontSize: theme.vars.fontSizes.xs,
-          fontWeight: theme.vars.fontWeights.medium,
-        }),
-      ]),
+      p: atoms({
+        fontSize: "base",
+      }),
+      "p-sm": atoms({
+        fontSize: "sm",
+      }),
+      label: atoms({
+        fontSize: "sm",
+      }),
+      "label-sm": atoms({
+        fontSize: "xs",
+      }),
+      button: atoms({
+        fontSize: "sm",
+        fontWeight: "medium",
+      }),
+      "button-sm": atoms({
+        fontSize: "xs",
+        fontWeight: "medium",
+      }),
     },
   },
 });

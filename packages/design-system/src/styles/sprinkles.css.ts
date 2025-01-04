@@ -2,6 +2,9 @@ import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
 
 import { theme } from "./vars.css";
 
+// Ensure
+import "./reset.css";
+
 const {
   vars: {
     borderStyles,

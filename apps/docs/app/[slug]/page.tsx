@@ -8,7 +8,6 @@ import { getDocumentationBySlug } from "../_utils/mdx";
 import MDXDefaultComponents from "../_components/mdx";
 import { ColorPalette } from "../_components/color-palette/color-palette";
 import { SpacingTable } from "../_components/spacing-table/spacing-table";
-import { TypeScale } from "../_components/type-scale/type-scale";
 import { CodePreview } from "../_components/code-preview/code-preview";
 
 import * as classes from "./page.css";
@@ -19,7 +18,6 @@ const components = {
   ...MDXDefaultComponents,
   ColorPalette,
   SpacingTable,
-  TypeScale,
   Heading,
   Text,
   CodePreview,

@@ -41,6 +41,9 @@ export const Sidebar = () => {
           </Text>
           <ul className={classes.groupMenu}>
             <li className={classes.groupMenuItem}>
+              <SidebarLink path="/box">Box</SidebarLink>
+            </li>
+            <li className={classes.groupMenuItem}>
               <SidebarLink path="/heading">Heading</SidebarLink>
             </li>
             <li className={classes.groupMenuItem}>

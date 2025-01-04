@@ -9,7 +9,6 @@ import { Sidebar } from "./_components/sidebar/sidebar";
  * Imports the external style sheets from spirit-ui
  * design system.
  */
-import "@spirit-ui/design-system/reset";
 import "@spirit-ui/design-system/styles";
 
 import * as classes from "./layout.css";

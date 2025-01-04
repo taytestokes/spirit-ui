@@ -7,7 +7,7 @@ export const wrapper = style({
   borderRight: `1px solid ${theme.vars.colors.neutral_300}`,
   borderTop: `1px solid ${theme.vars.colors.neutral_300}`,
   borderRadius: "6px",
-  marginBlock: theme.vars.space.spacing_4,
+  marginBlock: theme.vars.space.spacing_2,
 });
 
 export const preview = style({

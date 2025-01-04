@@ -2,7 +2,7 @@ import React from "react";
 
 import { Text } from "@spirit-ui/design-system/server";
 
-import * as styles from "./paragraph.css";
+import * as styles from "./styles.css";
 
 interface Props {
   children: React.ReactNode;

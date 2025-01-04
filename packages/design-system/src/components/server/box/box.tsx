@@ -26,7 +26,7 @@ export const Box = forwardRef<HTMLElement, Props>(
      * forward the rest of the native props onto the element.
      */
     for (const key in props) {
-      if (sprinkles.properties.has(key as keyof Omit<Atoms, "className">)) {
+      if (sprinkles.properties.has(key as keyof Atoms)) {
         atomProps[key] = props[key as keyof typeof props];
       } else {
         nativeProps[key] = props[key as keyof typeof props];

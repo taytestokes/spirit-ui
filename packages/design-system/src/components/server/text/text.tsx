@@ -9,7 +9,7 @@ type Props = {
   as?: "label" | "p" | "span";
   children: React.ReactNode;
   className?: string;
-  color: BoxProps["color"];
+  color?: BoxProps["color"];
 } & Variants;
 
 export const Text: React.FC<Props> = ({
