@@ -20,7 +20,25 @@ export const sidebar = style({
   },
 });
 
-export const header = style({});
+export const header = style({
+  alignItems: "center",
+  // background: vars.colors.neutral_0,
+  // borderBottom: `1px solid ${vars.colors.neutral_300}`,
+  display: "flex",
+  gap: vars.space.spacing_1,
+  padding: vars.space.spacing_2,
+});
+
+export const icon = style({
+  alignItems: "center",
+  background: vars.colors.neutral_1000,
+  borderRadius: "6px",
+  color: vars.colors.neutral_0,
+  display: "flex",
+  height: "32px",
+  justifyContent: "center",
+  width: "32px",
+});
 
 export const content = style({
   display: "flex",

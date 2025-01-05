@@ -3,7 +3,7 @@ import { clsx } from "clsx";
 
 import { Box, BoxProps } from "../box";
 
-import { textStyles, Variants } from "./text.css";
+import * as styles from "./styles.css";
 
 type Props = {
   as?: "label" | "p" | "span";
@@ -11,7 +11,7 @@ type Props = {
   className?: string;
   color?: BoxProps["color"];
   weight?: BoxProps["fontWeight"];
-} & Variants;
+} & styles.Variants;
 
 export const Text: React.FC<Props> = ({
   as = "p",
@@ -24,7 +24,7 @@ export const Text: React.FC<Props> = ({
 }: Props) => (
   <Box
     as={as}
-    className={clsx(textStyles({ variant }), className)}
+    className={clsx(styles.text({ variant }), className)}
     color={color}
     fontWeight={weight}
     {...rest}

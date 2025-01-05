@@ -2,7 +2,6 @@ import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
 
 import { theme } from "./vars.css";
 
-// Ensure
 import "./reset.css";
 
 const {
@@ -69,11 +68,6 @@ const responsiveProperties = defineProperties({
     paddingTop: space,
   },
 });
-
-// PICK UP HERE
-// - Finish adding the available css properties to sprinkles
-// - Revisit tokens naming
-// - Finish adding all tokens
 
 const unresponsiveProperties = defineProperties({
   properties: {

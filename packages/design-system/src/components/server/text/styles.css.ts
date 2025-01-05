@@ -2,7 +2,7 @@ import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
 
 import { atoms } from "../../../styles/atoms";
 
-export const textStyles = recipe({
+export const text = recipe({
   base: atoms({
     lineHeight: "normal",
   }),
@@ -33,4 +33,4 @@ export const textStyles = recipe({
   },
 });
 
-export type Variants = RecipeVariants<typeof textStyles>;
+export type Variants = RecipeVariants<typeof text>;

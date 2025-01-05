@@ -4,13 +4,34 @@ import { Text } from "@spirit-ui/design-system/server";
 
 import { SidebarLink } from "./sidebar-link";
 import { ThemeSwitcher } from "../theme-switcher/theme-switcher";
+import { GhostIcon } from "../icons/ghost-icon";
 
 import * as classes from "./sidebar.css";
 
 export const Sidebar = () => {
   return (
     <aside className={classes.sidebar}>
+      <div className={classes.header}>
+        {/* <div className={classes.icon}> */}
+        <GhostIcon height="24" width="24" />
+        {/* </div> */}
+        {/* <Text weight="semibold">Spirit</Text> */}
+      </div>
       <nav className={classes.content}>
+        <div className={classes.group}>
+          <Text
+            color="neutral_900"
+            className={classes.groupLabel}
+            variant="extraSmall"
+          >
+            Getting Started
+          </Text>
+          <ul className={classes.groupMenu}>
+            <li className={classes.groupMenuItem}>
+              <SidebarLink path="/introduction">Introduction</SidebarLink>
+            </li>
+          </ul>
+        </div>
         <div className={classes.group}>
           <Text
             color="neutral_900"

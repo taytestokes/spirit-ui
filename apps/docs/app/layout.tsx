@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 
-// import { ThemeProvider } from "./_components/theme-provider/theme-provider";
-import { ThemeProvider } from "@spirit-ui/design-system/client";
-import { Box } from "@spirit-ui/design-system/server";
-import { Sidebar } from "./_components/sidebar/sidebar";
-
 /**
  * Imports the external style sheets from spirit-ui
- * design system.
+ * design system. This will include all of the variables
+ * and utility classes from the design system.
  */
 import "@spirit-ui/design-system/styles";
+
+import { ThemeProvider } from "@spirit-ui/design-system/client";
+import { Sidebar } from "./_components/sidebar/sidebar";
 
 import * as classes from "./layout.css";
 
