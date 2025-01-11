@@ -1,55 +1,70 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useMemo,
+  useCallback,
+} from "react";
 
-// TODO:
-// - Figure out how to prevent flash of theme - need inject the theme script into the html to run on the server
-// - https://www.joshwcomeau.com/react/dark-mode/
+import { script } from "./script";
 
 type ThemeContextValue = {
   theme: string;
-  toggleTheme(): void;
+  setTheme: (theme: string) => void;
 };
 
 type Props = {
-  attribute?: string;
   children: React.ReactNode;
-  defaultTheme?: "light" | "dark";
-  element?: string;
-  storageKey?: string;
+  defaultTheme?: string;
 };
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-export const ThemeProvider = ({
-  attribute = "data-theme",
-  children,
-  defaultTheme = "light",
-  element = ":root",
-  storageKey = "spirit-ui-theme",
-}: Props) => {
-  const [theme, setTheme] = useState(defaultTheme);
+export const ThemeProvider = ({ children, defaultTheme = "light" }: Props) => {
+  const [theme, setThemeState] = useState(defaultTheme);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    localStorage.setItem(storageKey, newTheme);
-  };
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem(storageKey);
-    if (!storedTheme) return localStorage.setItem(storageKey, defaultTheme);
-    if (storedTheme === "dark") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
+  const setTheme = useCallback((theme: string) => {
+    setThemeState(theme);
+    localStorage.setItem("spirit-ui-theme", theme);
   }, []);
 
+  /**
+   * On initial hydration, we will pull the prefered theme from local storage
+   * and set the theme state to that value if it exists. If not, we will
+   * use the default theme.
+   */
   useEffect(() => {
-    document.querySelector(element)?.setAttribute(attribute, theme);
+    const storedTheme =
+      window.localStorage.getItem("spirit-ui-theme") || defaultTheme;
+
+    setThemeState(storedTheme);
+  }, []);
+
+  /**
+   * Update the :root element and apply the new theme value whenever theme changes.
+   */
+  useEffect(() => {
+    document.querySelector(":root")?.setAttribute("data-theme", theme);
   }, [theme]);
 
+  /**
+   * Provider values that will be available to consume
+   * to any component using the theme context.
+   */
+  const value = useMemo(
+    () => ({
+      theme,
+      setTheme,
+    }),
+    [theme, setTheme]
+  );
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={value}>
+      <script
+        dangerouslySetInnerHTML={{ __html: `(${script.toString()})()` }}
+      />
       {children}
     </ThemeContext.Provider>
   );

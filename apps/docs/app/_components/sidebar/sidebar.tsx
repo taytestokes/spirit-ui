@@ -3,20 +3,12 @@ import React from "react";
 import { Text } from "@spirit-ui/design-system/server";
 
 import { SidebarLink } from "./sidebar-link";
-import { ThemeSwitcher } from "../theme-switcher/theme-switcher";
-import { GhostIcon } from "../icons/ghost-icon";
 
 import * as classes from "./sidebar.css";
 
 export const Sidebar = () => {
   return (
     <aside className={classes.sidebar}>
-      <div className={classes.header}>
-        {/* <div className={classes.icon}> */}
-        <GhostIcon height="24" width="24" />
-        {/* </div> */}
-        {/* <Text weight="semibold">Spirit</Text> */}
-      </div>
       <nav className={classes.content}>
         <div className={classes.group}>
           <Text
@@ -76,10 +68,6 @@ export const Sidebar = () => {
           </ul>
         </div>
       </nav>
-
-      <div className={classes.footer}>
-        <ThemeSwitcher />
-      </div>
     </aside>
   );
 };

@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+import { calc } from "@vanilla-extract/css-utils";
 import { theme } from "@spirit-ui/design-system/theme";
 
 const { vars } = theme;
@@ -7,10 +8,11 @@ export const sidebar = style({
   background: vars.colors.neutral_50,
   borderRight: `1px solid ${vars.colors.neutral_300}`,
   display: "none",
-  height: "100vh",
+  height: calc.subtract("100vh", "56px"),
   position: "sticky",
-  top: 0,
+  top: "56px",
   width: "240px",
+  zIndex: 10,
 
   "@media": {
     "screen and (min-width: 768px)": {

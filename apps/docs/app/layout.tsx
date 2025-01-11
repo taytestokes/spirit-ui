@@ -8,7 +8,10 @@ import type { Metadata } from "next";
 import "@spirit-ui/design-system/styles";
 
 import { ThemeProvider } from "@spirit-ui/design-system/client";
+import { Text } from "@spirit-ui/design-system/server";
+
 import { Sidebar } from "./_components/sidebar/sidebar";
+import { ThemeSwitcher } from "./_components/theme-switcher/theme-switcher";
 
 import * as classes from "./layout.css";
 
@@ -23,15 +26,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ThemeProvider>
-      <html className={classes.html} lang="en">
-        <body>
+    <html suppressHydrationWarning className={classes.html} lang="en">
+      <body className={classes.body}>
+        <ThemeProvider>
+          <header className={classes.header}>
+            <Text weight="semibold">Spirit Design System</Text>
+            <ThemeSwitcher />
+          </header>
           <main className={classes.main}>
             <Sidebar />
-            <section className={classes.content}>{children}</section>
+            <div className={classes.content}>{children}</div>
           </main>
-        </body>
-      </html>
-    </ThemeProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
