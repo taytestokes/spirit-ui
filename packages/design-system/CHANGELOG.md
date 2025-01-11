@@ -1,5 +1,11 @@
 # @spirit-ui/design-system
 
+## 0.0.6
+
+### Patch Changes
+
+- 382a3a4: Updated theme provider to persist theme using local storage and inject styles during server render to avoid flicker
+
 ## 0.0.5
 
 ### Patch Changes
