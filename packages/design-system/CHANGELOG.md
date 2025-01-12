@@ -1,5 +1,11 @@
 # @spirit-ui/design-system
 
+## 0.0.7
+
+### Patch Changes
+
+- 7c8a3a4: Add animation disabling when theme changes for snappy feel
+
 ## 0.0.6
 
 ### Patch Changes
