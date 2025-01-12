@@ -28,6 +28,21 @@ const getInitialTheme = () => {
   return window.localStorage.getItem("spirit-ui-theme") || "light";
 };
 
+const disableAnimations = () => {
+  const css = document.createElement("style");
+  css.appendChild(
+    document.createTextNode(
+      `*{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}`
+    )
+  );
+  document.head.appendChild(css);
+
+  return () => {
+    window.getComputedStyle(document.body);
+    document.head.removeChild(css);
+  };
+};
+
 export const ThemeProvider = ({ children }: Props) => {
   const [theme, setThemeState] = useState(() => getInitialTheme());
 
@@ -36,19 +51,14 @@ export const ThemeProvider = ({ children }: Props) => {
     localStorage.setItem("spirit-ui-theme", theme);
   }, []);
 
-  /**
-   * Update the :root element and apply the new theme value whenever theme changes.
-   */
   useEffect(() => {
     if (theme) {
+      const enableAnimatinos = disableAnimations();
       document.querySelector(":root")?.setAttribute("data-theme", theme);
+      enableAnimatinos();
     }
   }, [theme]);
 
-  /**
-   * Provider values that will be available to consume
-   * to any component using the theme context.
-   */
   const value = useMemo(
     () => ({
       theme,
@@ -61,7 +71,6 @@ export const ThemeProvider = ({ children }: Props) => {
     <ThemeContext.Provider value={value}>
       <script
         dangerouslySetInnerHTML={{ __html: `(${script.toString()})()` }}
-        suppressHydrationWarning
       />
       {children}
     </ThemeContext.Provider>
