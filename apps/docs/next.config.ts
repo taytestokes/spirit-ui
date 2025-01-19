@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withContentlayer } from "next-contentlayer2";
 import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
 
 const withVanillaExtract = createVanillaExtractPlugin();
@@ -10,6 +11,17 @@ const nextConfig: NextConfig = {
    * https://github.com/hashicorp/next-mdx-remote?tab=readme-ov-file#installation
    */
   transpilePackages: ["next-mdx-remote", "@spirit-ui/design-system"],
+  reactStrictMode: true,
+  swcMinify: true,
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/installation",
+        permanent: true,
+      },
+    ];
+  },
 };
 
-export default withVanillaExtract(nextConfig);
+export default withVanillaExtract(withContentlayer(nextConfig));

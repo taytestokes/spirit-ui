@@ -6,7 +6,9 @@ import "./reset.css";
 
 const {
   vars: {
+    borderRadius,
     borderStyles,
+    borderWidths,
     colors,
     fonts,
     fontSizes,
@@ -34,7 +36,9 @@ const responsiveProperties = defineProperties({
   properties: {
     alignItems: ["flex-start", "center", "flex-end", "stretch", "baseline"],
     alignSelf: ["flex-start", "center", "flex-end", "stretch", "baseline"],
-    borderWidth: borderStyles,
+    borderRadius: borderRadius,
+    borderStyle: borderStyles,
+    borderWidth: borderWidths,
     display: ["block", "flex", "grid", "inline-block", "none", "contents"],
     flexDirection: ["column", "row", "column-reverse", "row-reverse"],
     flexGrow: [0, 1, 2, 3, 4],
@@ -62,6 +66,12 @@ const responsiveProperties = defineProperties({
     ],
     letterSpacing: letterSpacings,
     lineHeight: lineHeights,
+    margin: space,
+    marginBottom: space,
+    marginLeft: space,
+    marginRight: space,
+    marginTop: space,
+    padding: space,
     paddingBottom: space,
     paddingLeft: space,
     paddingRight: space,

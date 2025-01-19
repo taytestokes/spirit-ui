@@ -1,7 +1,7 @@
 import { style } from "@vanilla-extract/css";
 import { theme } from "@spirit-ui/design-system/theme";
 
-export const article = style({
+export const content = style({
   margin: "0 auto",
   padding: theme.vars.space.spacing_6,
   width: "100%",

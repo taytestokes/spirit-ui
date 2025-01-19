@@ -1,40 +1,35 @@
-import { compileMDX } from "next-mdx-remote/rsc";
-import { MDXComponents } from "mdx/types";
+import { notFound } from "next/navigation";
+import { allDocs } from "contentlayer/generated";
 
-import { Heading, Text } from "@spirit-ui/design-system/server";
+import { compileMDX } from "next-mdx-remote/rsc";
 
 import { getDocumentationBySlug } from "../_utils/mdx";
 
-import MDXDefaultComponents from "../_components/mdx";
-import { ColorPalette } from "../_components/color-palette/color-palette";
-import { SpacingTable } from "../_components/spacing-table/spacing-table";
-import { CodePreview } from "../_components/code-preview/code-preview";
+import { components } from "../_components/mdx-components/mdx-components";
 
 import * as classes from "./page.css";
 
 type Params = Promise<{ slug: string }>;
 
-const components = {
-  ...MDXDefaultComponents,
-  ColorPalette,
-  SpacingTable,
-  Heading,
-  Text,
-  CodePreview,
-} as MDXComponents;
-
 const DocumentationPage = async (props: { params: Params }) => {
   const pageParams = await props.params;
-  const slug = pageParams.slug;
 
-  const documentation = await getDocumentationBySlug(slug);
+  const doc = allDocs.find((doc) => doc.slug === `/${pageParams.slug}`);
+
+  if (!doc) {
+    return notFound();
+  }
 
   const { content } = await compileMDX({
-    source: documentation,
+    source: doc.body.raw,
     components,
   });
 
-  return <article className={classes.article}>{content}</article>;
+  return (
+    <div className={classes.content}>
+      <article>{content}</article>
+    </div>
+  );
 };
 
 export default DocumentationPage;

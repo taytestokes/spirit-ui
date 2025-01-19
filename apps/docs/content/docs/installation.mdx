@@ -1,0 +1,32 @@
+import { Snippet } from '../_components/snippet'
+import { CodeBlock } from '../_components/code-block'
+
+# Installation
+
+Get started with Spirit UI by installing the `@spirit-ui/design-system` package.
+
+<Snippet>npm install @spirit-ui/design-system</Snippet>
+
+After installing the package, add the `ThemeProvider` to root layout of your application.
+
+```tsx
+import { ThemeProvider } from "@/components/theme-provider"
+
+export default function RootLayout({
+      children,
+  }: {
+    children: React.ReactNode
+  }) {
+    return (
+      <html lang="en" suppressHydrationWarning>
+        <body>
+          <ThemeProvider>{children}</ThemeProvider>
+        </body>
+      </html>
+    )
+}
+```
+
+Ensure to add the `suppressHydrationWarning` attribute to the `<html>` element of your root layout. If you don't add
+the attribute, you will get hydration mismatch warnings. This property only applies one level deep, so it won't prevent
+hydration warnings on other elements.

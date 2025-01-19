@@ -16,11 +16,11 @@ export const Sidebar = () => {
             className={classes.groupLabel}
             variant="extraSmall"
           >
-            Getting Started
+            Overview
           </Text>
           <ul className={classes.groupMenu}>
             <li className={classes.groupMenuItem}>
-              <SidebarLink path="/introduction">Introduction</SidebarLink>
+              <SidebarLink path="/installation">Installation</SidebarLink>
             </li>
           </ul>
         </div>

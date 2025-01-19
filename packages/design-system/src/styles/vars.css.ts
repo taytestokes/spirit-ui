@@ -20,7 +20,9 @@ const darkColorTokens = {
 };
 
 const sharedTokens = {
+  borderRadius: tokens.borderRadius,
   borderStyles: tokens.borderStyles,
+  borderWidths: tokens.borderWidths,
   fonts: tokens.fonts,
   fontSizes: tokens.fontSizes,
   fontWeights: tokens.fontWeights,

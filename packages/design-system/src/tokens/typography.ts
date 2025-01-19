@@ -2,6 +2,7 @@ export const fonts = {
   inter: "Inter",
   system:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+  mono: "monospace, ui-monospace",
 };
 
 export const fontSizes = {
