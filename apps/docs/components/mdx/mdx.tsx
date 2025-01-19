@@ -1,5 +1,6 @@
 import React, { HtmlHTMLAttributes } from "react";
 import { clsx } from "clsx";
+import { useMDXComponent } from "next-contentlayer2/hooks";
 
 import { Heading, Text } from "@spirit-ui/design-system/server";
 
@@ -9,9 +10,9 @@ import { CodePreview } from "../code-preview/code-preview";
 import { Snippet } from "../snippet";
 import { CodeBlock } from "../code-block";
 
-import * as classes from "./mdx-components.css";
+import * as classes from "./mdx.css";
 
-export const components = {
+const components = {
   h1: ({ ...props }) => <h1 className={classes.h1} {...props} />,
   h2: ({ ...props }) => <h2 className={classes.h2} {...props} />,
   h3: ({ ...props }) => <h3 className={classes.h3} {...props} />,
@@ -33,4 +34,10 @@ export const components = {
   CodePreview,
   Snippet,
   CodeBlock,
+};
+
+export const MDX = ({ code }: { code: string }) => {
+  const Component = useMDXComponent(code);
+
+  return <Component components={components} />;
 };

@@ -10,8 +10,8 @@ import "@spirit-ui/design-system/styles";
 import { ThemeProvider } from "@spirit-ui/design-system/client";
 import { Text } from "@spirit-ui/design-system/server";
 
-import { Sidebar } from "./_components/sidebar/sidebar";
-import { ThemeSwitcher } from "./_components/theme-switcher/theme-switcher";
+import { Sidebar } from "../components/sidebar/sidebar";
+import { ThemeSwitcher } from "../components/theme-switcher/theme-switcher";
 
 import * as classes from "./layout.css";
 
