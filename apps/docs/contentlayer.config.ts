@@ -1,7 +1,6 @@
 import { defineDocumentType, makeSource } from "contentlayer2/source-files";
 
 import remarkGfm from "remark-gfm";
-import rehypeHighlight from "rehype-highlight";
 
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
@@ -21,6 +20,8 @@ export default makeSource({
   documentTypes: [Doc],
   mdx: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeHighlight],
+    rehypePlugins: [
+      /* Plugins coming soon */
+    ],
   },
 });
