@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from "contentlayer2/source-files";
+import { theme } from "@spirit-ui/design-system/theme";
 
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
@@ -25,8 +26,17 @@ export default makeSource({
       [
         rehypePrettyCode,
         {
-          theme: "github-dark",
-          keepBackground: false,
+          // TODO: Build Spirit UI Code Theme
+          theme: {
+            tokenColors: [
+              {
+                settings: {
+                  foreground: theme.vars.colors.neutral_950,
+                  background: theme.vars.colors.neutral_50,
+                },
+              },
+            ],
+          },
         },
       ],
     ],

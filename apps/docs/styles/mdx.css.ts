@@ -2,7 +2,15 @@ import { globalStyle } from "@vanilla-extract/css";
 import { theme } from "@spirit-ui/design-system/theme";
 
 const {
-  vars: { borderRadius, colors, fontSizes, fontWeights, space },
+  vars: {
+    borderStyles,
+    borderRadius,
+    borderWidths,
+    colors,
+    fontSizes,
+    fontWeights,
+    space,
+  },
 } = theme;
 
 /**
@@ -15,7 +23,7 @@ globalStyle("[data-rehype-pretty-code-figure]", {
 });
 
 globalStyle("[data-rehype-pretty-code-figure] pre", {
-  background: colors.neutral_50,
+  background: colors.neutral_100,
   paddingBlock: space.spacing_2,
   paddingInline: 0,
 });
@@ -28,9 +36,12 @@ globalStyle("[data-rehype-pretty-code-figure] code", {
 
 globalStyle("[data-rehype-pretty-code-figure] [data-line]", {
   alignItems: "center",
+  borderLeftColor: "transparent",
+  borderLeftStyle: borderStyles.solid,
+  borderLeftWidth: "5px",
   display: "flex",
   minHeight: "1rem",
-  paddingBlock: space.spacing_0_5,
+  paddingBlock: space.spacing_0_25,
   paddingInline: space.spacing_2,
 });
 
@@ -49,10 +60,11 @@ globalStyle("[data-line-numbers] [data-line]::before", {
 
 globalStyle("[data-rehype-pretty-code-figure] [data-highlighted-line]", {
   background: colors.neutral_100,
+  borderLeftColor: colors.neutral_300,
 });
 
 globalStyle("[data-rehype-pretty-code-title]", {
-  color: colors.neutral_950,
+  color: colors.neutral_900,
   fontSize: fontSizes.sm,
   fontWeight: fontWeights.semibold,
   padding: space.spacing_1,

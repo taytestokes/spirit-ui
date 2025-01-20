@@ -4,14 +4,14 @@ Get started with Spirit UI by installing the `@spirit-ui/design-system` package.
 
 After installing the package, add the `ThemeProvider` to root layout of your application.
 
-```tsx showLineNumbers title="app/layout.tsx"
+```tsx showLineNumbers title="app/layout.tsx" {4,5,6}
 import { ThemeProvider } from "@/components/theme-provider"
 
 export default function RootLayout({
-      children,
-  }: {
-    children: React.ReactNode
-  }) {
+  children,
+} : {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>

@@ -49,9 +49,8 @@ export const code = style({
   backgroundColor: colors.neutral_100,
   borderRadius: borderRadius.base,
   fontFamily: fonts.mono,
-  fontSize: fontSizes.sm,
-  paddingBlock: space.spacing_0_25,
-  paddingInline: space.spacing_0_5,
+  fontSize: fontSizes.xs,
+  padding: space.spacing_0_5,
 });
 
 export const blockquote = style({});
