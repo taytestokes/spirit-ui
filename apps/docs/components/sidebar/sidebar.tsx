@@ -13,7 +13,7 @@ export const Sidebar = () => {
     <aside className={classes.sidebar}>
       <nav className={classes.content}>
         {sitemap.sidebar.map((section) => (
-          <div className={classes.group}>
+          <div className={classes.group} key={section.title}>
             <Text
               color="neutral_900"
               className={classes.groupLabel}
@@ -23,7 +23,7 @@ export const Sidebar = () => {
             </Text>
             <ul className={classes.groupMenu}>
               {section.items.map((item) => (
-                <li className={classes.groupMenuItem}>
+                <li className={classes.groupMenuItem} key={item.title}>
                   <SidebarLink path={item.href}>{item.title}</SidebarLink>
                 </li>
               ))}

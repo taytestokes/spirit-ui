@@ -24,6 +24,10 @@ export const sitemap = {
           title: "Spacing",
           href: "/spacing",
         },
+        {
+          title: "Typography",
+          href: "/typography",
+        },
       ],
     },
     {
