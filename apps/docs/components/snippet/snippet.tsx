@@ -12,8 +12,11 @@ export const Snippet = ({ children }: Props) => {
   return (
     <Box
       alignItems="center"
-      backgroundColor="neutral_100"
+      backgroundColor="neutral_50"
+      borderColor="neutral_200"
       borderRadius="base"
+      borderStyle="solid"
+      color="neutral_900"
       display="flex"
       padding="spacing_2"
     >

@@ -24,6 +24,8 @@ globalStyle("[data-rehype-pretty-code-figure]", {
 
 globalStyle("[data-rehype-pretty-code-figure] pre", {
   background: colors.neutral_100,
+  borderColor: colors.neutral_200,
+  borderStyle: borderStyles.solid,
   paddingBlock: space.spacing_2,
   paddingInline: 0,
 });
@@ -41,7 +43,7 @@ globalStyle("[data-rehype-pretty-code-figure] [data-line]", {
   borderLeftWidth: "5px",
   display: "flex",
   minHeight: "1rem",
-  paddingBlock: space.spacing_0_25,
+  paddingBlock: space.spacing_0_5,
   paddingInline: space.spacing_2,
 });
 

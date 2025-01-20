@@ -26,12 +26,11 @@ export default makeSource({
       [
         rehypePrettyCode,
         {
-          // TODO: Build Spirit UI Code Theme
           theme: {
             tokenColors: [
               {
                 settings: {
-                  foreground: theme.vars.colors.neutral_950,
+                  foreground: theme.vars.colors.neutral_900,
                   background: theme.vars.colors.neutral_50,
                 },
               },

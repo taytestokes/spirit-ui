@@ -2,9 +2,35 @@
 
 Get started with Spirit UI by installing the `@spirit-ui/design-system` package.
 
-After installing the package, add the `ThemeProvider` to root layout of your application.
+<Snippet>npm install @spirit-ui/design-system</Snippet>
 
-```tsx showLineNumbers title="app/layout.tsx" {4,5,6}
+After installing the package, import the external stylesheet to provide the base style variables, fonts, and utility classes.
+
+```tsx showLineNumbers title="app/layout.tsx" {1}
+import "@spirit-ui/design-system/styles";
+
+export default function RootLayout({
+  children,
+} : {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body>
+        {children}
+      </body>
+    </html>
+  )
+}
+```
+
+After installing the package, add the `ThemeProvider` to root layout of your application. This will manage what theme your application should use from Spirit UI.
+
+Currently, only `light` and `dark` mode themes are supported with the default being `light`.
+
+```tsx showLineNumbers title="app/layout.tsx" {3,11,13}
+import "@spirit-ui/design-system/styles";
+
 import { ThemeProvider } from "@/components/theme-provider"
 
 export default function RootLayout({
@@ -22,6 +48,11 @@ export default function RootLayout({
 }
 ```
 
-Ensure to add the `suppressHydrationWarning` attribute to the `<html>` element of your root layout. If you don't add
-the attribute, you will get hydration mismatch warnings. This property only applies one level deep, so it won't prevent
+Ensure to add the `suppressHydrationWarning` attribute to the `<html>` element of your root layout. 
+
+If you don't add the attribute, you will get hydration mismatch warnings. This is because we dynamically update the root element with the `[data-theme]` attribute to determine which theme values to use.
+
+This property only applies one level deep, so it won't prevent
 hydration warnings on other elements.
+
+You can now start importing the Spirit UI color variables and components to use in your application.
