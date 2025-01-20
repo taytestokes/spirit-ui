@@ -20,6 +20,9 @@ export const Sidebar = () => {
           </Text>
           <ul className={classes.groupMenu}>
             <li className={classes.groupMenuItem}>
+              <SidebarLink path="/introduction">Introduction</SidebarLink>
+            </li>
+            <li className={classes.groupMenuItem}>
               <SidebarLink path="/installation">Installation</SidebarLink>
             </li>
           </ul>

@@ -2,15 +2,7 @@ import { globalStyle } from "@vanilla-extract/css";
 import { theme } from "@spirit-ui/design-system/theme";
 
 const {
-  vars: {
-    borderStyles,
-    borderRadius,
-    borderWidths,
-    colors,
-    fontSizes,
-    fontWeights,
-    space,
-  },
+  vars: { borderStyles, borderRadius, colors, fontSizes, fontWeights, space },
 } = theme;
 
 /**

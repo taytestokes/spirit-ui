@@ -1,43 +1,66 @@
-import { style, globalStyle } from "@vanilla-extract/css";
+import { style } from "@vanilla-extract/css";
 import { theme } from "@spirit-ui/design-system/theme";
 
 const {
-  vars: { borderRadius, colors, fonts, fontSizes, space },
+  vars: {
+    borderRadius,
+    colors,
+    fonts,
+    fontSizes,
+    fontWeights,
+    letterSpacings,
+    lineHeights,
+    space,
+  },
 } = theme;
 
 export const h1 = style({
+  letterSpacing: letterSpacings.snug,
+  lineHeight: lineHeights.tight,
   fontSize: fontSizes.xxxxl,
 });
 
 export const h2 = style({
+  letterSpacing: letterSpacings.snug,
+  lineHeight: lineHeights.tight,
   fontSize: fontSizes.xxxl,
 });
 
 export const h3 = style({
+  letterSpacing: letterSpacings.snug,
+  lineHeight: lineHeights.tight,
   fontSize: fontSizes.xxl,
 });
 
 export const h4 = style({
+  letterSpacing: letterSpacings.snug,
+  lineHeight: lineHeights.tight,
   fontSize: fontSizes.xl,
 });
 
 export const h5 = style({
+  letterSpacing: letterSpacings.snug,
+  lineHeight: lineHeights.tight,
   fontSize: fontSizes.lg,
 });
 
 export const h6 = style({
+  letterSpacing: letterSpacings.snug,
+  lineHeight: lineHeights.tight,
   fontSize: fontSizes.md,
 });
 
-export const a = style({});
-
-export const p = style({
-  marginBlock: space.spacing_4,
+export const a = style({
+  color: "inherit",
+  fontWeight: fontWeights.semibold,
+  textDecoration: "underline",
+  textUnderlineOffset: "4px",
 });
 
-// TODO:
-// Get line numbers to appear in code block
-// Need code block to get highlighted
+export const p = style({
+  lineHeight: lineHeights.normal,
+  marginBlock: space.spacing_4,
+});
 
 export const pre = style({
   backgroundColor: colors.neutral_100,

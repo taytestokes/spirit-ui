@@ -4,7 +4,6 @@ import {
 } from "@vanilla-extract/css";
 
 import { tokens } from "../tokens";
-import { borderRadius } from "../tokens/border";
 
 const getVarName = (_val: string | null, path: string[]) =>
   `spirit-ui-${path.join("-")}`.replace("_", "-");

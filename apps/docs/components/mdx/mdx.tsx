@@ -19,7 +19,7 @@ const components = {
   h4: ({ ...props }) => <h4 className={classes.h4} {...props} />,
   h5: ({ ...props }) => <h5 className={classes.h5} {...props} />,
   h6: ({ ...props }) => <h6 className={classes.h6} {...props} />,
-  // a: () => {},
+  a: ({ ...props }) => <a className={classes.a} {...props} />,
   p: ({ ...props }) => <p className={classes.p} {...props} />,
   pre: ({ className, ...props }: HtmlHTMLAttributes<HTMLElement>) => (
     <pre className={clsx(classes.pre, className)} {...props} />
