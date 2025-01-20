@@ -42,7 +42,6 @@ export const p = style({
 export const pre = style({
   backgroundColor: colors.neutral_100,
   borderRadius: borderRadius.base,
-  marginBlock: space.spacing_4,
   padding: space.spacing_2,
 });
 
@@ -53,21 +52,6 @@ export const code = style({
   fontSize: fontSizes.sm,
   paddingBlock: space.spacing_0_25,
   paddingInline: space.spacing_0_5,
-});
-
-globalStyle(`${code} > .line`, {
-  counterIncrement: "line",
-  display: "inline-block",
-  height: "20px",
-});
-
-globalStyle(`${code} > .line::before`, {
-  color: theme.vars.colors.neutral_950,
-  content: "counter(line)",
-  display: "inline-block",
-  marginRight: theme.vars.space.spacing_2,
-  textAlign: "right",
-  width: "20px",
 });
 
 export const blockquote = style({});

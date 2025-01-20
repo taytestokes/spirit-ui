@@ -3,6 +3,7 @@ import { allDocs } from "contentlayer/generated";
 
 import { MDX } from "../../components/mdx";
 
+import "../../styles/mdx.css";
 import * as classes from "./page.css";
 
 type Params = Promise<{ slug: string }>;

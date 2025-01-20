@@ -21,9 +21,11 @@ const components = {
   h6: ({ ...props }) => <h6 className={classes.h6} {...props} />,
   // a: () => {},
   p: ({ ...props }) => <p className={classes.p} {...props} />,
-  pre: ({ ...props }) => <pre className={classes.pre} {...props} />,
+  pre: ({ className, ...props }: HtmlHTMLAttributes<HTMLElement>) => (
+    <pre className={clsx(classes.pre, className)} {...props} />
+  ),
   code: ({ className, ...props }: HtmlHTMLAttributes<HTMLElement>) => (
-    <code className={clsx(className, classes.code)} {...props} />
+    <code className={clsx(classes.code, className)} {...props} />
   ),
   // blockquote: () => {},
   // img: () => {},
