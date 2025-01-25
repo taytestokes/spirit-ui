@@ -4,15 +4,17 @@ export const borderStyles = {
 };
 
 export const borderWidths = {
-  base: "1px",
+  none: "0px",
+  small: "1px",
+  medium: "2px",
+  large: "3px",
 };
 
-export const borderRadius = {
+export const radii = {
   none: "0px",
-  extraSmall: "1px",
   small: "2px",
-  base: "4px",
-  medium: "6px",
-  large: "8px",
-  extraLarge: "12px",
+  medium: "4px",
+  large: "6px",
+  xlarge: "8px",
+  full: "100%",
 };

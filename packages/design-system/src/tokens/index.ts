@@ -1,6 +1,10 @@
-import { borderRadius, borderStyles, borderWidths } from "./border";
-import { colors } from "./colors";
-import { space } from "./space";
+import { borderStyles, borderWidths, radii } from "./border";
+import { breakPoints } from "./break-points";
+import { colors } from "./color";
+import { shadows } from "./elevation";
+import { durations, easings } from "./motion";
+import { opacity } from "./opacity";
+import { spacing } from "./spacing";
 import {
   fonts,
   fontSizes,
@@ -10,14 +14,19 @@ import {
 } from "./typography";
 
 export const tokens = {
-  borderRadius,
   borderStyles,
   borderWidths,
+  breakPoints,
   colors,
+  durations,
+  easings,
   fonts,
   fontSizes,
   fontWeights,
   lineHeights,
   letterSpacings,
-  space,
+  opacity,
+  radii,
+  shadows,
+  spacing,
 };

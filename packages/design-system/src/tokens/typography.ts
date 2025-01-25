@@ -1,20 +1,19 @@
 export const fonts = {
-  inter: "Inter",
-  system:
-    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+  inter:
+    'Inter -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
   mono: "monospace, ui-monospace",
 };
 
 export const fontSizes = {
-  xs: "0.79rem",
-  sm: "0.889rem",
+  xsmall: "0.79rem",
+  small: "0.889rem",
   base: "1rem",
-  md: "1.125rem",
-  lg: "1.266rem",
-  xl: "1.424rem",
-  xxl: "1.602rem",
-  xxxl: "1.802rem",
-  xxxxl: "2.027rem",
+  medium: "1.125rem",
+  large: "1.266rem",
+  xlarge: "1.424rem",
+  xxlarge: "1.602rem",
+  xxxlarge: "1.802rem",
+  xxxxlarge: "2.027rem",
 };
 
 export const fontWeights = {

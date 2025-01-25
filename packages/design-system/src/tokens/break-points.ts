@@ -1,7 +1,7 @@
 export const breakPoints = {
-  mobile: "320px",
-  tablet: "768px",
-  computer: "992px",
-  desktop: "1200px",
-  widescreen: "1920px",
+  xsmall: "320px",
+  small: "760px",
+  medium: "990px",
+  large: "1200px",
+  xlarge: "1920px",
 };
