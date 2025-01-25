@@ -1,41 +1,41 @@
-import { theme } from "@spirit-ui/design-system/theme";
+import { vars } from "@spirit-ui/design-system/theme";
 import { style } from "@vanilla-extract/css";
 
 export const wrapper = style({
-  background: theme.vars.colors.neutral_0,
-  borderLeft: `1px solid ${theme.vars.colors.neutral_300}`,
-  borderRight: `1px solid ${theme.vars.colors.neutral_300}`,
-  borderTop: `1px solid ${theme.vars.colors.neutral_300}`,
-  borderRadius: "6px",
-  marginBlock: theme.vars.space.spacing_2,
+  background: vars.colors.neutral0,
+  borderLeft: `1px solid ${vars.colors.neutral300}`,
+  borderRight: `1px solid ${vars.colors.neutral300}`,
+  borderTop: `1px solid ${vars.colors.neutral300}`,
+  borderRadius: vars.radii.large,
+  marginBlock: vars.spacing.x2,
 });
 
 export const preview = style({
-  padding: theme.vars.space.spacing_2,
+  padding: vars.spacing.x2,
 });
 
 export const details = style({
-  background: theme.vars.colors.neutral_50,
-  borderBottom: `1px solid ${theme.vars.colors.neutral_300}`,
-  borderBottomLeftRadius: "6px",
-  borderBottomRightRadius: "6px",
+  background: vars.colors.neutral50,
+  borderBottom: `1px solid ${vars.colors.neutral300}`,
+  borderBottomLeftRadius: vars.radii.large,
+  borderBottomRightRadius: vars.radii.large,
 });
 
 export const summary = style({
-  borderTop: `1px solid ${theme.vars.colors.neutral_300}`,
-  color: theme.vars.colors.neutral_900,
+  borderTop: `1px solid ${vars.colors.neutral300}`,
+  color: vars.colors.neutral900,
   cursor: "pointer",
-  fontSize: theme.vars.fontSizes.sm,
-  padding: theme.vars.space.spacing_2,
+  fontSize: vars.fontSizes.small,
+  padding: vars.spacing.x2,
 });
 
 export const code = style({
-  background: theme.vars.colors.neutral_0,
-  borderBottomLeftRadius: "6px",
-  borderBottomRightRadius: "6px",
-  borderTop: `1px solid ${theme.vars.colors.neutral_300}`,
+  background: vars.colors.neutral0,
+  borderBottomLeftRadius: vars.radii.large,
+  borderBottomRightRadius: vars.radii.large,
+  borderTop: `1px solid ${vars.colors.neutral300}`,
   fontFamily: "monospace, ui-monospace",
-  fontSize: theme.vars.fontSizes.sm,
+  fontSize: vars.fontSizes.small,
   overflow: "auto",
-  padding: theme.vars.space.spacing_2,
+  padding: vars.spacing.x2,
 });

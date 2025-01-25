@@ -1,19 +1,15 @@
 import { style } from "@vanilla-extract/css";
-import { theme } from "@spirit-ui/design-system/theme";
-
-const {
-  vars: { borderRadius, borderStyles, colors, fontWeights, space },
-} = theme;
+import { vars } from "@spirit-ui/design-system/theme";
 
 export const docPager = style({
   alignItems: "center",
   display: "flex",
   justifyContent: "space-between",
-  paddingTop: space.spacing_4,
+  paddingTop: vars.spacing.x4,
 });
 
 export const link = style({
-  borderRadius: borderRadius.base,
+  borderRadius: vars.radii.medium,
   color: "inherit",
   display: "flex",
   flexDirection: "column",

@@ -5,7 +5,6 @@ import { useMDXComponent } from "next-contentlayer2/hooks";
 import { Heading, Text } from "@spirit-ui/design-system/server";
 
 import { ColorPalette } from "../color-palette/color-palette";
-import { SpacingTable } from "../spacing-table/spacing-table";
 import { CodePreview } from "../code-preview/code-preview";
 import { Snippet } from "../snippet";
 import { CodeBlock } from "../code-block";
@@ -30,7 +29,6 @@ const components = {
   // blockquote: () => {},
   // img: () => {},
   ColorPalette,
-  SpacingTable,
   Heading,
   Text,
   CodePreview,

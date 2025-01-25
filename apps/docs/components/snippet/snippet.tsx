@@ -12,13 +12,13 @@ export const Snippet = ({ children }: Props) => {
   return (
     <Box
       alignItems="center"
-      backgroundColor="neutral_50"
-      borderColor="neutral_200"
-      borderRadius="base"
+      backgroundColor="neutral50"
+      borderColor="neutral200"
+      borderRadius="medium"
       borderStyle="solid"
-      color="neutral_900"
+      color="neutral900"
       display="flex"
-      padding="spacing_2"
+      padding="x2"
     >
       <pre className={classes.pre}>{children}</pre>
     </Box>

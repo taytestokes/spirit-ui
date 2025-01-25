@@ -7,11 +7,11 @@ import * as classes from "./code-block.css";
 
 export const CodeBlock = async ({ code }: { code: string }) => (
   <Box
-    backgroundColor="neutral_100"
-    borderRadius="base"
+    backgroundColor="neutral100"
+    borderRadius="medium"
     className={classes.codeBlock}
     dangerouslySetInnerHTML={{ __html: await highlight(code) }}
     fontFamily="mono"
-    padding="spacing_2"
+    padding="x2"
   />
 );

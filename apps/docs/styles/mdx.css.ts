@@ -1,9 +1,5 @@
 import { globalStyle } from "@vanilla-extract/css";
-import { theme } from "@spirit-ui/design-system/theme";
-
-const {
-  vars: { borderStyles, borderRadius, colors, fontSizes, fontWeights, space },
-} = theme;
+import { vars } from "@spirit-ui/design-system/theme";
 
 /**
  * These styles will be applied to the classes
@@ -15,28 +11,28 @@ globalStyle("[data-rehype-pretty-code-figure]", {
 });
 
 globalStyle("[data-rehype-pretty-code-figure] pre", {
-  background: colors.neutral_100,
-  borderColor: colors.neutral_200,
-  borderStyle: borderStyles.solid,
-  paddingBlock: space.spacing_2,
+  background: vars.colors.neutral100,
+  borderColor: vars.colors.neutral200,
+  borderStyle: vars.borderStyles.solid,
+  paddingBlock: vars.spacing.x3,
   paddingInline: 0,
 });
 
 globalStyle("[data-rehype-pretty-code-figure] code", {
   backgroundColor: "transparent",
-  borderRadius: borderRadius.none,
+  borderRadius: vars.radii.none,
   padding: 0,
 });
 
 globalStyle("[data-rehype-pretty-code-figure] [data-line]", {
   alignItems: "center",
   borderLeftColor: "transparent",
-  borderLeftStyle: borderStyles.solid,
+  borderLeftStyle: vars.borderStyles.solid,
   borderLeftWidth: "5px",
   display: "flex",
   minHeight: "1rem",
-  paddingBlock: space.spacing_0_5,
-  paddingInline: space.spacing_2,
+  paddingBlock: vars.spacing.x1,
+  paddingInline: vars.spacing.x3,
 });
 
 globalStyle("[data-line-numbers]", {
@@ -45,21 +41,21 @@ globalStyle("[data-line-numbers]", {
 
 globalStyle("[data-line-numbers] [data-line]::before", {
   counterIncrement: "line",
-  color: theme.vars.colors.neutral_900,
+  color: vars.colors.neutral900,
   content: "counter(line)",
-  marginRight: theme.vars.space.spacing_2,
+  marginRight: vars.spacing.x3,
   textAlign: "right",
   width: "20px",
 });
 
 globalStyle("[data-rehype-pretty-code-figure] [data-highlighted-line]", {
-  background: colors.neutral_100,
-  borderLeftColor: colors.neutral_300,
+  background: vars.colors.neutral100,
+  borderLeftColor: vars.colors.neutral300,
 });
 
 globalStyle("[data-rehype-pretty-code-title]", {
-  color: colors.neutral_900,
-  fontSize: fontSizes.sm,
-  fontWeight: fontWeights.semibold,
-  padding: space.spacing_1,
+  color: vars.colors.neutral900,
+  fontSize: vars.fontSizes.small,
+  fontWeight: vars.fontWeights.semibold,
+  padding: vars.spacing.x2,
 });

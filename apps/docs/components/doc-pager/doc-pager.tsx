@@ -26,7 +26,7 @@ export const DocPager = ({ doc }: { doc: Doc }) => {
     <div className={classes.docPager}>
       {prev && (
         <Link className={classes.link} href={prev.href}>
-          <Text color="neutral_900" variant="extraSmall">
+          <Text color="neutral900" variant="extraSmall">
             Previous
           </Text>
           <Text>{prev.title}</Text>
@@ -34,7 +34,7 @@ export const DocPager = ({ doc }: { doc: Doc }) => {
       )}
       {next && (
         <Link className={clsx(classes.link, classes.next)} href={next.href}>
-          <Text color="neutral_900" variant="extraSmall">
+          <Text color="neutral900" variant="extraSmall">
             Next
           </Text>
           <Text>{next.title}</Text>

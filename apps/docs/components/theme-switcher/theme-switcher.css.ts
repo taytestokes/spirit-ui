@@ -1,13 +1,11 @@
 import { style } from "@vanilla-extract/css";
-import { theme } from "@spirit-ui/design-system/theme";
-
-const { vars } = theme;
+import { vars } from "@spirit-ui/design-system/theme";
 
 export const themeSwitcher = style({
-  background: vars.colors.neutral_0,
-  border: `1px solid ${vars.colors.neutral_200}`,
+  background: vars.colors.neutral0,
+  border: `1px solid ${vars.colors.neutral200}`,
   borderRadius: "4px",
-  color: vars.colors.neutral_950,
+  color: vars.colors.neutral950,
   cursor: "pointer",
-  padding: vars.space.spacing_1,
+  padding: vars.spacing.x2,
 });

@@ -1,21 +1,19 @@
 import { style, styleVariants } from "@vanilla-extract/css";
-import { theme } from "@spirit-ui/design-system/theme";
-
-const { vars } = theme;
+import { vars } from "@spirit-ui/design-system/theme";
 
 export const palette = style({
   display: "grid",
-  gap: vars.space.spacing_3,
-  marginTop: vars.space.spacing_3,
+  gap: vars.spacing.x3,
+  marginTop: vars.spacing.x3,
 });
 
 export const colorRow = style({
   display: "grid",
-  gap: vars.space.spacing_1,
+  gap: vars.spacing.x1,
 });
 
 export const rowLabel = style({
-  fontSize: vars.fontSizes.md,
+  fontSize: vars.fontSizes.medium,
   fontWeight: vars.fontWeights.semibold,
 
   ":first-letter": {
@@ -26,7 +24,7 @@ export const rowLabel = style({
 export const colorBoxes = style({
   alignItems: "center",
   display: "grid",
-  gap: vars.space.spacing_0_5,
+  gap: vars.spacing.x1,
   gridTemplateColumns: "repeat(5, 1fr)",
   width: "100%",
 });

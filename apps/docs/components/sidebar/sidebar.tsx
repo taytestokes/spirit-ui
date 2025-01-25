@@ -15,7 +15,7 @@ export const Sidebar = () => {
         {sitemap.sidebar.map((section) => (
           <div className={classes.group} key={section.title}>
             <Text
-              color="neutral_900"
+              color="neutral900"
               className={classes.groupLabel}
               variant="extraSmall"
             >

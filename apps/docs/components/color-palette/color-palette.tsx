@@ -1,9 +1,9 @@
 import React from "react";
-import { theme } from "@spirit-ui/design-system/theme";
+import { vars } from "@spirit-ui/design-system/theme";
 
 import * as styles from "./color-palette.css";
 
-type ThemeVarColor = keyof typeof theme.vars.colors;
+type ThemeVarColor = keyof typeof vars.colors;
 
 type ColorRowProps = {
   color:
@@ -18,7 +18,7 @@ type ColorRowProps = {
 };
 
 const ColorRow = ({ color }: ColorRowProps) => {
-  const colorKeys = Object.keys(theme.vars.colors).filter((colorVar) =>
+  const colorKeys = Object.keys(vars.colors).filter((colorVar) =>
     colorVar.startsWith(color)
   );
 

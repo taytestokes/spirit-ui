@@ -1,79 +1,66 @@
 import { style } from "@vanilla-extract/css";
-import { theme } from "@spirit-ui/design-system/theme";
-
-const {
-  vars: {
-    borderRadius,
-    colors,
-    fonts,
-    fontSizes,
-    fontWeights,
-    letterSpacings,
-    lineHeights,
-    space,
-  },
-} = theme;
+import { vars } from "@spirit-ui/design-system/theme";
 
 export const h1 = style({
-  letterSpacing: letterSpacings.snug,
-  lineHeight: lineHeights.tight,
-  fontSize: fontSizes.xxxxl,
+  letterSpacing: vars.letterSpacings.snug,
+  lineHeight: vars.lineHeights.tight,
+  fontSize: vars.fontSizes.xxxxlarge,
 });
 
 export const h2 = style({
-  letterSpacing: letterSpacings.snug,
-  lineHeight: lineHeights.tight,
-  fontSize: fontSizes.xxxl,
+  letterSpacing: vars.letterSpacings.snug,
+  lineHeight: vars.lineHeights.tight,
+  fontSize: vars.fontSizes.xxxlarge,
 });
 
 export const h3 = style({
-  letterSpacing: letterSpacings.snug,
-  lineHeight: lineHeights.tight,
-  fontSize: fontSizes.xxl,
+  letterSpacing: vars.letterSpacings.snug,
+  lineHeight: vars.lineHeights.tight,
+  fontSize: vars.fontSizes.xxlarge,
 });
 
 export const h4 = style({
-  letterSpacing: letterSpacings.snug,
-  lineHeight: lineHeights.tight,
-  fontSize: fontSizes.xl,
+  letterSpacing: vars.letterSpacings.snug,
+  lineHeight: vars.lineHeights.tight,
+  fontSize: vars.fontSizes.xlarge,
 });
 
 export const h5 = style({
-  letterSpacing: letterSpacings.snug,
-  lineHeight: lineHeights.tight,
-  fontSize: fontSizes.lg,
+  letterSpacing: vars.letterSpacings.snug,
+  lineHeight: vars.lineHeights.tight,
+  fontSize: vars.fontSizes.large,
 });
 
 export const h6 = style({
-  letterSpacing: letterSpacings.snug,
-  lineHeight: lineHeights.tight,
-  fontSize: fontSizes.md,
+  letterSpacing: vars.letterSpacings.snug,
+  lineHeight: vars.lineHeights.tight,
+  fontSize: vars.fontSizes.medium,
 });
 
 export const a = style({
   color: "inherit",
-  fontWeight: fontWeights.semibold,
+  fontWeight: vars.fontWeights.semibold,
   textDecoration: "underline",
   textUnderlineOffset: "4px",
 });
 
 export const p = style({
-  lineHeight: lineHeights.normal,
-  marginBlock: space.spacing_4,
+  lineHeight: vars.lineHeights.normal,
+  marginBlock: vars.spacing.x4,
 });
 
 export const pre = style({
-  backgroundColor: colors.neutral_100,
-  borderRadius: borderRadius.base,
-  padding: space.spacing_2,
+  backgroundColor: vars.colors.neutral100,
+  borderRadius: vars.radii.medium,
+  padding: vars.spacing.x2,
 });
 
 export const code = style({
-  backgroundColor: colors.neutral_100,
-  borderRadius: borderRadius.base,
-  fontFamily: fonts.mono,
-  fontSize: fontSizes.xs,
-  padding: space.spacing_0_5,
+  backgroundColor: vars.colors.neutral100,
+  borderRadius: vars.radii.medium,
+  fontFamily: vars.fonts.mono,
+  fontSize: vars.fontSizes.xsmall,
+  padding: vars.spacing.x1,
 });
 
 export const blockquote = style({});

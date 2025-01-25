@@ -1,5 +1,5 @@
 import { defineDocumentType, makeSource } from "contentlayer2/source-files";
-import { theme } from "@spirit-ui/design-system/theme";
+import { vars } from "@spirit-ui/design-system/theme";
 
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
@@ -30,8 +30,8 @@ export default makeSource({
             tokenColors: [
               {
                 settings: {
-                  foreground: theme.vars.colors.neutral_900,
-                  background: theme.vars.colors.neutral_50,
+                  foreground: vars.colors.neutral900,
+                  background: vars.colors.neutral50,
                 },
               },
             ],
