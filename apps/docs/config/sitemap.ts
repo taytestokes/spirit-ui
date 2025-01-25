@@ -8,8 +8,8 @@ export const sitemap = {
           href: "/introduction",
         },
         {
-          title: "Installation",
-          href: "/installation",
+          title: "Getting Started",
+          href: "/getting-started",
         },
       ],
     },

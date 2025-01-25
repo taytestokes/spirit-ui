@@ -1,4 +1,5 @@
 export const light = {
+  // Blues
   blue100: "#f0f7ff",
   blue200: "#e9f4ff",
   blue300: "#dff0ff",
@@ -9,6 +10,8 @@ export const light = {
   blue800: "#0059ed",
   blue900: "#0060f2",
   blue950: "#002358",
+
+  // Neutrals
   neutral0: "#FFFFFF",
   neutral50: "#fafafa",
   neutral100: "#f2f2f2",
@@ -22,6 +25,8 @@ export const light = {
   neutral900: "#666666",
   neutral950: "#171717",
   neutral1000: "#000000",
+
+  // Greens
   green100: "#ecfdec",
   green200: "#e6fce6",
   green300: "#d2fad2",
@@ -32,6 +37,8 @@ export const light = {
   green800: "#269141",
   green900: "#0f7e32",
   green950: "#003900",
+
+  // Pinks
   pink100: "#ffe8f7",
   pink200: "#ffe8f2",
   pink300: "#ffdfeb",
@@ -42,6 +49,8 @@ export const light = {
   pink800: "#e4106e",
   pink900: "#c31562",
   pink950: "#450522",
+
+  // Purples
   purple100: "#FAF0FF",
   purple200: "#F9F0FF",
   purple300: "#F6E8FF",
@@ -52,6 +61,8 @@ export const light = {
   purple800: "#8500D1",
   purple900: "#7D00CC",
   purple950: "#2F004E",
+
+  // Reds
   red100: "#ffedef",
   red200: "#ffe8ea",
   red300: "#ffe3e5",
@@ -85,6 +96,7 @@ export const light = {
 };
 
 const dark = {
+  // Blues
   blue100: "#06193A",
   blue200: "#022248",
   blue300: "#002F62",
@@ -95,6 +107,8 @@ const dark = {
   blue800: "#005BE7",
   blue900: "#47A8FF",
   blue950: "#EAF6FF",
+
+  // Greens
   green100: "#002608",
   green200: "#00320B",
   green300: "#003A0E",
@@ -105,6 +119,8 @@ const dark = {
   green800: "#009432",
   green900: "#00CA50",
   green950: "#D8FFE4",
+
+  // Neutrals
   neutral0: "#000000",
   neutral50: "#0a0a0a",
   neutral100: "#1A1A1A",
@@ -118,6 +134,8 @@ const dark = {
   neutral900: "#A1A1A1",
   neutral950: "#EDEDED",
   neutral1000: "#ffffff",
+
+  // Pinks
   pink100: "#310D1E",
   pink200: "#420C25",
   pink300: "#571032",
@@ -128,6 +146,8 @@ const dark = {
   pink800: "#E7006D",
   pink900: "#FF4D8D",
   pink950: "#FFE9F4",
+
+  // Purples
   purple100: "#290C33",
   purple200: "#341142",
   purple300: "#47185E",
@@ -138,6 +158,8 @@ const dark = {
   purple800: "#7D2BBA",
   purple900: "#C472FB",
   purple950: "#FBECFF",
+
+  // Reds
   red100: "#330A11",
   red200: "#440D13",
   red300: "#5D0E17",
@@ -148,6 +170,8 @@ const dark = {
   red800: "#E2162A",
   red900: "#FF565F",
   red950: "#FFE9ED",
+
+  // Teals
   teal100: "#00231B",
   teal200: "#002B22",
   teal300: "#003D34",
@@ -158,6 +182,8 @@ const dark = {
   teal800: "#00907E",
   teal900: "#00CBB5",
   teal950: "#CBFFF5",
+
+  // Yellows
   yellow100: "#2A1700",
   yellow200: "#361900",
   yellow300: "#502800",
