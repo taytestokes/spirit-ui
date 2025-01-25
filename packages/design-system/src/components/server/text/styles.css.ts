@@ -9,22 +9,22 @@ export const text = recipe({
   variants: {
     variant: {
       extraLarge: atoms({
-        fontSize: "xl",
+        fontSize: "xlarge",
       }),
       large: atoms({
-        fontSize: "lg",
+        fontSize: "large",
       }),
       medium: atoms({
-        fontSize: "md",
+        fontSize: "medium",
       }),
       base: atoms({
         fontSize: "base",
       }),
       small: atoms({
-        fontSize: "sm",
+        fontSize: "small",
       }),
       extraSmall: atoms({
-        fontSize: "xs",
+        fontSize: "xsmall",
       }),
     },
   },

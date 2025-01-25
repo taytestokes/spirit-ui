@@ -3,6 +3,8 @@ import {
   createGlobalThemeContract,
 } from "@vanilla-extract/css";
 
+import { Theme } from "./types";
+
 import { tokens } from "../tokens";
 
 const getVarName = (_val: string | null, path: string[]) =>
@@ -19,16 +21,21 @@ const darkColorTokens = {
   colors: getColorTokensByMode("dark"),
 };
 
-const sharedTokens = {
-  borderRadius: tokens.borderRadius,
+const sharedTokens: Omit<Theme, "colors"> = {
   borderStyles: tokens.borderStyles,
   borderWidths: tokens.borderWidths,
+  breakPoints: tokens.breakPoints,
+  durations: tokens.durations,
+  easings: tokens.easings,
   fonts: tokens.fonts,
   fontSizes: tokens.fontSizes,
   fontWeights: tokens.fontWeights,
-  space: tokens.space,
   lineHeights: tokens.lineHeights,
   letterSpacings: tokens.letterSpacings,
+  opacity: tokens.opacity,
+  radii: tokens.radii,
+  shadows: tokens.shadows,
+  spacing: tokens.spacing,
 };
 
 const colorVars = createGlobalThemeContract(lightColorTokens, getVarName);
@@ -39,19 +46,8 @@ createGlobalTheme(":root", sharedVars, sharedTokens);
 createGlobalTheme('[data-theme="light"]', colorVars, lightColorTokens);
 createGlobalTheme('[data-theme="dark"]', colorVars, darkColorTokens);
 
-/**
- * Theme object that provides the theme in both variable and token values.
- */
-export const theme = {
-  vars: {
-    ...colorVars,
-    ...sharedVars,
-  },
-  tokens: {
-    colors: {
-      light: lightColorTokens,
-      dark: darkColorTokens,
-    },
-    ...sharedTokens,
-  },
+export type ThemeVars = typeof sharedVars & typeof colorVars;
+export const vars = {
+  ...colorVars,
+  ...sharedVars,
 };

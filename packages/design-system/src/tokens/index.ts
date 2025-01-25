@@ -30,3 +30,5 @@ export const tokens = {
   shadows,
   spacing,
 };
+
+export type Tokens = typeof tokens;

@@ -1,5 +1,5 @@
 export const spacing = {
-  x0: 0,
+  x0: "0px",
   x1: "4px",
   x2: "8px",
   x3: "12px",

@@ -1,5 +1,5 @@
 export const easings = {
-  none: 0,
+  none: "0",
   xslow: "1000ms",
   slow: "500ms",
   medium: "300ms",

@@ -1,23 +1,26 @@
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
 
-import { theme } from "./vars.css";
+import { vars } from "./vars.css";
 
 import "./reset.css";
 
 const {
-  vars: {
-    borderRadius,
-    borderStyles,
-    borderWidths,
-    colors,
-    fonts,
-    fontSizes,
-    fontWeights,
-    letterSpacings,
-    lineHeights,
-    space,
-  },
-} = theme;
+  borderStyles,
+  borderWidths,
+  breakPoints,
+  colors,
+  durations,
+  easings,
+  fonts,
+  fontSizes,
+  fontWeights,
+  lineHeights,
+  letterSpacings,
+  opacity,
+  radii,
+  shadows,
+  spacing,
+} = vars;
 
 const colorProperties = defineProperties({
   properties: {
@@ -36,7 +39,7 @@ const responsiveProperties = defineProperties({
   properties: {
     alignItems: ["flex-start", "center", "flex-end", "stretch", "baseline"],
     alignSelf: ["flex-start", "center", "flex-end", "stretch", "baseline"],
-    borderRadius: borderRadius,
+    borderRadius: radii,
     borderStyle: borderStyles,
     borderWidth: borderWidths,
     display: ["block", "flex", "grid", "inline-block", "none", "contents"],
@@ -46,8 +49,8 @@ const responsiveProperties = defineProperties({
     flexWrap: ["wrap", "nowrap"],
     fontSize: { ...fontSizes, inherit: "inherit" },
     fontWeight: fontWeights,
-    gap: space,
-    height: space,
+    gap: spacing,
+    height: spacing,
     justifyContent: [
       "flex-start",
       "center",
@@ -66,16 +69,16 @@ const responsiveProperties = defineProperties({
     ],
     letterSpacing: letterSpacings,
     lineHeight: lineHeights,
-    margin: space,
-    marginBottom: space,
-    marginLeft: space,
-    marginRight: space,
-    marginTop: space,
-    padding: space,
-    paddingBottom: space,
-    paddingLeft: space,
-    paddingRight: space,
-    paddingTop: space,
+    margin: spacing,
+    marginBottom: spacing,
+    marginLeft: spacing,
+    marginRight: spacing,
+    marginTop: spacing,
+    padding: spacing,
+    paddingBottom: spacing,
+    paddingLeft: spacing,
+    paddingRight: spacing,
+    paddingTop: spacing,
   },
 });
 

@@ -11,23 +11,23 @@ export const heading = recipe({
   variants: {
     variant: {
       h1: atoms({
-        fontSize: "xxxxl",
+        fontSize: "xxxxlarge",
       }),
 
       h2: atoms({
-        fontSize: "xxxl",
+        fontSize: "xxxlarge",
       }),
       h3: atoms({
-        fontSize: "xxl",
+        fontSize: "xxlarge",
       }),
       h4: atoms({
-        fontSize: "xl",
+        fontSize: "xlarge",
       }),
       h5: atoms({
-        fontSize: "lg",
+        fontSize: "large",
       }),
       h6: atoms({
-        fontSize: "md",
+        fontSize: "medium",
       }),
     },
   },
