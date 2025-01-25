@@ -7,14 +7,15 @@ import { vars } from "@spirit-ui/design-system/theme";
  * when contentlayer is generating the JSX from the MDX files.
  */
 globalStyle("[data-rehype-pretty-code-figure]", {
+  marginTop: vars.spacing.x6,
   position: "relative",
 });
 
 globalStyle("[data-rehype-pretty-code-figure] pre", {
-  background: vars.colors.neutral100,
+  background: vars.colors.neutral50,
   borderColor: vars.colors.neutral200,
   borderStyle: vars.borderStyles.solid,
-  paddingBlock: vars.spacing.x3,
+  paddingBlock: vars.spacing.x4,
   paddingInline: 0,
 });
 
@@ -28,11 +29,11 @@ globalStyle("[data-rehype-pretty-code-figure] [data-line]", {
   alignItems: "center",
   borderLeftColor: "transparent",
   borderLeftStyle: vars.borderStyles.solid,
-  borderLeftWidth: "5px",
+  borderLeftWidth: "4px",
   display: "flex",
   minHeight: "1rem",
   paddingBlock: vars.spacing.x1,
-  paddingInline: vars.spacing.x3,
+  paddingInline: vars.spacing.x2,
 });
 
 globalStyle("[data-line-numbers]", {
@@ -43,7 +44,7 @@ globalStyle("[data-line-numbers] [data-line]::before", {
   counterIncrement: "line",
   color: vars.colors.neutral900,
   content: "counter(line)",
-  marginRight: vars.spacing.x3,
+  marginRight: vars.spacing.x4,
   textAlign: "right",
   width: "20px",
 });

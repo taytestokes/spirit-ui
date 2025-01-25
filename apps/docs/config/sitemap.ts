@@ -3,33 +3,33 @@ export const sitemap = {
     {
       title: "Overview",
       items: [
-        {
-          title: "Introduction",
-          href: "/introduction",
-        },
+        // {
+        //   title: "Introduction",
+        //   href: "/introduction",
+        // },
         {
           title: "Getting Started",
           href: "/getting-started",
         },
       ],
     },
-    {
-      title: "Foundations",
-      items: [
-        {
-          title: "Colors",
-          href: "/colors",
-        },
-        {
-          title: "Spacing",
-          href: "/spacing",
-        },
-        {
-          title: "Typography",
-          href: "/typography",
-        },
-      ],
-    },
+    // {
+    //   title: "Foundations",
+    //   items: [
+    //     {
+    //       title: "Colors",
+    //       href: "/colors",
+    //     },
+    //     {
+    //       title: "Spacing",
+    //       href: "/spacing",
+    //     },
+    //     {
+    //       title: "Typography",
+    //       href: "/typography",
+    //     },
+    //   ],
+    // },
     {
       title: "Components",
       items: [

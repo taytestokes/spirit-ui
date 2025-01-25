@@ -18,7 +18,10 @@ export const Snippet = ({ children }: Props) => {
       borderStyle="solid"
       color="neutral900"
       display="flex"
-      padding="x2"
+      fontSize="xsmall"
+      marginBottom="x6"
+      marginTop="x6"
+      padding="x4"
     >
       <pre className={classes.pre}>{children}</pre>
     </Box>

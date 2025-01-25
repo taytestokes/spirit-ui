@@ -46,7 +46,12 @@ export const a = style({
 
 export const p = style({
   lineHeight: vars.lineHeights.normal,
-  marginBlock: vars.spacing.x4,
+
+  selectors: {
+    "&:not(first-child)": {
+      marginTop: vars.spacing.x6,
+    },
+  },
 });
 
 export const pre = style({

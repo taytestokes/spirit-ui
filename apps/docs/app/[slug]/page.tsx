@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { allDocs } from "contentlayer/generated";
 
 import { MDX } from "@/components/mdx";
-import { DocPager } from "@/components/doc-pager";
 
 import "../../styles/mdx.css";
 import * as classes from "./page.css";
@@ -23,7 +22,6 @@ const DocumentationPage = async (props: { params: Params }) => {
       <article>
         <MDX code={doc.body.code} />
       </article>
-      <DocPager doc={doc} />
     </div>
   );
 };
