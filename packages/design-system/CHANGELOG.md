@@ -1,5 +1,11 @@
 # @spirit-ui/design-system
 
+## 0.0.8
+
+### Patch Changes
+
+- ccdd816: Update design tokens to a complete set
+
 ## 0.0.7
 
 ### Patch Changes
