@@ -1,5 +1,11 @@
 # @spirit-ui/design-system
 
+## 0.0.9
+
+### Patch Changes
+
+- 0f9f337: Fix motion design tokens
+
 ## 0.0.8
 
 ### Patch Changes
