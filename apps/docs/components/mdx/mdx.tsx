@@ -4,10 +4,10 @@ import { useMDXComponent } from "next-contentlayer2/hooks";
 
 import { Heading, Text } from "@spirit-ui/design-system/server";
 
-import { ColorPalette } from "../color-palette/color-palette";
-import { CodePreview } from "../code-preview/code-preview";
+import { ColorPalette } from "../color-palette";
+import { CodePreview } from "../code-preview";
 import { Snippet } from "../snippet";
-import { CodeBlock } from "../code-block";
+import { ComponentPreview } from "../component-preview";
 
 import * as classes from "./mdx.css";
 
@@ -33,7 +33,7 @@ const components = {
   Text,
   CodePreview,
   Snippet,
-  CodeBlock,
+  ComponentPreview,
 };
 
 export const MDX = ({ code }: { code: string }) => {
