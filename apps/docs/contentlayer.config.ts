@@ -10,7 +10,7 @@ import fs from "fs";
 import { visit } from "unist-util-visit";
 import { u } from "unist-builder";
 
-import { componentExamples } from "./config/component-examples";
+import { components } from "./config/preview-components";
 
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
@@ -39,19 +39,14 @@ export default makeSource({
       () => (tree: UnistTree) => {
         visit(tree, (node: UnistNode) => {
           if (node.name === "ComponentPreview") {
-            const componentName = node.attributes?.find(
-              (attr) => attr.name === "name"
-            )?.value as string;
+            const name = node.attributes?.find((attr) => attr.name === "name")
+              ?.value as string;
 
-            if (!componentName) return;
+            if (!name) return;
 
             try {
-              const exampleComponent = componentExamples[componentName];
-
-              const exampleCode = fs.readFileSync(
-                exampleComponent.filePath,
-                "utf8"
-              );
+              const component = components[name];
+              const code = fs.readFileSync(component.file, "utf8");
 
               node.children?.push(
                 u("element", {
@@ -65,10 +60,13 @@ export default makeSource({
                       properties: {
                         className: ["language-tsx"],
                       },
+                      data: {
+                        meta: "showLineNumbers",
+                      },
                       children: [
                         {
                           type: "text",
-                          value: exampleCode,
+                          value: code,
                         },
                       ],
                     }),
