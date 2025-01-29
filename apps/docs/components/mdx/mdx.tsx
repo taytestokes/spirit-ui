@@ -33,7 +33,17 @@ const components = {
   Text,
   CodePreview,
   Snippet,
-  ComponentPreview,
+  ComponentPreview: ({
+    children,
+    name,
+    ...props
+  }: React.ComponentProps<typeof ComponentPreview>) => (
+    <div className={classes.componentPreviewWrapper}>
+      <ComponentPreview name={name} {...props}>
+        {children}
+      </ComponentPreview>
+    </div>
+  ),
 };
 
 export const MDX = ({ code }: { code: string }) => {

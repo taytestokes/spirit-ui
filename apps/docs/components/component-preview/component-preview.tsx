@@ -10,7 +10,11 @@ interface ComponentPreviewProps {
 }
 
 export const ComponentPreview = ({ name, children }: ComponentPreviewProps) => {
-  const Code = React.Children.toArray(children)[0];
+  /**
+   * The code block for the component will be generated
+   * during the build time from the content layer.
+   */
+  const CodeBlock = React.Children.toArray(children)[0];
 
   const Preview = useMemo(() => {
     const Component = components[name]?.component;
@@ -23,7 +27,7 @@ export const ComponentPreview = ({ name, children }: ComponentPreviewProps) => {
       <div className={classes.preview}>
         <React.Suspense>{Preview}</React.Suspense>
       </div>
-      <div className={classes.code}>{Code}</div>
+      <div className={classes.code}>{CodeBlock}</div>
     </div>
   );
 };

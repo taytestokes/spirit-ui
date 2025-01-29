@@ -16,6 +16,10 @@ export const Doc = defineDocumentType(() => ({
   name: "Doc",
   filePathPattern: "docs/**/*.mdx",
   contentType: "mdx",
+  fields: {
+    title: { type: "string", required: true },
+    subtitle: { type: "string", required: true },
+  },
   computedFields: {
     slug: {
       type: "string",

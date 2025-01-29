@@ -1,53 +1,24 @@
-## Heading
+---
+title: Heading
+subtitle: Used to display heading elements.
+---
 
-Display text using defined typography styles to represent heading elements.
+<ComponentPreview name="heading"/>
 
-<ComponentPreview name="heading-example"/>
+### Variants
 
-{/* ### Variant
+The `variant` prop can be used to change the visual appearence of the heading element.
 
-The variant prop will determine how to the text is visually represented.
+<ComponentPreview name="heading-variants"/>
 
-<CodePreview
-  code={`
-  <Heading variant="h1">Heading One</Heading>
-  <Heading variant="h2">Heading Two</Heading>
-  <Heading variant="h3">Heading Three</Heading>
-  <Heading variant="h4">Heading Four</Heading>
-  <Heading variant="h5">Heading Five</Heading>
-  <Heading variant="h6">Heading Six</Heading>
-`}
->
-  <Heading variant="h1">Heading One</Heading>
-  <Heading variant="h2">Heading Two</Heading>
-  <Heading variant="h3">Heading Three</Heading>
-  <Heading variant="h4">Heading Four</Heading>
-  <Heading variant="h5">Heading Five</Heading>
-  <Heading variant="h6">Heading Six</Heading>
-</CodePreview>
+### Colors
 
-### Color
+The `color` prop can be used to change the text color of the heading.
 
-The color prop will determine what color the text should be.
-
-<CodePreview
-  code={`
-  <Heading color="yellow700">Welcome to Spirit UI</Heading>
-`}
->
-  <Heading color="yellow700">Welcome to Spirit UI</Heading>
-</CodePreview>
+<ComponentPreview name="heading-colors"/>
 
 ### Polymorphic
 
-Override the underlying heading element that is rendered to change it's semantic meaning.
+The `as` prop can be used to override the underlying html element that is rendered to change it's semantic meaning.
 
-<CodePreview
-  code={`
-<Heading as="h3" variant="h2">
-    Semantically rendered as {"<h2>"}, but visually rendered as {"<h1>"}
-</Heading>
-`}
->
- <Heading as="h3" variant="h2">Semantically rendered as {"<h2>"}, but visually rendered as {"<h3>"}</Heading>
-</CodePreview> */}
+<ComponentPreview name="heading-polymorphic"/>

@@ -1,11 +1,10 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "@spirit-ui/design-system/theme";
 
-export const content = style({
-  display: "grid",
-  gridTemplateRows: "1fr min-content",
+export const page = style({
   margin: "0 auto",
-  padding: vars.spacing.x8,
+  paddingBlock: vars.spacing.x12,
+  paddingInline: vars.spacing.x4,
   width: "100%",
 
   "@media": {
@@ -13,4 +12,9 @@ export const content = style({
       maxWidth: "900px",
     },
   },
+});
+
+export const titleContainer = style({
+  display: "grid",
+  gap: vars.spacing.x2,
 });
