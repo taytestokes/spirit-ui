@@ -2,16 +2,18 @@ import React, { HtmlHTMLAttributes } from "react";
 import { clsx } from "clsx";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 
-import { Heading, Text } from "@spirit-ui/design-system/server";
+import { Heading, Text } from "@spirit-ui/design-system/components";
 
 import { ColorPalette } from "../color-palette";
 import { CodePreview } from "../code-preview";
 import { Snippet } from "../snippet";
 import { ComponentPreview } from "../component-preview";
+import { PropsTable } from "../props-table";
 
 import * as classes from "./mdx.css";
 
 const components = {
+  // Native Elements
   h1: ({ ...props }) => <h1 className={classes.h1} {...props} />,
   h2: ({ ...props }) => <h2 className={classes.h2} {...props} />,
   h3: ({ ...props }) => <h3 className={classes.h3} {...props} />,
@@ -28,11 +30,14 @@ const components = {
   ),
   // blockquote: () => {},
   // img: () => {},
+
+  // Components
   ColorPalette,
   Heading,
   Text,
   CodePreview,
   Snippet,
+  PropsTable,
   ComponentPreview: ({
     children,
     name,

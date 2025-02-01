@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box } from "@spirit-ui/design-system/server";
+import { Box } from "@spirit-ui/design-system/components";
 
 import * as classes from "./styles.css";
 

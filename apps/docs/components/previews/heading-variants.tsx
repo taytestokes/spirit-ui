@@ -1,4 +1,4 @@
-import { Box, Heading } from "@spirit-ui/design-system/server";
+import { Box, Heading } from "@spirit-ui/design-system/components";
 
 export default function Component() {
   return (

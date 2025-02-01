@@ -23,21 +23,13 @@
     "components"
   ],
   "exports": {
-    "./client": {
+    "./components": {
       "types": {
-        "import": "./dist/components/client/index.d.mts",
-        "require": "./dist/components/client/index.d.ts"
+        "import": "./dist/components/index.d.mts",
+        "require": "./dist/components/index.d.ts"
       },
-      "require": "./dist/components/client/index.js",
-      "import": "./dist/components/client/index.mjs"
-    },
-    "./server": {
-      "types": {
-        "import": "./dist/components/server/index.d.mts",
-        "require": "./dist/components/server/index.d.ts"
-      },
-      "require": "./dist/components/server/index.js",
-      "import": "./dist/components/server/index.mjs"
+      "require": "./dist/components/index.js",
+      "import": "./dist/components/index.mjs"
     },
     "./styles": {
       "require": "./dist/styles/index.css",

@@ -1,72 +1,24 @@
-## Text
+---
+title: Text
+subtitle: Used to render text with defined typography styles.
+---
 
-Display text using defined typography styles.
+<ComponentPreview name="text" />
 
 ### Variants
 
-The variant will determine how to the text is visually represented.
+The `variant` prop can be used to change the visual appearence of the text element.
 
-<CodePreview
-  code={`
-  <Text variant="extraLarge">Extra Large</Text>
-  <Text variant="large">Large</Text>
-  <Text variant="medium">Medium</Text>
-  <Text variant="base">Base</Text>
-  <Text variant="small">Small</Text>
-  <Text variant="extraSmall">Extra Small</Text>
-`}
->
-  <Text variant="extraLarge">Extra Large</Text>
-  <Text variant="large">Large</Text>
-  <Text variant="medium">Medium</Text>
-  <Text variant="base">Base</Text>
-  <Text variant="small">Small</Text>
-  <Text variant="extraSmall">Extra Small</Text>
-</CodePreview>
+<ComponentPreview name="text-variants" />
 
-### Color
+### Colors 
 
-The color of the text can be applied by passing the name of the color that is represented by our color tokens.
+The `color` prop can be used to change the color of the text.
 
-<CodePreview
-  code={`
-  <Text color="pink700">Welcome to Spirit UI</Text>
-`}
->
-  <Text color="pink700">Welcome to Spirit UI</Text>
-</CodePreview>
-
-### Weight
-
-The font weight of the text can be applied by passing the name of the font weight through the weight prop.
-
-<CodePreview
-  code={`
-  <Text weight="regular">Regular</Text>
-  <Text weight="medium">Medium</Text>
-  <Text weight="semibold">Semibold</Text>
-  <Text weight="bold">Bold</Text>
-  <Text weight="black">Black</Text>
-`}
->
-  <Text weight="regular">Regular</Text>
-  <Text weight="medium">Medium</Text>
-  <Text weight="semibold">Semibold</Text>
-  <Text weight="bold">Bold</Text>
-  <Text weight="black">Black</Text>
-</CodePreview>
+<ComponentPreview name="text-colors" />
 
 ### Polymorphic
 
-Override the underlying element that is rendered for the text to change it's semantic meaning. By default, the `p` element will be rendered.
+The `as` prop can be used to override the underlying html element that is rendered to change it's semantic meaning.
 
-<CodePreview
-  code={`
-<Text as="h2" variant="h1">
-    Semantically rendered as {"<h2>"}, but visually rendered as {"<h1>"}
-</Text>
-`}
->
-
-  <Text as="h2" variant="h1">Semantically rendered as {"<h2>"}, but visually rendered as {"<h1>"}</Text>
-</CodePreview>
+<ComponentPreview name="text-polymorphic" />

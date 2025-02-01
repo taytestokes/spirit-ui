@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useTheme } from "@spirit-ui/design-system/client";
+import { useTheme } from "@spirit-ui/design-system/components";
 
 import * as styles from "./theme-switcher.css";
 

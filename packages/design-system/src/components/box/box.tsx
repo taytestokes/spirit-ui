@@ -1,8 +1,8 @@
 import React, { forwardRef } from "react";
 import clsx, { ClassValue } from "clsx";
 
-import { atoms, Atoms } from "../../../styles/atoms";
-import { sprinkles } from "../../../styles/sprinkles.css";
+import { atoms, Atoms } from "../../styles/atoms";
+import { sprinkles } from "../../styles/sprinkles.css";
 
 type NativeHTMLProps = React.AllHTMLAttributes<HTMLElement>;
 

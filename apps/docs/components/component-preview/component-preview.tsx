@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 
-import { components } from "../../config/preview-components";
+import { previews } from "../../config/previews";
 
 import * as classes from "./component-preview.css";
 
@@ -16,9 +16,9 @@ export const ComponentPreview = ({ name, children }: ComponentPreviewProps) => {
    */
   const CodeBlock = React.Children.toArray(children)[0];
 
+  // TODO: Handle loading state
   const Preview = useMemo(() => {
-    const Component = components[name]?.component;
-
+    const Component = previews[name]?.component;
     return <Component />;
   }, [name]);
 

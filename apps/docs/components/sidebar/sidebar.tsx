@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Text } from "@spirit-ui/design-system/server";
+import { Text } from "@spirit-ui/design-system/components";
 
 import { SidebarLink } from "./sidebar-link";
 
@@ -15,9 +15,9 @@ export const Sidebar = () => {
         {sitemap.sidebar.map((section) => (
           <div className={classes.group} key={section.title}>
             <Text
-              color="neutral900"
               className={classes.groupLabel}
-              variant="extraSmall"
+              variant="small"
+              weight="semibold"
             >
               {section.title}
             </Text>

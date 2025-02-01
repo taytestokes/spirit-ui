@@ -1,6 +1,6 @@
 import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
 
-import { atoms } from "../../../styles/atoms";
+import { atoms } from "../../styles/atoms";
 
 export const text = recipe({
   base: atoms({

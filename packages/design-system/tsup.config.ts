@@ -22,22 +22,18 @@ export default defineConfig(
   (options: Options) =>
     [
       {
-        entry: ["src/components/client/index.ts"],
+        entry: ["src/components/index.ts"],
         banner: {
           js: '"use client"',
         },
-        outDir: `${DIST_PATH}/components/client`,
+        outDir: `${DIST_PATH}/components`,
         clean: !options.watch,
         minify: !options.watch,
         ...config,
         ...options,
       },
       {
-        entry: [
-          "src/components/server/index.ts",
-          "src/styles/index.ts",
-          "src/tokens/index.ts",
-        ],
+        entry: ["src/styles/index.ts", "src/tokens/index.ts"],
         outDir: DIST_PATH,
         clean: !options.watch,
         minify: !options.watch,

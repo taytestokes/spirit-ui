@@ -7,8 +7,9 @@ import type { Metadata } from "next";
  */
 import "@spirit-ui/design-system/styles";
 
-import { ThemeProvider } from "@spirit-ui/design-system/client";
-import { Text } from "@spirit-ui/design-system/server";
+import "../styles/globals.css";
+
+import { ThemeProvider, Text } from "@spirit-ui/design-system/components";
 
 import { Sidebar } from "../components/sidebar/sidebar";
 import { ThemeSwitcher } from "../components/theme-switcher/theme-switcher";

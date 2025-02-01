@@ -33,10 +33,10 @@ export const sitemap = {
     {
       title: "Components",
       items: [
-        {
-          title: "Box",
-          href: "/box",
-        },
+        // {
+        //   title: "Box",
+        //   href: "/box",
+        // },
         {
           title: "Heading",
           href: "/heading",
@@ -45,10 +45,10 @@ export const sitemap = {
           title: "Text",
           href: "/text",
         },
-        {
-          title: "ThemeProvider",
-          href: "/theme-provider",
-        },
+        // {
+        //   title: "ThemeProvider",
+        //   href: "/theme-provider",
+        // },
       ],
     },
   ],

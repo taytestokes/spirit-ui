@@ -1,11 +1,10 @@
 import { notFound } from "next/navigation";
 import { allDocs } from "contentlayer/generated";
 
-import { Heading, Text } from "@spirit-ui/design-system/server";
+import { Heading, Text } from "@spirit-ui/design-system/components";
 
 import { MDX } from "@/components/mdx";
 
-import "../../styles/mdx.css";
 import * as classes from "./page.css";
 
 type Params = Promise<{ slug: string }>;

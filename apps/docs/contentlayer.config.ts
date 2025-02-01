@@ -10,7 +10,7 @@ import fs from "fs";
 import { visit } from "unist-util-visit";
 import { u } from "unist-builder";
 
-import { components } from "./config/preview-components";
+import { previews } from "./config/previews";
 
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
@@ -49,7 +49,7 @@ export default makeSource({
             if (!name) return;
 
             try {
-              const component = components[name];
+              const component = previews[name];
               const code = fs.readFileSync(component.file, "utf8");
 
               node.children?.push(

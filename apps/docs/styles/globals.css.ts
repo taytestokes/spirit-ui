@@ -56,10 +56,10 @@ globalStyle("[data-rehype-pretty-code-figure] [data-highlighted-line]", {
 });
 
 globalStyle("[data-rehype-pretty-code-title]", {
-  color: vars.colors.neutral900,
   fontSize: vars.fontSizes.small,
   fontWeight: vars.fontWeights.semibold,
-  padding: vars.spacing.x2,
+  paddingBlock: vars.spacing.x4,
+  paddingInline: vars.spacing.x2,
 });
 
 /**
