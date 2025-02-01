@@ -1,5 +1,11 @@
 # @spirit-ui/design-system
 
+## 0.0.10
+
+### Patch Changes
+
+- ff44786: Updated entry point for components to /components
+
 ## 0.0.9
 
 ### Patch Changes
