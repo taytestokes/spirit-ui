@@ -14,7 +14,7 @@ type ThemeContextValue = {
   setTheme: (theme: string) => void;
 };
 
-type Props = {
+export type ThemeProviderProps = {
   children: React.ReactNode;
 };
 
@@ -43,7 +43,7 @@ const disableAnimations = () => {
   };
 };
 
-export const ThemeProvider = ({ children }: Props) => {
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [theme, setThemeState] = useState(() => getInitialTheme());
 
   const setTheme = useCallback((theme: string) => {

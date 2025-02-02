@@ -91,7 +91,7 @@ export default makeSource({
             tokenColors: [
               {
                 settings: {
-                  foreground: vars.colors.neutral950,
+                  foreground: vars.colors.neutral900,
                 },
               },
             ],

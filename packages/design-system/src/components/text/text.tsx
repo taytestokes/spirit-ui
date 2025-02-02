@@ -1,11 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { clsx } from "clsx";
 
 import { Box, BoxProps } from "../box";
 
 import * as styles from "./styles.css";
 
-type Props = {
+type TextProps = {
   as?: "label" | "p" | "span";
   children: React.ReactNode;
   className?: string;
@@ -13,7 +13,7 @@ type Props = {
   weight?: BoxProps["fontWeight"];
 } & styles.Variants;
 
-export const Text: React.FC<Props> = ({
+export const Text = ({
   as = "p",
   children,
   className,
@@ -21,7 +21,7 @@ export const Text: React.FC<Props> = ({
   variant,
   weight,
   ...rest
-}: Props) => (
+}: TextProps) => (
   <Box
     as={as}
     className={clsx(styles.text({ variant }), className)}

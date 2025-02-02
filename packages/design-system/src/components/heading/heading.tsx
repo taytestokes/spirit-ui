@@ -5,8 +5,8 @@ import { Box, BoxProps } from "../box";
 
 import * as styles from "./styles.css";
 
-type Props = {
-  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+type HeadingProps = {
+  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   children: React.ReactNode;
   className?: string;
   color?: BoxProps["color"];
@@ -14,19 +14,17 @@ type Props = {
 
 export const Heading = forwardRef(
   (
-    { as = "h2", children, className, color, variant = "h2", ...rest }: Props,
+    { as, children, className, color, variant = "h2", ...rest }: HeadingProps,
     ref: React.Ref<HTMLElement>
-  ) => {
-    return (
-      <Box
-        as={as}
-        className={clsx(styles.heading({ variant }), className)}
-        color={color}
-        ref={ref}
-        {...rest}
-      >
-        {children}
-      </Box>
-    );
-  }
+  ) => (
+    <Box
+      as={as}
+      className={clsx(styles.heading({ variant }), className)}
+      color={color}
+      ref={ref}
+      {...rest}
+    >
+      {children}
+    </Box>
+  )
 );
