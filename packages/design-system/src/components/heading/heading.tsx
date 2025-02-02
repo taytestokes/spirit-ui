@@ -6,7 +6,7 @@ import { Box, BoxProps } from "../box";
 import * as styles from "./styles.css";
 
 type HeadingProps = {
-  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   children: React.ReactNode;
   className?: string;
   color?: BoxProps["color"];
@@ -14,7 +14,14 @@ type HeadingProps = {
 
 export const Heading = forwardRef(
   (
-    { as, children, className, color, variant = "h2", ...rest }: HeadingProps,
+    {
+      as = "h2",
+      children,
+      className,
+      color,
+      variant = "h2",
+      ...rest
+    }: HeadingProps,
     ref: React.Ref<HTMLElement>
   ) => (
     <Box
