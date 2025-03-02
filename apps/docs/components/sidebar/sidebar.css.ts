@@ -3,11 +3,10 @@ import { calc } from "@vanilla-extract/css-utils";
 import { vars } from "@spirit-ui/design-system/theme";
 
 export const sidebar = style({
-  borderRight: `1px solid ${vars.colors.neutral300}`,
   display: "none",
   height: calc.subtract("100vh", "56px"),
-  paddingBlock: vars.spacing.x4,
-  paddingInline: vars.spacing.x2,
+  paddingBlock: vars.spacing.x8,
+  paddingInline: vars.spacing.x4,
   position: "sticky",
   top: "56px",
   width: "240px",
@@ -23,7 +22,7 @@ export const sidebar = style({
 
 export const content = style({
   display: "grid",
-  gap: vars.spacing.x4,
+  gap: vars.spacing.x8,
   scrollbarColor: `${vars.colors.neutral300} transparent`,
   scrollbarWidth: "thin",
   overflow: "auto",
@@ -32,21 +31,18 @@ export const content = style({
 export const group = style({
   display: "grid",
   gap: vars.spacing.x1,
-  marginBottom: vars.spacing.x4,
   width: "100%",
 });
 
 export const groupLabel = style({
   alignItems: "center",
   display: "flex",
-  fontWeight: vars.fontWeights.medium,
-  paddingLeft: vars.spacing.x2,
 });
 
 export const groupMenu = style({
   display: "flex",
   flexDirection: "column",
-  gap: "1px",
+  gap: vars.spacing.x1,
   listStyle: "none",
   padding: "0px",
   width: "100%",

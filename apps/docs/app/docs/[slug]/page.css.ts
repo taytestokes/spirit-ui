@@ -3,20 +3,16 @@ import { vars } from "@spirit-ui/design-system/theme";
 
 export const page = style({
   display: "flex",
+  margin: "0 auto",
+  maxWidth: "900px",
   width: "100%",
 });
 
 export const content = style({
   margin: "0 auto",
-  paddingBlock: vars.spacing.x12,
+  padding: vars.spacing.x8,
   paddingInline: vars.spacing.x4,
   width: "100%",
-
-  "@media": {
-    "screen and (min-width: 768px)": {
-      maxWidth: "900px",
-    },
-  },
 });
 
 export const titleContainer = style({

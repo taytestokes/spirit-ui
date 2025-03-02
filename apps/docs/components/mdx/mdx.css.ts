@@ -50,7 +50,6 @@ export const a = style({
 });
 
 export const p = style({
-  color: vars.colors.neutral900,
   lineHeight: vars.lineHeights.normal,
   marginBlock: vars.spacing.x4,
 });

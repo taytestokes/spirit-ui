@@ -13,23 +13,23 @@ export const sitemap = {
         },
       ],
     },
-    {
-      title: "Foundations",
-      items: [
-        {
-          title: "Colors",
-          href: "/docs/colors",
-        },
-        // {
-        //   title: "Spacing",
-        //   href: "/spacing",
-        // },
-        // {
-        //   title: "Typography",
-        //   href: "/typography",
-        // },
-      ],
-    },
+    // {
+    //   title: "Foundations",
+    //   items: [
+    //     {
+    //       title: "Colors",
+    //       href: "/docs/colors",
+    //     },
+    //     // {
+    //     //   title: "Spacing",
+    //     //   href: "/spacing",
+    //     // },
+    //     // {
+    //     //   title: "Typography",
+    //     //   href: "/typography",
+    //     // },
+    //   ],
+    // },
     {
       title: "Components",
       items: [

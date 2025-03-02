@@ -9,11 +9,13 @@ import * as classes from "./header.css";
 
 export const Header = () => (
   <header className={classes.header}>
-    <Link className={classes.link} href="/">
-      <Text color="neutral950" weight="semibold">
-        Spirit UI
-      </Text>
-    </Link>
-    <ThemeSwitcher />
+    <div className={classes.content}>
+      <Link className={classes.link} href="/">
+        <Text color="neutral950" weight="semibold">
+          Spirit UI
+        </Text>
+      </Link>
+      <ThemeSwitcher />
+    </div>
   </header>
 );
