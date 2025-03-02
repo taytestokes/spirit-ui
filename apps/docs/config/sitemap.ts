@@ -9,27 +9,27 @@ export const sitemap = {
         // },
         {
           title: "Getting Started",
-          href: "/getting-started",
+          href: "/docs/getting-started",
         },
       ],
     },
-    // {
-    //   title: "Foundations",
-    //   items: [
-    //     {
-    //       title: "Colors",
-    //       href: "/colors",
-    //     },
-    //     {
-    //       title: "Spacing",
-    //       href: "/spacing",
-    //     },
-    //     {
-    //       title: "Typography",
-    //       href: "/typography",
-    //     },
-    //   ],
-    // },
+    {
+      title: "Foundations",
+      items: [
+        {
+          title: "Colors",
+          href: "/docs/colors",
+        },
+        // {
+        //   title: "Spacing",
+        //   href: "/spacing",
+        // },
+        // {
+        //   title: "Typography",
+        //   href: "/typography",
+        // },
+      ],
+    },
     {
       title: "Components",
       items: [
@@ -39,11 +39,11 @@ export const sitemap = {
         // },
         {
           title: "Heading",
-          href: "/heading",
+          href: "/docs/heading",
         },
         {
           title: "Text",
-          href: "/text",
+          href: "/docs/text",
         },
         // {
         //   title: "ThemeProvider",

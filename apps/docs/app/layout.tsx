@@ -9,10 +9,9 @@ import "@spirit-ui/design-system/styles";
 
 import "../styles/globals.css";
 
-import { ThemeProvider, Text } from "@spirit-ui/design-system/components";
+import { ThemeProvider } from "@spirit-ui/design-system/components";
 
-import { Sidebar } from "../components/sidebar/sidebar";
-import { ThemeSwitcher } from "../components/theme-switcher/theme-switcher";
+import { Header } from "@/components/header";
 
 import * as classes from "./layout.css";
 
@@ -30,14 +29,8 @@ export default function RootLayout({
     <html className={classes.html} lang="en" suppressHydrationWarning>
       <body className={classes.body}>
         <ThemeProvider>
-          <header className={classes.header}>
-            <Text weight="semibold">Spirit Design System</Text>
-            <ThemeSwitcher />
-          </header>
-          <main className={classes.main}>
-            <Sidebar />
-            <div className={classes.content}>{children}</div>
-          </main>
+          <Header />
+          <main className={classes.main}>{children}</main>
         </ThemeProvider>
       </body>
     </html>

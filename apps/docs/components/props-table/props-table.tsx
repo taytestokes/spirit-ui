@@ -17,6 +17,7 @@ const getPropTypes = (component: string) => {
     "..",
     "..",
     "..",
+    "..",
     "packages",
     "design-system",
     "src",
@@ -24,6 +25,8 @@ const getPropTypes = (component: string) => {
     component,
     `${component}.tsx`
   );
+
+  console.log(componentsDirPath);
 
   const types = docgen(componentsDirPath, {
     shouldExtractValuesFromUnion: true,
