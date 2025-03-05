@@ -57,4 +57,20 @@ export const previews: Record<string, ComponentConfig> = {
       () => import("../components/previews/text-polymorphic")
     ),
   },
+  // Icon Component
+  icon: {
+    name: "icon",
+    file: "components/previews/icon.tsx",
+    component: React.lazy(() => import("../components/previews/icon")),
+  },
+  "icon-variants": {
+    name: "icon-variants",
+    file: "components/previews/icon-variants.tsx",
+    component: React.lazy(() => import("../components/previews/icon-variants")),
+  },
+  "icon-sizes": {
+    name: "icon-sizes",
+    file: "components/previews/icon-sizes.tsx",
+    component: React.lazy(() => import("../components/previews/icon-sizes")),
+  },
 };

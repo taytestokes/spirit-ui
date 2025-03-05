@@ -46,6 +46,10 @@ export const sitemap = {
           href: "/docs/heading",
         },
         {
+          title: "Icon",
+          href: "/docs/icon",
+        },
+        {
           title: "Text",
           href: "/docs/text",
         },
