@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "gen-types": "npx tsx ./scripts/generate-component-types.ts"
+    "lint": "next lint"
   },
   "dependencies": {
     "@spirit-ui/design-system": "*",
