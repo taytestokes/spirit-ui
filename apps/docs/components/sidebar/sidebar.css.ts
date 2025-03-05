@@ -5,11 +5,11 @@ import { vars } from "@spirit-ui/design-system/theme";
 export const sidebar = style({
   display: "none",
   height: calc.subtract("100vh", "56px"),
+  minWidth: "240px",
   paddingBlock: vars.spacing.x8,
   paddingInline: vars.spacing.x4,
   position: "sticky",
   top: "56px",
-  width: "240px",
   zIndex: 10,
 
   "@media": {

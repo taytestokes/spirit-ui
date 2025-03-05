@@ -26,8 +26,6 @@ const getPropTypes = (component: string) => {
     `${component}.tsx`
   );
 
-  console.log(componentsDirPath);
-
   const types = docgen(componentsDirPath, {
     shouldExtractValuesFromUnion: true,
     shouldExtractLiteralValuesFromEnum: true,

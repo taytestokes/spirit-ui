@@ -9,6 +9,7 @@ import { CodePreview } from "../code-preview";
 import { Snippet } from "../snippet";
 import { ComponentPreview } from "../component-preview";
 import { PropsTable } from "../props-table";
+import { IconGallery } from "../icon-gallery/icon-gallery";
 
 import * as classes from "./mdx.css";
 
@@ -49,6 +50,7 @@ const components = {
       </ComponentPreview>
     </div>
   ),
+  IconGallery,
 };
 
 export const MDX = ({ code }: { code: string }) => {

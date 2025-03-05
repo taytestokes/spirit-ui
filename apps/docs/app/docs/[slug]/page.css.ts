@@ -4,7 +4,7 @@ import { vars } from "@spirit-ui/design-system/theme";
 export const page = style({
   display: "flex",
   margin: "0 auto",
-  maxWidth: "900px",
+  maxWidth: "1100px",
   width: "100%",
 });
 

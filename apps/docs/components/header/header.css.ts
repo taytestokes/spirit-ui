@@ -16,7 +16,7 @@ export const content = style({
   display: "flex",
   height: "100%",
   margin: "0 auto",
-  maxWidth: "900px",
+  maxWidth: "1100px",
   justifyContent: "space-between",
   padding: vars.spacing.x4,
   width: "100%",
