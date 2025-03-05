@@ -331,12 +331,10 @@ const icons = [
   "XMarkIcon",
 ] as const;
 
-type IconName = typeof icons;
-
 export const IconGallery = () => {
   return (
     <div className={classes.gallery}>
-      {icons.map((icon: IconName) => {
+      {icons.map((icon) => {
         return (
           <div className={classes.iconCard}>
             <Icon name={icon} size={24} />
