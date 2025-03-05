@@ -1,5 +1,11 @@
 # @spirit-ui/design-system
 
+## 0.0.11
+
+### Patch Changes
+
+- 7de98aa: Add Icon component using Heroicons
+
 ## 0.0.10
 
 ### Patch Changes
