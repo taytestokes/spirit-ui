@@ -334,16 +334,14 @@ const icons = [
 export const IconGallery = () => {
   return (
     <div className={classes.gallery}>
-      {icons.map((icon) => {
-        return (
-          <div className={classes.iconCard}>
-            <Icon name={icon} size={24} />
-            <Text color="neutral900" variant="extraSmall">
-              {icon}
-            </Text>
-          </div>
-        );
-      })}
+      {icons.map((icon) => (
+        <div className={classes.iconCard} key={icon}>
+          <Icon name={icon} size={24} />
+          <Text color="neutral900" variant="extraSmall">
+            {icon}
+          </Text>
+        </div>
+      ))}
     </div>
   );
 };
