@@ -3,13 +3,11 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "changeset": "changeset",
     "clean": "turbo clean && rm -rf ./node_modules && rm -rf ./.turbo",
     "dev": "turbo dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint",
-    "publish-packages": "changeset publish",
-    "version": "changeset version"
+    "publish-design-system": "npm run build --workspace=@spirit-ui/design-system && changeset add && changeset version && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.11",
