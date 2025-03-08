@@ -2,7 +2,7 @@ import React, { HtmlHTMLAttributes } from "react";
 import { clsx } from "clsx";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 
-import { Heading, Text } from "@spirit-ui/design-system/components";
+import { Heading, Stack, Text } from "@spirit-ui/design-system/components";
 
 import { ColorPalette } from "../color-palette";
 import { CodePreview } from "../code-preview";
@@ -51,6 +51,7 @@ const components = {
     </div>
   ),
   IconGallery,
+  Stack,
 };
 
 export const MDX = ({ code }: { code: string }) => {

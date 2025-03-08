@@ -24,6 +24,7 @@ const {
 
 const colorProperties = defineProperties({
   properties: {
+    background: colors,
     backgroundColor: colors,
     borderColor: colors,
     color: colors,
@@ -79,6 +80,7 @@ const responsiveProperties = defineProperties({
     paddingLeft: spacing,
     paddingRight: spacing,
     paddingTop: spacing,
+    width: spacing,
   },
 });
 
