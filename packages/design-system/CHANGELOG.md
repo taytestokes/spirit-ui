@@ -1,5 +1,11 @@
 # @spirit-ui/design-system
 
+## 0.0.12
+
+### Patch Changes
+
+- 3b8bc7c: Add Stack component
+
 ## 0.0.11
 
 ### Patch Changes
