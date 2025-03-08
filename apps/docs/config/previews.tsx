@@ -73,4 +73,22 @@ export const previews: Record<string, ComponentConfig> = {
     file: "components/previews/icon-sizes.tsx",
     component: React.lazy(() => import("../components/previews/icon-sizes")),
   },
+  // Stack Component
+  stack: {
+    name: "stack",
+    file: "components/previews/stack.tsx",
+    component: React.lazy(() => import("../components/previews/stack")),
+  },
+  "stack-direction": {
+    name: "stack-direction",
+    file: "components/previews/stack-direction.tsx",
+    component: React.lazy(
+      () => import("../components/previews/stack-direction")
+    ),
+  },
+  "stack-gap": {
+    name: "stack-gap",
+    file: "components/previews/stack-gap.tsx",
+    component: React.lazy(() => import("../components/previews/stack-gap")),
+  },
 };

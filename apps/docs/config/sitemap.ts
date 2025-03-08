@@ -50,6 +50,10 @@ export const sitemap = {
           href: "/docs/icon",
         },
         {
+          title: "Stack",
+          href: "/docs/stack",
+        },
+        {
           title: "Text",
           href: "/docs/text",
         },
