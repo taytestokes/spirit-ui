@@ -1,0 +1,68 @@
+{
+  "name": "@spirit-ui/react",
+  "version": "0.0.15",
+  "description": "React component library built with Tailwindcss, Typescript, and Vite.",
+  "homepage": "https://github.com/taytestokes/spirit-ui",
+  "bugs": {
+    "url": "https://github.com/taytestokes/spirit-ui/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taytestokes/spirit-ui.git",
+    "directory": "packages/react"
+  },
+  "license": "MIT",
+  "author": "Tayte Stokes",
+  "types": "./dist/spirit-ui.d.ts",
+  "main": "./dist/spirit-ui.umd.cjs",
+  "module": "./dist/spirit-ui.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/spirit-ui.umd.cjs",
+      "import": "./dist/spirit-ui.mjs",
+      "types": "./dist/spirit-ui.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "spirit-ui",
+    "react",
+    "components"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json && vite build",
+    "build-storybook": "storybook build",
+    "dev": "npm run storybook",
+    "storybook": "storybook dev -p 6006"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-onboarding": "^8.6.14",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/react": "^8.6.14",
+    "@storybook/react-vite": "^8.6.14",
+    "@storybook/test": "^8.6.14",
+    "@tailwindcss/vite": "^4.1.7",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "storybook": "^8.6.14",
+    "tailwind-variants": "^1.0.0",
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.3"
+  },
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.7"
+  }
+}
