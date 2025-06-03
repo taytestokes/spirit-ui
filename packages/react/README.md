@@ -2,6 +2,23 @@
 
 Spirit UI React is a React component library that is built with Typescript, Tailwindcss, and Vite.
 
+## Installation
+
+> The consuming application must be configured with tailwindcss@4
+
+Install the `@spirit-ui/react` package.
+
+`npm install @spirit-ui/react`
+
+Then configure the consuming applications tailwindcss stylesheet to detect sources in the dependency using the `@source` directive.
+
+```
+@import 'tailwindcss';
+
+/* Detect @spirit-ui/react files to generate classes */
+@source '../node_modules/@spirit-ui/react';
+```
+
 ## Development
 
 Spirit UI uses Storybook to develop components.
