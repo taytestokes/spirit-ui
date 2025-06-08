@@ -1,5 +1,11 @@
 # @spirit-ui/react
 
+## 0.0.16
+
+### Patch Changes
+
+- 9ad5cec: Updates color button variants to use neutrals
+
 ## 0.0.15
 
 ### Patch Changes

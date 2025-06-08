@@ -5,6 +5,7 @@
     "build": "turbo build",
     "clean": "turbo clean && rm -rf ./node_modules && rm -rf ./.turbo",
     "dev": "turbo dev",
+    "dev:components": "npm run dev --workspace@spirit-ui/react",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint"
   },

@@ -9,7 +9,7 @@ interface ButtonProps {
 }
 
 const classes = tv({
-  base: "active:opacity-80 font-medium rounded-md cursor-pointer flex items-center justify-center shadow-[0_0_0_1px] shadow-transparent transition duration-150 ease-in",
+  base: "font-medium rounded-md cursor-pointer flex items-center justify-center shadow-[0_0_0_1px] shadow-transparent transition duration-150 ease-in",
   variants: {
     size: {
       small: "h-[32px] text-sm px-3",
@@ -17,26 +17,23 @@ const classes = tv({
       large: "h-[48px] text-md px-5",
     },
     variant: {
-      primary: "bg-zinc-900 hover:bg-zinc-800 shadow-zinc-900 text-zinc-50",
+      primary:
+        "bg-neutral-900 hover:bg-neutral-800 shadow-neutral-900 text-neutral-50",
       secondary:
-        "bg-transparent hover:bg-zinc-100 shadow-zinc-200 text-zinc-950",
+        "bg-transparent hover:bg-neutral-100 shadow-neutral-200 text-neutral-950",
       tertiary:
-        "bg-transparent hover:bg-zinc-200 shadow-transparent hover:shadow-zinc-200 text-zinc-950",
+        "bg-transparent hover:bg-neutral-200 shadow-transparent hover:shadow-neutral-200 text-neutral-950",
       destructive:
-        "bg-red-600 hover:bg-red-700 shadow-red-600 hover:shadow-red-700 text-zinc-50",
+        "bg-red-600 hover:bg-red-700 shadow-red-600 hover:shadow-red-700 text-neutral-50",
     },
-  },
-  defaultVariants: {
-    size: "medium",
-    variant: "primary",
   },
 });
 
 export const Button = ({
   children,
-  className,
-  size,
-  variant,
+  className = "",
+  size = "medium",
+  variant = "primary",
   ...rest
 }: ButtonProps) => {
   return (
