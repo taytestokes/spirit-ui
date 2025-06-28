@@ -4,7 +4,7 @@ import { tv } from "tailwind-variants";
 interface ButtonProps {
   children?: React.ReactNode;
   className?: string;
-  size?: "small" | "medium" | "large";
+  size?: "sm" | "md" | "lg";
   variant?: "primary" | "secondary" | "tertiary" | "destructive";
 }
 
@@ -12,9 +12,9 @@ const classes = tv({
   base: "font-medium rounded-md cursor-pointer flex items-center justify-center shadow-[0_0_0_1px] shadow-transparent transition duration-150 ease-in",
   variants: {
     size: {
-      small: "h-[32px] text-sm px-3",
-      medium: "h-[40px] text-sm px-4",
-      large: "h-[48px] text-md px-5",
+      sm: "h-[32px] text-sm px-3",
+      md: "h-[40px] text-sm px-4",
+      lg: "h-[48px] text-md px-5",
     },
     variant: {
       primary:
@@ -32,7 +32,7 @@ const classes = tv({
 export const Button = ({
   children,
   className = "",
-  size = "medium",
+  size = "md",
   variant = "primary",
   ...rest
 }: ButtonProps) => {
