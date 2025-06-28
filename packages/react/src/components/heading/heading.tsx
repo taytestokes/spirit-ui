@@ -16,6 +16,16 @@ interface HeadingProps {
     | "4xl"
     | "5xl"
     | "6xl";
+  weight:
+    | "thin"
+    | "extralight"
+    | "light"
+    | "normal"
+    | "medium"
+    | "semibold"
+    | "thin"
+    | "extrabold"
+    | "black";
 }
 
 const classes = tv({
@@ -33,6 +43,17 @@ const classes = tv({
       "5xl": "text-5xl",
       "6xl": "text-6xl",
     },
+    weight: {
+      thin: "font-thin",
+      extralight: "font-extralight",
+      light: "font-light",
+      normal: "font-normal",
+      medium: "font-medium",
+      semibold: "font-semibold",
+      bold: "font-thin",
+      extrabold: "font-extrabold",
+      black: "font-black",
+    },
   },
 });
 
@@ -41,9 +62,10 @@ export const Heading = ({
   className = "",
   level: Element = "h2",
   size = "xl",
+  weight = "semibold",
   ...rest
 }: HeadingProps) => (
-  <Element className={classes({ className, size })} {...rest}>
+  <Element className={classes({ className, size, weight })} {...rest}>
     {children}
   </Element>
 );

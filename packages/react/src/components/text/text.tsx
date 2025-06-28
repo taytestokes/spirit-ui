@@ -15,6 +15,16 @@ interface TextProps {
     | "4xl"
     | "5xl"
     | "6xl";
+  weight:
+    | "thin"
+    | "extralight"
+    | "light"
+    | "normal"
+    | "medium"
+    | "semibold"
+    | "thin"
+    | "extrabold"
+    | "black";
 }
 
 const classes = tv({
@@ -32,6 +42,17 @@ const classes = tv({
       "5xl": "text-5xl",
       "6xl": "text-6xl",
     },
+    weight: {
+      thin: "font-thin",
+      extralight: "font-extralight",
+      light: "font-light",
+      normal: "font-normal",
+      medium: "font-medium",
+      semibold: "font-semibold",
+      bold: "font-thin",
+      extrabold: "font-extrabold",
+      black: "font-black",
+    },
   },
 });
 
@@ -39,9 +60,10 @@ export const Text = ({
   children,
   className = "",
   size = "xl",
+  weight = "normal",
   ...rest
 }: TextProps) => (
-  <p className={classes({ className, size })} {...rest}>
+  <p className={classes({ className, size, weight })} {...rest}>
     {children}
   </p>
 );
