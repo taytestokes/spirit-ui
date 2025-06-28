@@ -1,5 +1,11 @@
 # @spirit-ui/react
 
+## 0.0.17
+
+### Patch Changes
+
+- b77ff57: Add Heading and Text components as well as update Button size props
+
 ## 0.0.16
 
 ### Patch Changes

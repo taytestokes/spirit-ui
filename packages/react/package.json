@@ -1,6 +1,6 @@
 {
   "name": "@spirit-ui/react",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "React component library built with Tailwindcss, Typescript, and Vite.",
   "homepage": "https://github.com/taytestokes/spirit-ui",
   "bugs": {
