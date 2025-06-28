@@ -1,5 +1,11 @@
 # @spirit-ui/react
 
+## 0.0.18
+
+### Patch Changes
+
+- 6f770a2: Add weight prop to heading and text components
+
 ## 0.0.17
 
 ### Patch Changes
